@@ -1,76 +1,119 @@
-function button (domino, label, fn)
-  local button = {}
-  button.width = 1300
-  button.height = 600
-  button.position = {0,-0.2,0}
-  button.rotation ={180,90,0}
-  button.click_function = fn
-  button.label = label
-  button.font_size = 180
-  button.function_owner = nil
-  domino.createButton(button)
-end
-
-function cardbutton (card, label, fn)
-  local button = {}
-  button.width = 125*string.len(label)
-  button.height = 250
-  button.position = {0,2,0}
-  button.rotation ={0,0,0}
-  button.click_function = fn
-  button.label = label
-  button.font_size = 180
-  button.function_owner = nil
-  card.createButton(button)
-end
-
-function backcardbutton (card, label, fn)
-  local button = {}
-  button.width = 125*string.len(label)
-  button.height = 250
-  button.position = {0,-2,0}
-  button.rotation ={0,0,180}
-  button.click_function = fn
-  button.label = label
-  button.font_size = 180
-  button.function_owner = nil
-  card.createButton(button)
-end
-
-function copyTable(tab)
-  local result = {}
-  for k,v in pairs(tab) do
-    result[k] = v
-  end
-  return result
-end
-
-function setOnCollisionEnter(guids, fnName)
-  for k,v in pairs(guids) do
-    local o = getObjectFromGUID(v)
-    if(o) then
-      o:setLuaScript([[
-      function onCollisionEnter(collision_info)
-          if(self and collision_info and Global and Global.getVar("loaded") ) then
-            collision_info['object'] = self
-            Global.call(']]..fnName..[[', collision_info)
-          end
-      end
-      ]])
-    end
-  end
-end
-
-function clearLua(guids)
-  for k,v in pairs(guids) do
-    local o = getObjectFromGUID(v)
-    if(o) then
-      o:setLuaScript("")
-    end
-  end
-end
 
 loaded = false
+
+-- fixed data
+
+commandTokenRotation = {x=0,y=180,z=0 }
+diceRotations = {
+  Red = {
+    gun = {x=270.0, y=0.0, z=0.0},
+    shield = {x=0.0,y=0.0, z=0.0},
+    morale = {x=0.0, y=360.0, z=270.0}
+  },
+  Green = {
+    gun = {x=270.00, y=180.00, z=0.00},
+    shield = {x=0.00, y=180.00, z=0.00},
+    morale = {x=0.00, y=180.00, z=270.00}
+  },
+  Blue = {
+    gun = {x=270.00, y=180.00, z=0.00},
+    shield = {x=0.00, y=180.00, z=0.00},
+    morale = {x=0.00, y=180.00, z=270.00}
+  },
+  Yellow = {
+    gun = {x=270.0, y=0.0, z=0.0},
+    shield = {x=0.0,y=0.0, z=0.0},
+    morale = {x=0.0, y=360.0, z=270.0}
+  }
+}
+
+dicePositions = {
+  Red = {
+    gun ={x=-42.22, y=1.91, z=-10.24},
+    shield = {x=-42.24, y=1.91, z=-12.19},
+    morale ={x=-42.26, y=1.91, z=-14.21},
+    combatCard={x=-40.26, y=1.1, z=-20.21},
+    dir=1
+  },
+  Green = {
+    gun = {x=-31.55, y=1.91, z=10.12},
+    shield = {x=-31.55, y=1.91, z=12.15},
+    morale = {x=-31.55, y=1.91, z=14.15},
+    combatCard={x=-29.55, y=1.1, z=20.12},
+    dir=-1
+  },
+  Blue = {
+    gun = {x=42.00, y=1.91, z=10.12},
+    shield = {x=42.00, y=1.91, z=12.12},
+    morale = {x=42.00, y=1.91, z=14.12},
+    combatCard={x=40.00, y=1.1, z=20.12},
+    dir=-1
+  },
+  Yellow = {
+    gun ={x=31.29, y=1.91, z=-10.24},
+    shield = {x=31.29, y=1.91, z=-12.19},
+    morale ={x=31.29, y=1.91, z=-14.21},
+    combatCard={x=33.29, y=1.1, z=-20.21},
+    dir=1
+  }
+}
+diceTrayZones = {
+  ["a683b5"] = {player = "Red", side = "gun", dir=1},
+  ["4ad533"] = {player = "Red", side = "shield", dir=1},
+  ["c50b56"] = {player = "Red", side = "morale", dir=1},
+  ["f3b87d"] = {player = "Green", side = "gun", dir=-1},
+  ["28da53"] = {player = "Green", side = "shield", dir=-1},
+  ["1ac1b8"] = {player = "Green", side = "morale", dir=-1},
+  ["1c39c8"] = {player = "Blue", side = "gun", dir=-1},
+  ["eff97e"] = {player = "Blue", side = "shield", dir=-1},
+  ["1581fb"] = {player = "Blue", side = "morale", dir=-1},
+  ["666cb1"] = {player = "Yellow", side = "gun", dir=1},
+  ["61409a"] = {player = "Yellow", side = "shield", dir=1},
+  ["7f86d5"] = {player = "Yellow", side = "morale", dir=1}
+
+}
+sideTableZones = {
+  ["a53bc5"] = {player = "Blue"},
+  ["7a2f2b"] = {player = "Yellow"},
+  ["56ae34"] = {player = "Red"},
+  ["ffaf4b"] = {player = "Green"}
+}
+diceSideMap = {"gun","gun","gun","shield","shield","morale"}
+
+dieXWidth = 1.56
+
+playerHighlights = {
+  ["Red"]={r=1,b=0.0,g=0.0},
+  ["Yellow"]={r=1,b=0.0,g=1},
+  ["Blue"]={r=0.0,b=1,g=0.0},
+  ["Green"]={r=0.0,b=0.0,g=1} }
+
+tileRadius = 4.75
+MAIN_BOARD_ZONE = "288d26"
+
+
+--mutable state
+
+reinforceTokensToPlayer = {}
+combatTokensToPlayer = {}
+combatDecks = {}
+combatDeckPositions = {}
+plannedUpgrades = {}
+floatingCards = {}
+combatDice = {}
+combatEndDecks = {}
+playedCombatCards = {Red={},Green={},Yellow={},Blue={}}
+playerCombatStartButtons = {}
+combatDeckContents = {}
+playerCombatDomino = {}
+
+combatLock = {
+  Red=false,
+  Yellow=false,
+  Blue=false,
+  Green=false
+}
+commandTokenObjects = {}
 
 function onLoad(state)
 
@@ -132,42 +175,10 @@ function onLoad(state)
   for k,v in pairs(findAllLike('Combat upgrades')) do
     upgradeButton(getObjectFromGUID(v), nil)
   end
-
-  button(getObjectFromGUID("21f190"), "Calc. Combat", "calculateCombat")
-  button(getObjectFromGUID("8ba3e6"), "Calc. Combat", "calculateCombat")
-  button(getObjectFromGUID("c01aec"), "Calc. Combat", "calculateCombat")
-  button(getObjectFromGUID("601e16"), "Calc. Combat", "calculateCombat")
-
 end
 
 function upgradeButton(deck)
   cardbutton(deck, "UP", "upgradeCards")
-  checkCardsInIconTable(deck)
-end
-
-function checkCardsInIconTable(deck)
-  for k,card in pairs(deck.getObjects()) do
-    if(not cardIconValues[card.nickname]) then
-      print(card.nickname.. " not found")
-    end
-  end
-end
-
-combatDecks = {}
-combatDeckPositions = {}
-plannedUpgrades = {}
-floatingCards = {}
-
-function onChat(message, player)
-  if(message == "resetCombat") then
-    print("reset")
-
-    color = player.color
-    combatLock[color] = false
-    resetPositions(combatDice[playerCombatDomino[color]])
-    return false
-  end
-  return true
 end
 
 function upgradeCards(deck, playerColor)
@@ -222,8 +233,8 @@ function finishUpgrade(clickedCard,playerColor)
   local cardNamesToGuids = floatingCards[playerColor]
   local combatDeckPosition = copyTable(combatDeckPositions[playerColor])
   local height = 1.5
-  local combatCardGuid = nil
-  local discardCardGuid = nil
+  local combatCardGuid
+  local discardCardGuid
   for cardName,guids in pairs(cardNamesToGuids) do
     for k,guid in pairs(guids) do
       local card = getObjectFromGUID(guid)
@@ -277,8 +288,6 @@ function refindCombatDeck(params)
   end
 end
 
-commandTokenRotation = {x=0,y=180,z=0}
-
 function isObjectInZone(zoneGUID, objectGUID)
   local zone = getObjectFromGUID(zoneGUID)
   if(zone) then
@@ -300,89 +309,7 @@ function isObjectInZones(zoneGUIDs, objectGUID)
   return false
 end
 
-diceRotations = {
-  Red = {
-    gun = {x=270.0, y=0.0, z=0.0},
-    shield = {x=0.0,y=0.0, z=0.0},
-    morale = {x=0.0, y=360.0, z=270.0}
-  },
-  Green = {
-    gun = {x=270.00, y=180.00, z=0.00},
-    shield = {x=0.00, y=180.00, z=0.00},
-    morale = {x=0.00, y=180.00, z=270.00}
-  },
-  Blue = {
-    gun = {x=270.00, y=180.00, z=0.00},
-    shield = {x=0.00, y=180.00, z=0.00},
-    morale = {x=0.00, y=180.00, z=270.00}
-  },
-  Yellow = {
-    gun = {x=270.0, y=0.0, z=0.0},
-    shield = {x=0.0,y=0.0, z=0.0},
-    morale = {x=0.0, y=360.0, z=270.0}
-  }
-}
-
-dicePositions = {
-  Red = {
-    gun ={x=-42.22, y=1.91, z=-10.24},
-    shield = {x=-42.24, y=1.91, z=-12.19},
-    morale ={x=-42.26, y=1.91, z=-14.21},
-    combatCard={x=-40.26, y=1.1, z=-20.21},
-    dir=1
-  },
-  Green = {
-    gun = {x=-31.55, y=1.91, z=10.12},
-    shield = {x=-31.55, y=1.91, z=12.15},
-    morale = {x=-31.55, y=1.91, z=14.15},
-    combatCard={x=-29.55, y=1.1, z=20.12},
-    dir=-1
-  },
-  Blue = {
-    gun = {x=42.00, y=1.91, z=10.12},
-    shield = {x=42.00, y=1.91, z=12.12},
-    morale = {x=42.00, y=1.91, z=14.12},
-    combatCard={x=40.00, y=1.1, z=20.12},
-    dir=-1
-  },
-  Yellow = {
-    gun ={x=31.29, y=1.91, z=-10.24},
-    shield = {x=31.29, y=1.91, z=-12.19},
-    morale ={x=31.29, y=1.91, z=-14.21},
-    combatCard={x=33.29, y=1.1, z=-20.21},
-    dir=1
-  }
-}
-
-
-diceTrayZones = {
-  ["a683b5"] = {player = "Red", side = "gun", dir=1},
-  ["4ad533"] = {player = "Red", side = "shield", dir=1},
-  ["c50b56"] = {player = "Red", side = "morale", dir=1},
-  ["f3b87d"] = {player = "Green", side = "gun", dir=-1},
-  ["28da53"] = {player = "Green", side = "shield", dir=-1},
-  ["1ac1b8"] = {player = "Green", side = "morale", dir=-1},
-  ["1c39c8"] = {player = "Blue", side = "gun", dir=-1},
-  ["eff97e"] = {player = "Blue", side = "shield", dir=-1},
-  ["1581fb"] = {player = "Blue", side = "morale", dir=-1},
-  ["666cb1"] = {player = "Yellow", side = "gun", dir=1},
-  ["61409a"] = {player = "Yellow", side = "shield", dir=1},
-  ["7f86d5"] = {player = "Yellow", side = "morale", dir=1}
-
-}
-
-sideTableZones = {
-  ["a53bc5"] = {player = "Blue"},
-  ["7a2f2b"] = {player = "Yellow"},
-  ["56ae34"] = {player = "Red"},
-  ["ffaf4b"] = {player = "Green"}
-}
-
-diceSideMap = {"gun","gun","gun","shield","shield","morale"}
-
-dieXWidth = 1.56
-
-function onObjectDropped(  playerColor,  obj )
+function onObjectDropped(playerColor,  obj )
   local p = obj.getPosition()
   if(string.find(obj.getName(), "combat die") and diceRotations[playerColor]
     and not isObjectInZones(diceTrayZones, obj.getGUID())
@@ -505,54 +432,6 @@ function numObjectsInZoneWithRot(zone, rot)
   return count
 end
 
-playerHighlights = {
-  ["Red"]={r=1,b=0.0,g=0.0},
-  ["Yellow"]={r=1,b=0.0,g=1},
-  ["Blue"]={r=0.0,b=1,g=0.0},
-  ["Green"]={r=0.0,b=0.0,g=1}}
-
-reinforceTokensToPlayer = {}
-
-pawn1guid = "d054f2"
-pawn2guid = "91f901"
-
-function between(val, bound1, bound2)
-  return (val > bound1 and val < bound2) or (val > bound2 and val < bound1)
-
-end
-
-function findPlayerModelsInCombat(playerColor)
-   local pawn1pos = getObjectFromGUID(pawn1guid).getPosition()
-   local pawn2pos = getObjectFromGUID(pawn2guid).getPosition()
-   local result = {}
-   for k,obj in pairs(getAllObjects()) do
-     local pos = obj.getPosition()
-     local inX = between(pos.x, pawn1pos.x, pawn2pos.x)
-     local inY = between(pos.z, pawn1pos.z, pawn2pos.z)
-     if(inX and inY and
-     (modelOwners[obj.getName()] == playerColor or
-        (obj.getName() == "Reinforcement token" and
-        reinforceTokensToPlayer[obj.getGUID()]) == playerColor) or
-        (obj.getVar("owned") and obj.getVar("owner") == playerColor)) then
-        table.insert(result, obj)
-        if(not obj.getVar("owned")) then
-          obj.highlightOn(playerHighlights[playerColor], 4)
-        end
-     end
-   end
-   return result
-end
-
-tileRadius = 4.75
-
-function getquadrant(tilePos, pawnPos)
-  return {x=sign(tilePos.x - pawnPos.x), z=sign(tilePos.z - pawnPos.z)}
-end
-
-function distanceInSquareRadius(center, pos, radius)
-  return math.abs(center.x-pos.x) <= radius and math.abs(center.z-pos.z) <= radius
-end
-
 function bagCollision(info)
   if(info and info.object and info.collision_object and info.collision_object.getGUID()) then
     Timer.create({
@@ -585,8 +464,6 @@ function retrieveItems(params)
     end
   end
 end
-
-MAIN_BOARD_ZONE = "288d26"
 
 function commandTokenCollision(info)
 
@@ -689,12 +566,12 @@ function resetPositions(storage, random)
 end
 
 function retrieveFromContainer(guid,putRot,putPos)
-   objs = getAllObjects()
+  local objs = getAllObjects()
    for k,container in pairs(objs) do
      if(container.tag == 'Bag' or container.tag == 'Deck') then
         for k2,target in pairs(container.getObjects()) do
           if(target.guid == guid) then
-             takeObjParams = {}
+             local takeObjParams = {}
              takeObjParams.guid = guid
              takeObjParams.position = putPos
              takeObjParams.rotation = putRot
@@ -705,8 +582,6 @@ function retrieveFromContainer(guid,putRot,putPos)
    end
 end
 
-commandTokenObjects = {}
-
 function tokenResetButton(domino, tokens)
   button(domino, 'Reset Command\n Tokens', 'resetCommandTokens')
   commandTokenObjects[domino] = storePositions(tokens)
@@ -716,29 +591,17 @@ function resetCommandTokens(buttonObj, color)
   resetPositions(commandTokenObjects[buttonObj], true)
 end
 
-playerCombatStartButtons = {}
-combatDeckContents = {}
-playerCombatDomino = {}
-
 function combatStartButton(domino, deck, playerColor)
   button(domino, 'Start Combat', 'startCombat')
   playerCombatStartButtons[domino] = playerColor
   playerCombatDomino[playerColor] = domino
   combatDecks[playerColor] = deck
-  checkCardsInIconTable(deck)
 end
-
-combatLock = {
-  Red=false,
-  Yellow=false,
-  Blue=false,
-  Green=false
-}
 
 function startCombat(domino, playerColor)
   if(not combatLock[playerColor]) then
     combatLock[playerColor] = true
-    deck = combatDecks[playerCombatStartButtons[domino]]
+    local deck = combatDecks[playerCombatStartButtons[domino]]
     if(combatDeckContents[deck] == nil) then
       deck.flip()
       combatDeckContents[deck] = {table.unpack(deck.getObjects())}
@@ -771,8 +634,6 @@ function initHand(params)
   end
 end
 
-playedCombatCards = {Red={},Green={},Yellow={},Blue={}}
-
 function smoothMove(obj,pos)
   obj.setPositionSmooth(pos)
   print("Moving "..tostring(obj.isSmoothMoving()))
@@ -795,7 +656,6 @@ function playCard(card,playerColor)
   end
   table.insert(playedCombatCards[playerColor],card)
   card.setLock(false)
-
 end
 
 function returnCard(card,playerColor)
@@ -812,31 +672,20 @@ function flipAndInitCard(params)
   cardbutton(params.card, "PLAY", "playCard")
 end
 
-combatDice = {}
-combatEndDecks = {}
-
 function combatEndButton(domino, deck, dice)
   button(domino, 'End Combat', 'endCombat')
   combatDice[domino] = storePositions(dice)
 end
 
-
-
-function onObjectPickUp(playerColor, obj )
-
-end
-
-combatTokensToPlayer = {}
-
 function endCombat(domino, playerColor)
   if(not combatLock[playerColor]) then
     combatLock[playerColor] = true
-    deck = combatDecks[playerColor]
+    local deck = combatDecks[playerColor]
     if(combatDeckContents[deck] ~= nil) then
       playedCombatCards[playerColor] = {}
-      cards = combatDeckContents[deck]
+      local cards = combatDeckContents[deck]
       for k,v in pairs(cards) do
-        card = getObjectFromGUID(v['guid'])
+        local card = getObjectFromGUID(v['guid'])
         if card ~= nil then
           card.clearButtons()
           card.putObject(deck)
@@ -846,7 +695,7 @@ function endCombat(domino, playerColor)
       deck.flip()
       for k,v in pairs(combatTokensToPlayer) do
           if(v == playerColor) then
-            obj = getObjectFromGUID(k)
+            local obj = getObjectFromGUID(k)
             if(obj ~= nil) then
               obj.destruct()
             end
@@ -858,196 +707,74 @@ function endCombat(domino, playerColor)
   end
 end
 
-function emptyCombatResult()
-    return {guns=0,shields=0,morale=0}
+function button (domino, label, fn)
+  local button = {}
+  button.width = 1300
+  button.height = 600
+  button.position = {0,-0.2,0}
+  button.rotation ={180,90,0}
+  button.click_function = fn
+  button.label = label
+  button.font_size = 180
+  button.function_owner = nil
+  domino.createButton(button)
 end
 
-function cr(g,s,m)
-    return {guns=g,shields=s,morale=m}
+function cardbutton (card, label, fn)
+  local button = {}
+  button.width = 125*string.len(label)
+  button.height = 250
+  button.position = {0,2,0}
+  button.rotation ={0,0,0}
+  button.click_function = fn
+  button.label = label
+  button.font_size = 180
+  button.function_owner = nil
+  card.createButton(button)
 end
 
-diceZonesByPlayer = nil
-
-function emptyColorMap()
-  return {Red={},Green={},Yellow={},Blue={}}
+function backcardbutton (card, label, fn)
+  local button = {}
+  button.width = 125*string.len(label)
+  button.height = 250
+  button.position = {0,-2,0}
+  button.rotation ={0,0,180}
+  button.click_function = fn
+  button.label = label
+  button.font_size = 180
+  button.function_owner = nil
+  card.createButton(button)
 end
 
-function reverseTrayMap()
-  diceZonesByPlayer = emptyColorMap()
-  for k,v in pairs(diceTrayZones) do
-    diceZonesByPlayer[v.player][v.side] = k
+function copyTable(tab)
+  local result = {}
+  for k,v in pairs(tab) do
+    result[k] = v
   end
-end
-
-function nearZero(x)
-  return math.abs(((x + 10)%360)-10) < 10
-end
-
-colorToFaction = {Red="Chaos",Yellow="Eldar",Green="Orks",Blue="Space Marines"}
-
-function calculateCombat(domino, playerColor)
-  if(not diceZonesByPlayer) then
-    reverseTrayMap()
-  end
-  local finalResult = emptyCombatResult()
-  local tokenResult = emptyCombatResult()
-  for guid,player in pairs(combatTokensToPlayer) do
-    print(guid.." : "..player)
-    if(player == playerColor) then
-      local tok = getObjectFromGUID(guid)
-      if(math.abs(tok.getRotation().z) < 10) then
-        tokenResult.shields = tokenResult.shields+1
-      else
-        tokenResult.guns = tokenResult.guns+1
-      end
-    end
-  end
-  --printCombatResult("Combat Tokens", tokenResult)
-  finalResult = add(finalResult, tokenResult)
-  local modelResult = emptyCombatResult()
-  local models = findPlayerModelsInCombat(playerColor)
-  for k,model in pairs(models) do
-    if(nearZero(model.getRotation().z) and nearZero(model.getRotation().x)) then
-      if(model.getName() == "Reinforcement token") then
-        modelResult.morale = modelResult.morale + ((playerColor == "Green") and 1 or 2)
-      elseif(model.getName() == "Bastion") then
-        modelResult.morale = modelResult.morale + 2
-      else
-        local _,_,moraleAmount = string.find(model.getDescription(), "(%d) morale")
-        modelResult.morale = modelResult.morale + tonumber(moraleAmount)
-      end
-    end
-  end
-  --printCombatResult("Models", modelResult)
-  finalResult = add(finalResult, modelResult)
-  local cardResult = emptyCombatResult()
-  local playedCards = playedCombatCards[playerColor]
-  for k,card in pairs(playedCards) do
-    if(math.abs(card.getPosition().z - dicePositions[playerColor].combatCard.z ) < 1) then
-      cardResult = add(cardResult, cardIconValues[card.getName()])
-    end
-  end
-  --printCombatResult("Cards", cardResult)
-  finalResult = add(finalResult, cardResult)
-  local zones = diceZonesByPlayer[playerColor]
-  local diceResult = cr(countDice(zones["gun"]),countDice(zones["shield"]),countDice(zones["morale"]))
-  --printCombatResult("Dice", diceResult)
-  finalResult = add(finalResult, diceResult)
-  printToAll(colorToFaction[playerColor]..[[=
-  guns = ]]..finalResult.guns..[[
-  shields = ]]..finalResult.shields..[[
-  morale = ]]..finalResult.morale, lighten(playerHighlights[playerColor], 0.1))
-end
-
-function lighten(color, factor)
-  result = {}
-  result.r = color.r + ((1 - color.r) * factor)
-  result.g = color.g + ((1 - color.g) * factor)
-  result.b = color.b + ((1 - color.b) * factor)
   return result
 end
 
-function countDice(zoneGuid)
-  local count = 0;
-  for k,obj in pairs(getObjectFromGUID(zoneGuid).getObjects()) do
-    if(string.find(obj.getName(), "die")) then
-      count = count+1
+function setOnCollisionEnter(guids, fnName)
+  for k,v in pairs(guids) do
+    local o = getObjectFromGUID(v)
+    if(o) then
+      o:setLuaScript([[
+      function onCollisionEnter(collision_info)
+          if(self and collision_info and Global and Global.getVar("loaded") ) then
+            collision_info['object'] = self
+            Global.call(']]..fnName..[[', collision_info)
+          end
+      end
+      ]])
     end
   end
-  return count
 end
 
-function add(r1,r2)
-  return cr(r1.guns+r2.guns,r1.shields+r2.shields,r1.morale+r2.morale)
+function clearLua(guids)
+  for k,v in pairs(guids) do
+    local o = getObjectFromGUID(v)
+    if(o) then
+      o:setLuaScript("")
+    end
+  end
 end
-
-function printCombatResult(start, tab)
-  print(name.." contributed "..tab.guns.." guns, "..tab.shields.." shields, and "..tab.morale.." morale")
-end
-
-
-cardIconValues = {
-  ["Foul worship"] = cr(0,1,0),
-  ["Lure of Chaos"] = cr(0,0,1),
-  ["Dark faith"] = cr(0,0,1),
-  ["Khorne's rage"] = cr(1,0,0),
-  ["Impure zeal"] = cr(1,1,0),
-  ["Mark of Slaanesh"] = cr(1,1,0),
-  ["Mark of Nurgle"] = cr(0,2,0),
-  ["Mark of Khorne"] = cr(2,0,0),
-  ["Mark of Tzeentch"] = cr(0,0,2),
-  ["Chaos united"] = cr(1,1,1),
-  ["Daemonic resilience"] = cr(0,2,1),
-  ["Inhuman strength"] = cr(2,0,1),
-  ["Death and despair"] = cr(2,0,1),
-  ["Chaos victorious"] = cr(1,1,1),
-  ["Slugga Boyz"] = cr(1,1,0),
-  ["'Ard Boyz"] = cr(0,2,0),
-  ["Shoota Boyz"] = cr(2,0,0),
-  ["Gretchin"] = cr(0,0,0),
-  ["Mek Boyz"] = cr(0,0,1),
-  ["Biker Nobz"] = cr(2,1,0),
-  ["Mega Nobz"] = cr(1,2,0),
-  ["Waaagh!!!!"] = cr(0,0,3),
-  ["Sea of green"] = cr(1,1,0),
-  ["Weirdboyz"] = cr(1,1,1),
-  ["Rokkit wagon"] = cr(3,0,0),
-  ["Party wagon"] = cr(1,2,0),
-  ["Smasher Gargant"] = cr(2,3,0),
-  ["Snapper Gargant"] = cr(4,1,0),
-  ["Command of the Autarch"] = cr(0,0,0),
-  ["Ranger support"] = cr(0,1,1),
-  ["Striking Scorpions"] = cr(0,1,0),
-  ["Hit and run"] = cr(1,0,0),
-  ["Howling Banshees"] = cr(1,0,0),
-  ["Swooping Hawks"] = cr(0,2,0),
-  ["Wraithguard advance"] = cr(1,0,1),
-  ["Fire Dragon's vengeance"] = cr(2,0,0),
-  ["Wraithguard support"] = cr(0,1,1),
-  ["Wave Serpent"] = cr(1,2,0),
-  ["Spiritseer's guidance"] = cr(1,1,1),
-  ["Fire Prism"] = cr(2,1,0),
-  ["Holofield emitter"] = cr(1,2,1),
-  ["Psychic lance"] = cr(2,1,0),
-  ["Reconnaissance"] = cr(0,1,0),
-  ["Faith in the Emperor"] = cr(0,0,1),
-  ["Ambush"] = cr(1,0,0),
-  ["Fury of the Ultramar"] = cr(1,0,0),
-  ["Blessed Power armour"] = cr(0,1,0),
-  ["Hold the line"] = cr(0,1,1),
-  ["Glory and death"] = cr(1,0,1),
-  ["Veteran scouts"] = cr(1,1,1),
-  ["Drop Pod assault"] = cr(1,1,0),
-  ["Break the line"] = cr(1,2,0),
-  ["Show no fear"] = cr(0,2,1),
-  ["Armoured advance"] = cr(2,1,0),
-  ["Emperor's might"] = cr(3,0,0),
-  ["Emperor's glory"] = cr(0,2,2)
-}
-
-modelOwners = {
-  ["Aspect Warrior"] = "Yellow",
-  ["Wraithguard"] = "Yellow",
-  ["Falcon"] = "Yellow",
-  ["Warlock Battle Titan"] = "Yellow",
-  ["Hellebore Frigate"] = "Yellow",
-  ["Void Stalker"] = "Yellow",
-  ["Cultist"] = "Red",
-  ["Chaos Space Marine"] = "Red",
-  ["Iconoclast Destroyer"] = "Red",
-  ["Hellbrute"] = "Red",
-  ["Chaos Reaver Titan"] = "Red",
-  ["Repulsive Grand Cruiser"] = "Red",
-  ["Ork Boyz"] = "Green",
-  ["Nob"] = "Green",
-  ["Battlewagon"] = "Green",
-  ["Gargant"] = "Green",
-  ["Onslaught Attack Ship"] = "Green",
-  ["Kill Kroozer"] = "Green",
-  ["Scout"] = "Blue",
-  ["Space Marine"] = "Blue",
-  ["Strike Cruiser"] = "Blue",
-  ["Land Raider"] = "Blue",
-  ["Warlord Titan"] = "Blue",
-  ["Battle Barge"] = "Blue",
-}
