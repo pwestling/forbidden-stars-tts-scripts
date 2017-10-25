@@ -1,5 +1,65 @@
 loaded = false
 
+function vector_convertor(v)
+  return { x = v.x, y = v.y, z = v.z }
+end
+
+function button(domino, label, fn)
+  local button = {}
+  button.width = 1300
+  button.height = 600
+  button.position = { 0, -0.2, 0 }
+  button.rotation = { 180, 90, 0 }
+  button.click_function = fn
+  button.label = label
+  button.font_size = 180
+  button.function_owner = nil
+  domino.createButton(button)
+  state.buttons[domino.getGUID()] = button
+end
+
+function cardbutton(card, label, fn)
+  local button = {}
+  button.width = 125 * string.len(label)
+  button.height = 250
+  button.position = { 0, 2, 0 }
+  button.rotation = { 0, 0, 0 }
+  button.click_function = fn
+  button.label = label
+  button.font_size = 180
+  button.function_owner = nil
+  card.createButton(button)
+  state.buttons[card.getGUID()] = button
+end
+
+function backcardbutton(card, label, fn)
+  local button = {}
+  button.width = 125 * string.len(label)
+  button.height = 250
+  button.position = { 0, -2, 0 }
+  button.rotation = { 0, 0, 180 }
+  button.click_function = fn
+  button.label = label
+  button.font_size = 180
+  button.function_owner = nil
+  card.createButton(button)
+  state.buttons[card.getGUID()] = button
+end
+
+function removeButtons(obj)
+  obj.clearButtons()
+  stat.buttons[obj.getGUID()] = nil
+end
+
+function recreateButtons(buttonTabs)
+  for objGuid, buttonTab in pairs(buttonTabs) do
+    local obj = getObjectFromGUID(objGuid)
+    if (obj ~= nil) then
+      obj.createButton(buttonTab)
+    end
+  end
+end
+
 function copyTable(tab)
   local result = {}
   for k, v in pairs(tab) do
@@ -120,7 +180,8 @@ default_state = {
     Blue = false,
     Green = false
   },
-  commandTokenObjects = {}
+  commandTokenObjects = {},
+  buttons = {}
 }
 
 state = {}
@@ -130,22 +191,32 @@ function onSave()
 end
 
 function onLoad(statestring)
+  print("Loading")
 
   setOnCollisionEnter(findAllLike('order token'), 'commandTokenCollision')
   setOnCollisionEnter(findAllWithTag('Bag'), 'bagCollision')
   --setOnCollisionEnter(findAllLike('Combat Pawn'), 'combatPawnCollision')
   --clearLua(findAllWithTag('Infinite'))
+  --clearLua(findAllLike('order token'))
+  --clearLua(findAllWithTag('Bag'))
 
-  if(statestring == "") then
+
+  if (statestring == "") then
+    print("Recreating state")
     --noinspection GlobalCreationOutsideO
     state = copyTable(default_state)
-    setupInitialState()
+    setupButtons()
   else
+    print("Loading state")
+    --noinspection GlobalCreationOutsideO
+    print(statestring)
     state = JSON.decode(statestring)
+    print(JSON.encode_pretty(state))
+    recreateButtons(state.buttons)
   end
 end
 
-function setupInitialState()
+function setupButtons()
   --Chaos
   tokenResetButton(getObjectFromGUID('0e761d'),
     findAll('Chaos order token'))
@@ -185,7 +256,7 @@ function setupInitialState()
   Global.setVar("loaded", true)
 
   for k, v in pairs(findAllLike('Combat upgrades')) do
-    upgradeButton(getObjectFromGUID(v), nil)
+    upgradeButton(getObjectFromGUID(v))
   end
 end
 
@@ -196,8 +267,8 @@ end
 function upgradeCards(deck, playerColor)
   if (not state.combatLock[playerColor]) then
     state.combatLock[playerColor] = true
-    local combatDeck = state.combatDecks[playerColor]
-    state.plannedUpgrades[playerColor] = deck
+    local combatDeck = getObjectFromGUID(state.combatDecks[playerColor])
+    state.plannedUpgrades[playerColor] = deck.getGUID()
     local cards = combatDeck.getObjects()
     local cardNamesToGuids = {}
     for k, card in pairs(cards) do
@@ -209,7 +280,7 @@ function upgradeCards(deck, playerColor)
 
     local counter = 0
     state.floatingCards[playerColor] = cardNamesToGuids
-    state.combatDeckPositions[playerColor] = combatDeck.getPosition()
+    state.combatDeckPositions[playerColor] = vector_convertor(combatDeck.getPosition())
     for cardName, guids in pairs(cardNamesToGuids) do
       local goto1 = copyTable(combatDeck.getPosition())
       goto1.x = goto1.x - (10) + (counter * 4)
@@ -241,7 +312,7 @@ function upgradeCards(deck, playerColor)
 end
 
 function finishUpgrade(clickedCard, playerColor)
-  local betterCards = state.plannedUpgrades[playerColor]
+  local betterCards = getObjectFromGUID(state.plannedUpgrades[playerColor])
   local sideTablePos = copyTable(betterCards.getPosition())
   local cardNamesToGuids = state.floatingCards[playerColor]
   local combatDeckPosition = copyTable(state.combatDeckPositions[playerColor])
@@ -289,7 +360,7 @@ function refindCombatDeck(params)
     if (v.tag == "Deck") then
       for k2, cardTab in pairs(v.getObjects()) do
         if (cardTab.guid == params.combat) then
-          state.combatDecks[params.player] = v
+          state.combatDecks[params.player] = v.getGUID()
           v.setName("Combat Cards")
         end
         if (cardTab.guid == params.discard) then
@@ -546,8 +617,8 @@ function storePositions(objectGuids)
   for k, v in pairs(objectGuids) do
     local o = getObjectFromGUID(v)
     table.insert(guids, v)
-    table.insert(positions, o.getPosition())
-    table.insert(rotations, o.getRotation())
+    table.insert(positions, vector_convertor(o.getPosition()))
+    table.insert(rotations, vector_convertor(o.getRotation()))
     count = count + 1
   end
   storage['size'] = count
@@ -596,25 +667,27 @@ end
 
 function tokenResetButton(domino, tokens)
   button(domino, 'Reset Command\n Tokens', 'resetCommandTokens')
-  state.commandTokenObjects[domino] = storePositions(tokens)
+  state.commandTokenObjects[domino.getGUID()] = storePositions(tokens)
 end
 
-function resetCommandTokens(buttonObj, color)
-  resetPositions(state.commandTokenObjects[buttonObj], true)
+function resetCommandTokens(domino, color)
+  resetPositions(state.commandTokenObjects[domino.getGUID()], true)
 end
 
 function combatStartButton(domino, deck, playerColor)
   button(domino, 'Start Combat', 'startCombat')
-  state.playerCombatStartButtons[domino] = playerColor
-  state.playerCombatDomino[playerColor] = domino
-  state.combatDecks[playerColor] = deck
+  state.playerCombatStartButtons[domino.getGUID()] = playerColor
+  state.playerCombatDomino[playerColor] = domino.getGUID()
+  if (deck ~= nil) then
+    state.combatDecks[playerColor] = deck.getGUID()
+  end
 end
 
 function startCombat(domino, playerColor)
   if (not state.combatLock[playerColor]) then
     state.combatLock[playerColor] = true
-    local deck = state.combatDecks[state.playerCombatStartButtons[domino]]
-    if (state.combatDeckContents[deck] == nil) then
+    local deck = getObjectFromGUID(state.combatDecks[state.playerCombatStartButtons[domino.getGUID()]])
+    if (state.combatDeckContents[deck] == {} or state.combatDeckContents[deck] == nil) then
       deck.flip()
       state.combatDeckContents[deck] = { table.unpack(deck.getObjects()) }
       deck.shuffle()
@@ -686,14 +759,14 @@ end
 
 function combatEndButton(domino, deck, dice)
   button(domino, 'End Combat', 'endCombat')
-  state.combatDice[domino] = storePositions(dice)
+  state.combatDice[domino.getGUID()] = storePositions(dice)
 end
 
 function endCombat(domino, playerColor)
   if (not state.combatLock[playerColor]) then
     state.combatLock[playerColor] = true
     local deck = state.combatDecks[playerColor]
-    if (state.combatDeckContents[deck] ~= nil) then
+    if (state.combatDeckContents[deck] ~= nil and state.combatDeckContents[deck] ~= {}) then
       state.playedCombatCards[playerColor] = {}
       local cards = state.combatDeckContents[deck]
       for k, v in pairs(cards) do
@@ -703,7 +776,7 @@ function endCombat(domino, playerColor)
           card.putObject(deck)
         end
       end
-      state.combatDeckContents[deck] = nil
+      state.combatDeckContents[deck] = {}
       deck.flip()
       for k, v in pairs(state.combatTokensToPlayer) do
         if (v == playerColor) then
@@ -714,48 +787,9 @@ function endCombat(domino, playerColor)
         end
       end
     end
-    resetPositions(state.combatDice[domino])
+    resetPositions(state.combatDice[domino.getGUID()])
     timer(playerColor, "unlockCombat", { playerColor = playerColor }, 2)
   end
-end
-
-function button(domino, label, fn)
-  local button = {}
-  button.width = 1300
-  button.height = 600
-  button.position = { 0, -0.2, 0 }
-  button.rotation = { 180, 90, 0 }
-  button.click_function = fn
-  button.label = label
-  button.font_size = 180
-  button.function_owner = nil
-  domino.createButton(button)
-end
-
-function cardbutton(card, label, fn)
-  local button = {}
-  button.width = 125 * string.len(label)
-  button.height = 250
-  button.position = { 0, 2, 0 }
-  button.rotation = { 0, 0, 0 }
-  button.click_function = fn
-  button.label = label
-  button.font_size = 180
-  button.function_owner = nil
-  card.createButton(button)
-end
-
-function backcardbutton(card, label, fn)
-  local button = {}
-  button.width = 125 * string.len(label)
-  button.height = 250
-  button.position = { 0, -2, 0 }
-  button.rotation = { 0, 0, 180 }
-  button.click_function = fn
-  button.label = label
-  button.font_size = 180
-  button.function_owner = nil
-  card.createButton(button)
 end
 
 function setOnCollisionEnter(guids, fnName)
