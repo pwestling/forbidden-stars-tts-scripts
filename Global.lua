@@ -159,8 +159,6 @@ tileRadius = 4.75
 MAIN_BOARD_ZONE = "288d26"
 
 
---mutable state
-
 default_state = {
   reinforceTokensToPlayer = {},
   combatTokensToPlayer = {},
@@ -216,18 +214,89 @@ function onLoad(statestring)
   end
 end
 
+playerInitInfo = {
+  Red = {
+    combatStart = '713059',
+    combatEnd = 'e0982e',
+    tokenReset = '0e761d',
+    factionCardPos = { -18.75, 0.91, -31.80 },
+    objectiveTokenPos = { -18.41, 1.20, -34.33 },
+    combatDeckPos = { -27.75, 1.02, -28.75 },
+    eventCardPos = { -27.75, 1.01, -33.75 },
+    startUnitsUpperLeft = { -24.25, 0.96, -22.75 },
+    materialCounterPos = { -18.49, 0.95, -29.20 },
+    combatDieUpperLeft = { -61.89, 1.48, -31.75 },
+    factoryPilePos = { -59.26, 0.89, -26.02 },
+    bastionPilePos = { -59.24, 0.73, -24.09 },
+    cityPilePos = { -59.26, 1.02, -21.91 },
+    upgradeCardUpperLeft = { -78.26, 0.81, -22.68 },
+    modelPileUpperLeft = { -78.26, 0.81, -22.68 },
+    startTilePos = { -21.25, 1.11, -14.25 }
+  },
+  Yellow = {
+    combatStart = '6e8dbf',
+    combatEnd = '53d047',
+    tokenReset = 'f39151'
+  },
+  Blue = {
+    combatStart = 'b06168',
+    combatEnd = '75dde9',
+    tokenReset = 'c2f4c8'
+  },
+  Green = {
+    combatStart = 'dc2e41',
+    combatEnd = 'a91d0c',
+    tokenReset = 'a2d0c5'
+  }
+}
+
+factionInitInfo = {
+  Chaos = {
+    factionCard = 'e3444f',
+    eventCardDeck = 'fa3e3f',
+    chaosCombatDeck = '2831bc',
+    objectiveTokens = '5237e6',
+    factionTile = 'f708dc',
+    startingUnits = { '49b1f8', '87a502', '9e22f7', '983186', '15d8a0', '7d20fd' },
+    factionBag = 'bff26b'
+  }
+}
+
+function getByName(objectDescriptors, name)
+  for index, desc in pairs(objectDescriptors) do
+    if (desc.name == name) then
+      return desn.guid
+    end
+  end
+  return nil
+end
+
+function initFaction(color, faction)
+
+  local factionBag = getObectFromGUID(factionInitInfo[faction].factionBag)
+  local objectDescriptors = factionBag.getObject()
+
+end
+
 function setupButtons()
+
+  local redCombatStartButton = getObjectFromGUID('713059')
+  local redCombatEndButton = getObjectFromGUID('e0982e');
+  local redTokenResetButton = getObjectFromGUID('0e761d')
+
+  local yellowTokenResetButton = getObjectFromGUID('f39151');
   --Chaos
-  tokenResetButton(getObjectFromGUID('0e761d'),
+
+  tokenResetButton(redTokenResetButton,
     findAll('Chaos order token'))
-  combatStartButton(getObjectFromGUID('713059'),
+  combatStartButton(redCombatStartButton,
     find('Chaos Combat Cards'),
     "Red")
-  combatEndButton(getObjectFromGUID('e0982e'),
+  combatEndButton(redCombatEndButton,
     find('Chaos Combat Cards'),
     findAll('Chaos combat die'))
   --Eldar
-  tokenResetButton(getObjectFromGUID('f39151'),
+  tokenResetButton(,
     findAll('Eldar order token'))
   combatStartButton(getObjectFromGUID('6e8dbf'),
     find('Eldar Combat Cards'),
@@ -687,13 +756,11 @@ function startCombat(domino, playerColor)
   if (not state.combatLock[playerColor]) then
     state.combatLock[playerColor] = true
     local deck = getObjectFromGUID(state.combatDecks[state.playerCombatStartButtons[domino.getGUID()]])
-    if (state.combatDeckContents[deck] == {} or state.combatDeckContents[deck] == nil) then
-      deck.flip()
-      state.combatDeckContents[deck] = { table.unpack(deck.getObjects()) }
-      deck.shuffle()
-      deck.dealToColor(5, playerColor)
-      timer(playerColor, "initHand", { playerColor = playerColor }, 1)
-    end
+    deck.flip()
+    state.combatDeckContents[deck.getGUID()] = { table.unpack(deck.getObjects()) }
+    deck.shuffle()
+    deck.dealToColor(5, playerColor)
+    timer(playerColor, "initHand", { playerColor = playerColor }, 1)
     timer(playerColor, "unlockCombat", { playerColor = playerColor }, 2)
   end
 end
@@ -765,25 +832,23 @@ end
 function endCombat(domino, playerColor)
   if (not state.combatLock[playerColor]) then
     state.combatLock[playerColor] = true
-    local deck = state.combatDecks[playerColor]
-    if (state.combatDeckContents[deck] ~= nil and state.combatDeckContents[deck] ~= {}) then
-      state.playedCombatCards[playerColor] = {}
-      local cards = state.combatDeckContents[deck]
-      for k, v in pairs(cards) do
-        local card = getObjectFromGUID(v['guid'])
-        if card ~= nil then
-          card.clearButtons()
-          card.putObject(deck)
-        end
+    local deck = getObjectFromGUID(state.combatDecks[playerColor])
+    state.playedCombatCards[playerColor] = {}
+    local cards = state.combatDeckContents[deck.getGUID()]
+    for k, v in pairs(cards) do
+      local card = getObjectFromGUID(v['guid'])
+      if card ~= nil then
+        card.clearButtons()
+        card.putObject(deck)
       end
-      state.combatDeckContents[deck] = {}
-      deck.flip()
-      for k, v in pairs(state.combatTokensToPlayer) do
-        if (v == playerColor) then
-          local obj = getObjectFromGUID(k)
-          if (obj ~= nil) then
-            obj.destruct()
-          end
+    end
+    state.combatDeckContents[deck.getGUID()] = {}
+    deck.flip()
+    for k, v in pairs(state.combatTokensToPlayer) do
+      if (v == playerColor) then
+        local obj = getObjectFromGUID(k)
+        if (obj ~= nil) then
+          obj.destruct()
         end
       end
     end
