@@ -185,7 +185,8 @@ default_state = {
 state = {}
 
 function onSave()
-  return JSON.encode(state)
+  return ""
+  --return JSON.encode(state)
 end
 
 function onLoad(statestring)
@@ -198,7 +199,7 @@ function onLoad(statestring)
   --clearLua(findAllLike('order token'))
   --clearLua(findAllWithTag('Bag'))
 
-
+  statestring = ""
   if (statestring == "") then
     print("Recreating state")
     --noinspection GlobalCreationOutsideO
@@ -207,48 +208,12 @@ function onLoad(statestring)
   else
     print("Loading state")
     --noinspection GlobalCreationOutsideO
-    print(statestring)
     state = JSON.decode(statestring)
-    print(JSON.encode_pretty(state))
     recreateButtons(state.buttons)
   end
 end
 
-playerInitInfo = {
-  Red = {
-    combatStart = '713059',
-    combatEnd = 'e0982e',
-    tokenReset = '0e761d',
-    factionCardPos = { -18.75, 0.91, -31.80 },
-    objectiveTokenPos = { -18.41, 1.20, -34.33 },
-    combatDeckPos = { -27.75, 1.02, -28.75 },
-    eventCardPos = { -27.75, 1.01, -33.75 },
-    startUnitsUpperLeft = { -24.25, 0.96, -22.75 },
-    materialCounterPos = { -18.49, 0.95, -29.20 },
-    combatDieUpperLeft = { -61.89, 1.48, -31.75 },
-    factoryPilePos = { -59.26, 0.89, -26.02 },
-    bastionPilePos = { -59.24, 0.73, -24.09 },
-    cityPilePos = { -59.26, 1.02, -21.91 },
-    upgradeCardUpperLeft = { -78.26, 0.81, -22.68 },
-    modelPileUpperLeft = { -78.26, 0.81, -22.68 },
-    startTilePos = { -21.25, 1.11, -14.25 }
-  },
-  Yellow = {
-    combatStart = '6e8dbf',
-    combatEnd = '53d047',
-    tokenReset = 'f39151'
-  },
-  Blue = {
-    combatStart = 'b06168',
-    combatEnd = '75dde9',
-    tokenReset = 'c2f4c8'
-  },
-  Green = {
-    combatStart = 'dc2e41',
-    combatEnd = 'a91d0c',
-    tokenReset = 'a2d0c5'
-  }
-}
+
 
 factionInitInfo = {
   Chaos = {
@@ -257,25 +222,163 @@ factionInitInfo = {
     chaosCombatDeck = '2831bc',
     objectiveTokens = '5237e6',
     factionTile = 'f708dc',
-    startingUnits = { '49b1f8', '87a502', '9e22f7', '983186', '15d8a0', '7d20fd' },
+    startingUnits = {
+      ['49b1f8'] = true,
+      ['87a502'] = true,
+      ['9e22f7'] = true,
+      ['983186'] = true,
+      ['15d8a0'] = true,
+      ['7d20fd'] = true
+    },
     factionBag = 'bff26b'
   }
 }
 
-function getByName(objectDescriptors, name)
+function getByPred(objectDescriptors, pred)
+  local results = {}
   for index, desc in pairs(objectDescriptors) do
-    if (desc.name == name) then
-      return desn.guid
+    if (pred(desc)) then
+      table.insert(results, desc.guid)
     end
   end
-  return nil
+  return results
+end
+
+function getByNameLike(objectDescriptors, name)
+  local result = getByPred(objectDescriptors, function(desc) return string.find(desc.name, name) end)
+  return result
+end
+
+function getByName(objectDescriptors, name)
+  local result = getByPred(objectDescriptors, function(desc) return desc.name == name end)
+  return result
+end
+
+function getByGuids(objectDescriptors, guids)
+  local result = getByPred(objectDescriptors, function(desc) return guids[desc.guid] end)
+  return result
+end
+
+playerInitInfo = {
+  Red = {
+    combatStart = '713059',
+    combatEnd = 'e0982e',
+    tokenReset = '0e761d',
+    orderTokenUpperLeft = { pos = { -9.25, 1.06, -28.25 }, rot = { 0.00, 180, 180 } },
+    factionCardPos = { pos = { -18.75, 0.91, -30.80 }, rot = { 0.00, 179.85, 0.00 } },
+    objectiveTokenPos = { pos = { -18.41, 1.20, -34.33 }, rot = { 0.00, 180.00, 180.00 } },
+    combatDeckPos = { pos = { -27.75, 1.02, -28.75 }, rot = { 0.00, 180.00, 0.00 } },
+    eventCardPos = { pos = { -27.75, 1.01, -33.75 }, rot = { 0.00, 180.00, 0.00 } },
+    startUnitsUpperLeft = { pos = { -24.25, 0.96, -22.75 }, rot = { 0, 0, 0 } },
+    materialCounterPos = { pos = { -18.49, 0.95, -28.20 }, rot = { 0.00, 360, 0.00 } },
+    combatDieUpperLeft = { pos = { -61.89, 1.48, -31.75 }, rot = { 270.00, 360, 0.00 } },
+    factoryPilePos = { pos = { -59.26, 0.89, -26.02 }, rot = { 0, 0, 0 } },
+    bastionPilePos = { pos = { -59.24, 0.73, -24.09 }, rot = { 0, 0, 0 } },
+    cityPilePos = { pos = { -59.26, 1.02, -21.91 }, rot = { 0, 0, 0 } },
+    upgradeCardUpperLeft = { pos = { -78.26, 0.81, -22.68 }, rot = { 0.00, 180, 0.00 } },
+    modelPileUpperLeft = { pos = { -75.26, 0.81, -32.68 }, rot = { 0, 180, 0 } },
+    startTilePos = { pos = { -21.25, 1.11, -14.25 }, rot = { 0.00, 180, 180 } },
+    dir = 1
+  },
+  Yellow = {
+    combatStart = '6e8dbf',
+    combatEnd = '53d047',
+    tokenReset = 'f39151',
+    dir = 1
+  },
+  Blue = {
+    combatStart = 'b06168',
+    combatEnd = '75dde9',
+    tokenReset = 'c2f4c8',
+    dir = -1
+  },
+  Green = {
+    combatStart = 'dc2e41',
+    combatEnd = 'a91d0c',
+    tokenReset = 'a2d0c5',
+    dir = -1
+  }
+}
+
+cardWidth = 3.7
+cardHeight = 4.8
+
+function lockCallback(obj, params)
+  obj.setLock(params.lock)
+end
+
+function moveTo(guids, pos, bag, lock)
+  bag.takeObject({
+    guid = guids[1],
+    position = pos.pos,
+    rotation = pos.rot,
+    callback = "lockCallback",
+    callback_owner = Global,
+    params = { lock = lock }
+  })
+end
+
+function DIV(a, b)
+  return (a - a % b) / b
+end
+
+function gridLayout(guids, pos, dir, cols, x, z, bag, lock)
+  local index = 0
+  for i, g in pairs(guids) do
+    for i, guid in pairs(g) do
+      local newPos = {}
+      newPos['x'] = pos.pos[1] + ((index % cols) * x * dir)
+      newPos['z'] = pos.pos[3] + (DIV(index, cols) * z * (-dir))
+      newPos['y'] = pos.pos[2]
+      moveTo({ guid }, { pos = newPos, rot = pos.rot }, bag, lock)
+      index = index + 1
+    end
+  end
 end
 
 function initFaction(color, faction)
-
-  local factionBag = getObectFromGUID(factionInitInfo[faction].factionBag)
-  local objectDescriptors = factionBag.getObject()
-
+  local factionTable = factionInitInfo[faction]
+  local factionBag = getObjectFromGUID(factionTable.factionBag)
+  local objectDescriptors = factionBag.getObjects()
+  local factionCard = getByName(objectDescriptors, "Faction Card")
+  local eventDeck = getByName(objectDescriptors, "Event cards")
+  local combatDeck = getByName(objectDescriptors, faction .. " Combat Cards")
+  local objectiveTokens = getByName(objectDescriptors, "Objective tokens")
+  local factionTile = getByName(objectDescriptors, "System tile")
+  local cities = getByName(objectDescriptors, "Cities")
+  local factories = getByName(objectDescriptors, "Factories")
+  local bastions = getByName(objectDescriptors, "Bastions")
+  local dice = getByName(objectDescriptors, faction .. " combat die")
+  local level0upgrades = getByName(objectDescriptors, "Combat upgrades (LV 0)")
+  local level2upgrades = getByName(objectDescriptors, "Combat upgrades (LV 2)")
+  local level3upgrades = getByName(objectDescriptors, "Combat upgrades (LV 3)")
+  local orderUpgrades = getByName(objectDescriptors, "Order upgrades")
+  local modelPiles = getByNameLike(objectDescriptors, "Models")
+  local orderTokens = getByNameLike(objectDescriptors, "order token")
+  local counter = getByName(objectDescriptors, "materiel")
+  local startUnits = getByGuids(objectDescriptors, factionTable.startingUnits)
+  local colorTable = playerInitInfo[color]
+  moveTo(factionCard, colorTable.factionCardPos, factionBag, true)
+  moveTo(eventDeck, colorTable.eventCardPos, factionBag, true)
+  moveTo(combatDeck, colorTable.combatDeckPos, factionBag, true)
+  moveTo(objectiveTokens, colorTable.objectiveTokenPos, factionBag, true)
+  moveTo(factionTile, colorTable.startTilePos, factionBag, false)
+  moveTo(cities, colorTable.cityPilePos, factionBag, true)
+  moveTo(factories, colorTable.factoryPilePos, factionBag, true)
+  moveTo(bastions, colorTable.bastionPilePos, factionBag, true)
+  moveTo(counter, colorTable.materialCounterPos, factionBag, true)
+  gridLayout({ dice }, colorTable.combatDieUpperLeft, colorTable.dir, 4, dieXWidth, dieXWidth, factionBag, false)
+--  gridLayout({ modelPiles }, colorTable.modelPileUpperLeft,
+--    colorTable.dir, 10, 2.4, 2.4, factionBag, true)
+--  gridLayout({ startUnits }, colorTable.startUnitsUpperLeft,
+--    colorTable.dir, 5, 3, 3, factionBag, false)
+  gridLayout({ orderTokens }, colorTable.orderTokenUpperLeft,
+    colorTable.dir, 2, 2.5, 2.5, factionBag, false)
+ -- gridLayout({ level0upgrades, orderUpgrades, level2upgrades, level3upgrades},
+ --   colorTable.upgradeCardUpperLeft, colorTable.dir, 5, cardWidth, cardHeight, factionBag, true)
+  tokenResetButton(getObjectFromGUID(colorTable.), orderTokens)
+  combatStartButton(redCombatStartButton, combatDeck[1], color)
+  combatEndButton(redCombatEndButton, combatDeck[1], dice)
 end
 
 function setupButtons()
@@ -287,16 +390,10 @@ function setupButtons()
   local yellowTokenResetButton = getObjectFromGUID('f39151');
   --Chaos
 
-  tokenResetButton(redTokenResetButton,
-    findAll('Chaos order token'))
-  combatStartButton(redCombatStartButton,
-    find('Chaos Combat Cards'),
-    "Red")
-  combatEndButton(redCombatEndButton,
-    find('Chaos Combat Cards'),
-    findAll('Chaos combat die'))
+  initFaction("Red", "Chaos")
+
   --Eldar
-  tokenResetButton(,
+  tokenResetButton(yellowTokenResetButton,
     findAll('Eldar order token'))
   combatStartButton(getObjectFromGUID('6e8dbf'),
     find('Eldar Combat Cards'),
@@ -601,18 +698,20 @@ end
 
 function retrieveItems(params)
   local bagName = params.bag.getName()
-  local retrieveOffset = 10
-  local retrieveHeight = 2
-  for k, v in pairs(params.bag.getObjects()) do
-    local n = v.name
-    if (not (string.find(bagName, n) or string.find(bagName, n .. "s") or string.find(bagName, string.gsub(n, "y$", "ies")))) then
-      print("Retrieving")
-      local pos = params.bag.getPosition()
-      pos['x'] = pos['x'] + (retrieveOffset * (-1 * sign(pos['x'])))
-      pos['z'] = pos['z'] + (retrieveOffset * (-1 * sign(pos['z'])))
-      pos['y'] = pos['y'] + retrieveHeight
-      params.bag.takeObject({ guid = v.guid, position = pos })
-      retrieveHeight = retrieveHeight + 2
+  if (not string.find(bagName, "Faction")) then
+    local retrieveOffset = 10
+    local retrieveHeight = 2
+    for k, v in pairs(params.bag.getObjects()) do
+      local n = v.name
+      if (not (string.find(bagName, n) or string.find(bagName, n .. "s") or string.find(bagName, string.gsub(n, "y$", "ies")))) then
+        print("Retrieving")
+        local pos = params.bag.getPosition()
+        pos['x'] = pos['x'] + (retrieveOffset * (-1 * sign(pos['x'])))
+        pos['z'] = pos['z'] + (retrieveOffset * (-1 * sign(pos['z'])))
+        pos['y'] = pos['y'] + retrieveHeight
+        params.bag.takeObject({ guid = v.guid, position = pos })
+        retrieveHeight = retrieveHeight + 2
+      end
     end
   end
 end
