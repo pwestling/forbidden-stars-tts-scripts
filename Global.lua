@@ -68,6 +68,15 @@ function copyTable(tab)
   return result
 end
 
+function tabToS(tab)
+  local s = "{"
+  for k, v in pairs(tab) do
+    s = s .. k .. "=" .. tostring(v) .. ","
+  end
+  s = s .. "}"
+  return s
+end
+
 -- fixed data
 
 commandTokenRotation = { x = 0, y = 180, z = 0 }
@@ -213,22 +222,40 @@ function onLoad(statestring)
   end
 end
 
+function concatArrs(arrs)
+  local result = {}
+  for k, a in pairs(arrs) do
+    for k2, v in pairs(a) do
+      table.insert(result, v)
+    end
+  end
+  return result
+end
 
 
 factionInitInfo = {
   Chaos = {
-    factionCard = 'e3444f',
-    eventCardDeck = 'fa3e3f',
-    chaosCombatDeck = '2831bc',
-    objectiveTokens = '5237e6',
-    factionTile = 'f708dc',
+    objectiveTokens = {
+      advance = { '911f30', '656f0c' },
+      deploy = { '2d02ab', '7fc185' },
+      strategize = { '787faf', 'b5b9ec' },
+      dominate = { '5244ce', '2607fc' }
+    },
     startingUnits = {
-      ['49b1f8'] = true,
-      ['87a502'] = true,
-      ['9e22f7'] = true,
-      ['983186'] = true,
-      ['15d8a0'] = true,
-      ['7d20fd'] = true
+      '49b1f8',
+      '87a502',
+      '9e22f7',
+      '983186',
+      '7d20fd',
+      '15d8a0'
+    },
+    modelPiles = {
+      '36cbd8',
+      '14836a',
+      '632bba',
+      'e73481',
+      'e3f272',
+      'aa302c'
     },
     factionBag = 'bff26b'
   }
@@ -254,11 +281,6 @@ function getByName(objectDescriptors, name)
   return result
 end
 
-function getByGuids(objectDescriptors, guids)
-  local result = getByPred(objectDescriptors, function(desc) return guids[desc.guid] end)
-  return result
-end
-
 playerInitInfo = {
   Red = {
     combatStart = '713059',
@@ -266,17 +288,17 @@ playerInitInfo = {
     tokenReset = '0e761d',
     orderTokenUpperLeft = { pos = { -9.25, 1.06, -28.25 }, rot = { 0.00, 180, 180 } },
     factionCardPos = { pos = { -18.75, 0.91, -30.80 }, rot = { 0.00, 179.85, 0.00 } },
-    objectiveTokenPos = { pos = { -18.41, 1.20, -34.33 }, rot = { 0.00, 180.00, 180.00 } },
+    objectiveTokenPos = { pos = { -18.41, 1.53, -33.14 }, rot = { 0.00, 180.00, 180.00 } },
     combatDeckPos = { pos = { -27.75, 1.02, -28.75 }, rot = { 0.00, 180.00, 0.00 } },
     eventCardPos = { pos = { -27.75, 1.01, -33.75 }, rot = { 0.00, 180.00, 0.00 } },
     startUnitsUpperLeft = { pos = { -24.25, 0.96, -22.75 }, rot = { 0, 0, 0 } },
-    materialCounterPos = { pos = { -18.49, 0.95, -28.20 }, rot = { 0.00, 360, 0.00 } },
+    materialCounterPos = { pos = { -18.49, 0.95, -28.20 }, rot = { 0.35, 358.33, 358.10 } },
     combatDieUpperLeft = { pos = { -61.89, 1.48, -31.75 }, rot = { 270.00, 360, 0.00 } },
     factoryPilePos = { pos = { -59.26, 0.89, -26.02 }, rot = { 0, 0, 0 } },
     bastionPilePos = { pos = { -59.24, 0.73, -24.09 }, rot = { 0, 0, 0 } },
     cityPilePos = { pos = { -59.26, 1.02, -21.91 }, rot = { 0, 0, 0 } },
     upgradeCardUpperLeft = { pos = { -78.26, 0.81, -22.68 }, rot = { 0.00, 180, 0.00 } },
-    modelPileUpperLeft = { pos = { -75.26, 0.81, -32.68 }, rot = { 0, 180, 0 } },
+    modelPileUpperLeft = { pos = { -78.26, 0.81, -32.68 }, rot = { 0, 180, 0 } },
     startTilePos = { pos = { -21.25, 1.11, -14.25 }, rot = { 0.00, 180, 180 } },
     dir = 1
   },
@@ -353,32 +375,57 @@ function initFaction(color, faction)
   local level2upgrades = getByName(objectDescriptors, "Combat upgrades (LV 2)")
   local level3upgrades = getByName(objectDescriptors, "Combat upgrades (LV 3)")
   local orderUpgrades = getByName(objectDescriptors, "Order upgrades")
-  local modelPiles = getByNameLike(objectDescriptors, "Models")
-  local orderTokens = getByNameLike(objectDescriptors, "order token")
   local counter = getByName(objectDescriptors, "materiel")
-  local startUnits = getByGuids(objectDescriptors, factionTable.startingUnits)
   local colorTable = playerInitInfo[color]
   moveTo(factionCard, colorTable.factionCardPos, factionBag, true)
-  moveTo(eventDeck, colorTable.eventCardPos, factionBag, true)
-  moveTo(combatDeck, colorTable.combatDeckPos, factionBag, true)
-  moveTo(objectiveTokens, colorTable.objectiveTokenPos, factionBag, true)
+  moveTo(eventDeck, colorTable.eventCardPos, factionBag, false)
+  moveTo(combatDeck, colorTable.combatDeckPos, factionBag, false)
+  moveTo(objectiveTokens, colorTable.objectiveTokenPos, factionBag, false)
   moveTo(factionTile, colorTable.startTilePos, factionBag, false)
-  moveTo(cities, colorTable.cityPilePos, factionBag, true)
-  moveTo(factories, colorTable.factoryPilePos, factionBag, true)
-  moveTo(bastions, colorTable.bastionPilePos, factionBag, true)
+  moveTo(cities, colorTable.cityPilePos, factionBag, false)
+  moveTo(factories, colorTable.factoryPilePos, factionBag, false)
+  moveTo(bastions, colorTable.bastionPilePos, factionBag, false)
   moveTo(counter, colorTable.materialCounterPos, factionBag, true)
-  gridLayout({ dice }, colorTable.combatDieUpperLeft, colorTable.dir, 4, dieXWidth, dieXWidth, factionBag, false)
---  gridLayout({ modelPiles }, colorTable.modelPileUpperLeft,
---    colorTable.dir, 10, 2.4, 2.4, factionBag, true)
---  gridLayout({ startUnits }, colorTable.startUnitsUpperLeft,
---    colorTable.dir, 5, 3, 3, factionBag, false)
-  gridLayout({ orderTokens }, colorTable.orderTokenUpperLeft,
+  gridLayout({ dice }, colorTable.combatDieUpperLeft, colorTable.dir, 4, dieXWidth + 0.1, dieXWidth + 0.1, factionBag, false)
+  gridLayout({ factionTable.modelPiles }, colorTable.modelPileUpperLeft,
+    colorTable.dir, 10, 2.4, 2.4, factionBag, true)
+  gridLayout({ factionTable.startingUnits }, colorTable.startUnitsUpperLeft,
+    colorTable.dir, 5, 3, 3, factionBag, false)
+  local objTokens = {
+    factionTable.objectiveTokens.advance,
+    factionTable.objectiveTokens.dominate,
+    factionTable.objectiveTokens.strategize,
+    factionTable.objectiveTokens.deploy
+  }
+  gridLayout(objTokens,
+    colorTable.orderTokenUpperLeft,
     colorTable.dir, 2, 2.5, 2.5, factionBag, false)
- -- gridLayout({ level0upgrades, orderUpgrades, level2upgrades, level3upgrades},
- --   colorTable.upgradeCardUpperLeft, colorTable.dir, 5, cardWidth, cardHeight, factionBag, true)
-  tokenResetButton(getObjectFromGUID(colorTable.), orderTokens)
-  combatStartButton(redCombatStartButton, combatDeck[1], color)
-  combatEndButton(redCombatEndButton, combatDeck[1], dice)
+  gridLayout({ level0upgrades, orderUpgrades, level2upgrades, level3upgrades },
+    colorTable.upgradeCardUpperLeft, colorTable.dir, 5, cardWidth, cardHeight, factionBag, true)
+  local id = "initPlayerButtons" .. color .. faction
+  Timer.destroy(id)
+  Timer.create({
+    identifier = id,
+    function_name = 'playerButtons',
+    parameters = {
+      colorTable = colorTable,
+      orderTokens = concatArrs(objTokens),
+      combatDeck = combatDeck[1],
+      dice = dice,
+      color = color,
+      upgradeCards = concatArrs({ level0upgrades, level2upgrades, level3upgrades })
+    },
+    delay = 1
+  })
+end
+
+function playerButtons(params)
+  tokenResetButton(getObjectFromGUID(params.colorTable.tokenReset), params.orderTokens)
+  combatStartButton(getObjectFromGUID(params.colorTable.combatStart), params.combatDeck, params.color)
+  combatEndButton(getObjectFromGUID(params.colorTable.combatEnd), params.combatDeck, params.dice)
+  for k, v in pairs(params.upgradeCards) do
+    upgradeButton(getObjectFromGUID(v))
+  end
 end
 
 function setupButtons()
@@ -390,39 +437,39 @@ function setupButtons()
   local yellowTokenResetButton = getObjectFromGUID('f39151');
   --Chaos
 
-  initFaction("Red", "Chaos")
+  --initFaction("Red", "Chaos")
 
   --Eldar
   tokenResetButton(yellowTokenResetButton,
     findAll('Eldar order token'))
   combatStartButton(getObjectFromGUID('6e8dbf'),
-    find('Eldar Combat Cards'),
+    find('Eldar Combat Cards').getGUID(),
     "Yellow")
   combatEndButton(getObjectFromGUID('53d047'),
-    find('Eldar Combat Cards'),
+    find('Eldar Combat Cards').getGUID(),
     findAll('Eldar combat die'))
   --SMs
   tokenResetButton(getObjectFromGUID('c2f4c8'),
     findAll('Space Marine order token'))
   combatStartButton(getObjectFromGUID('b06168'),
-    find('Space Marine Combat Cards'),
+    find('Space Marine Combat Cards').getGUID(),
     "Blue")
   combatEndButton(getObjectFromGUID('75dde9'),
-    find('Space Marine Combat Cards'),
+    find('Space Marine Combat Cards').getGUID(),
     findAll('Space Marine combat die'))
   --Orks
   tokenResetButton(getObjectFromGUID('a2d0c5'),
     findAll('Ork order token'))
   combatStartButton(getObjectFromGUID('dc2e41'),
-    find('Ork Combat Cards'),
+    find('Ork Combat Cards').getGUID(),
     "Green")
   combatEndButton(getObjectFromGUID('a91d0c'),
-    find('Ork Combat Cards'),
+    find('Ork Combat Cards').getGUID(),
     findAll('Ork combat die'))
   Global.setVar("loaded", true)
 
   for k, v in pairs(findAllLike('Combat upgrades')) do
-    upgradeButton(getObjectFromGUID(v))
+    --upgradeButton(getObjectFromGUID(v))
   end
 end
 
@@ -431,6 +478,7 @@ function upgradeButton(deck)
 end
 
 function upgradeCards(deck, playerColor)
+  print(playerColor, state.combatLock[playerColor])
   if (not state.combatLock[playerColor]) then
     state.combatLock[playerColor] = true
     local combatDeck = getObjectFromGUID(state.combatDecks[playerColor])
@@ -842,25 +890,25 @@ function resetCommandTokens(domino, color)
   resetPositions(state.commandTokenObjects[domino.getGUID()], true)
 end
 
-function combatStartButton(domino, deck, playerColor)
+function combatStartButton(domino, deckGuid, playerColor)
   button(domino, 'Start Combat', 'startCombat')
   state.playerCombatStartButtons[domino.getGUID()] = playerColor
   state.playerCombatDomino[playerColor] = domino.getGUID()
-  if (deck ~= nil) then
-    state.combatDecks[playerColor] = deck.getGUID()
-  end
+  local deck = getObjectFromGUID(deckGuid)
+  state.combatDecks[playerColor] = deck.getGUID()
 end
 
 function startCombat(domino, playerColor)
+  print(playerColor, state.combatLock[playerColor])
   if (not state.combatLock[playerColor]) then
     state.combatLock[playerColor] = true
-    local deck = getObjectFromGUID(state.combatDecks[state.playerCombatStartButtons[domino.getGUID()]])
+    print(playerColor, state.combatLock[playerColor])
+    local deck = getObjectFromGUID(state.combatDecks[playerColor])
     deck.flip()
     state.combatDeckContents[deck.getGUID()] = { table.unpack(deck.getObjects()) }
     deck.shuffle()
     deck.dealToColor(5, playerColor)
     timer(playerColor, "initHand", { playerColor = playerColor }, 1)
-    timer(playerColor, "unlockCombat", { playerColor = playerColor }, 2)
   end
 end
 
@@ -929,31 +977,30 @@ function combatEndButton(domino, deck, dice)
 end
 
 function endCombat(domino, playerColor)
-  if (not state.combatLock[playerColor]) then
-    state.combatLock[playerColor] = true
-    local deck = getObjectFromGUID(state.combatDecks[playerColor])
-    state.playedCombatCards[playerColor] = {}
-    local cards = state.combatDeckContents[deck.getGUID()]
-    for k, v in pairs(cards) do
-      local card = getObjectFromGUID(v['guid'])
-      if card ~= nil then
-        card.clearButtons()
-        card.putObject(deck)
-      end
+  state.combatLock[playerColor] = true
+  local deck = getObjectFromGUID(state.combatDecks[playerColor])
+  state.playedCombatCards[playerColor] = {}
+  local cards = state.combatDeckContents[deck.getGUID()]
+  for k, v in pairs(cards) do
+    local card = getObjectFromGUID(v['guid'])
+    if card ~= nil then
+      print(card)
+      card.clearButtons()
+      card.putObject(deck)
     end
-    state.combatDeckContents[deck.getGUID()] = {}
-    deck.flip()
-    for k, v in pairs(state.combatTokensToPlayer) do
-      if (v == playerColor) then
-        local obj = getObjectFromGUID(k)
-        if (obj ~= nil) then
-          obj.destruct()
-        end
-      end
-    end
-    resetPositions(state.combatDice[domino.getGUID()])
-    timer(playerColor, "unlockCombat", { playerColor = playerColor }, 2)
   end
+  state.combatDeckContents[deck.getGUID()] = {}
+  deck.flip()
+  for k, v in pairs(state.combatTokensToPlayer) do
+    if (v == playerColor) then
+      local obj = getObjectFromGUID(k)
+      if (obj ~= nil) then
+        obj.destruct()
+      end
+    end
+  end
+  resetPositions(state.combatDice[domino.getGUID()])
+  timer(playerColor, "unlockCombat", { playerColor = playerColor }, 2)
 end
 
 function setOnCollisionEnter(guids, fnName)
