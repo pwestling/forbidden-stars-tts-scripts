@@ -4,7 +4,7 @@ function vector_convertor(v)
   return { x = v.x, y = v.y, z = v.z }
 end
 
-function button(domino, label, fn)
+function detailedbutton(domino, label, fn, font_size)
   local button = {}
   button.width = 1300
   button.height = 600
@@ -12,10 +12,14 @@ function button(domino, label, fn)
   button.rotation = { 180, 90, 0 }
   button.click_function = fn
   button.label = label
-  button.font_size = 180
+  button.font_size = font_size
   button.function_owner = nil
   domino.createButton(button)
   state.buttons[domino.getGUID()] = button
+end
+
+function button(domino, label, fn)
+  detailedbutton(domino, label, fn, 180)
 end
 
 function cardbutton(card, label, fn)
@@ -48,7 +52,7 @@ end
 
 function removeButtons(obj)
   obj.clearButtons()
-  stat.buttons[obj.getGUID()] = nil
+  state.buttons[obj.getGUID()] = nil
 end
 
 function recreateButtons(buttonTabs)
@@ -188,6 +192,7 @@ default_state = {
     Green = false
   },
   commandTokenObjects = {},
+  factionButtons = {},
   buttons = {}
 }
 
@@ -201,8 +206,8 @@ end
 function onLoad(statestring)
   print("Loading")
 
-  setOnCollisionEnter(findAllLike('order token'), 'commandTokenCollision')
-  setOnCollisionEnter(findAllWithTag('Bag'), 'bagCollision')
+  --setOnCollisionEnter(findAllLike('order token'), 'commandTokenCollision')
+  --setOnCollisionEnter(findAllWithTag('Bag'), 'bagCollision')
   --setOnCollisionEnter(findAllLike('Combat Pawn'), 'combatPawnCollision')
   --clearLua(findAllWithTag('Infinite'))
   --clearLua(findAllLike('order token'))
@@ -258,6 +263,32 @@ factionInitInfo = {
       'aa302c'
     },
     factionBag = 'bff26b'
+  },
+  Eldar = {
+    objectiveTokens = {
+      advance = { 'ea7418', '91d7c0' },
+      deploy = { '8ec1f0', '99d309' },
+      strategize = { '9d41d1', 'b05da8' },
+      dominate = { '525259', 'a68c5d' }
+    },
+    startingUnits = {
+      '06ff1f',
+      '05139e',
+      '9fa8cc',
+      '994392',
+      '51e527',
+      '9cd9d3',
+      '9479b9'
+    },
+    modelPiles = {
+      '26e79f',
+      '581425',
+      '4b093a',
+      'f16fe6',
+      '3b40cb',
+      '5c09c9'
+    },
+    factionBag = 'a67614'
   }
 }
 
@@ -292,7 +323,7 @@ playerInitInfo = {
     combatDeckPos = { pos = { -27.75, 1.02, -28.75 }, rot = { 0.00, 180.00, 0.00 } },
     eventCardPos = { pos = { -27.75, 1.01, -33.75 }, rot = { 0.00, 180.00, 0.00 } },
     startUnitsUpperLeft = { pos = { -24.25, 0.96, -22.75 }, rot = { 0, 0, 0 } },
-    materialCounterPos = { pos = { -18.49, 0.95, -28.20 }, rot = { 0.35, 358.33, 358.10 } },
+    materialCounterPos = { pos = { -18.49, 0.95, -28.20 }, rot = { 0, 0, 0 } },
     combatDieUpperLeft = { pos = { -61.89, 1.48, -31.75 }, rot = { 270.00, 360, 0.00 } },
     factoryPilePos = { pos = { -59.26, 0.89, -26.02 }, rot = { 0, 0, 0 } },
     bastionPilePos = { pos = { -59.24, 0.73, -24.09 }, rot = { 0, 0, 0 } },
@@ -306,18 +337,60 @@ playerInitInfo = {
     combatStart = '6e8dbf',
     combatEnd = '53d047',
     tokenReset = 'f39151',
+    orderTokenUpperLeft = { pos = { 6.25, 1.06, -28.25 }, rot = { 0.00, 180, 180 } },
+    factionCardPos = { pos = { 18.25, 0.91, -30.75 }, rot = { 0, 180, 0 } },
+    objectiveTokenPos = { pos = { 18.46, 1.20, -33.16 }, rot = { 0, 180, 180 } },
+    combatDeckPos = { pos = { 26.75, 1.02, -28.75 }, rot = { 0, 180, 0 } },
+    eventCardPos = { pos = { 26.75, 1.01, -33.75 }, rot = { 0, 180, 0 } },
+    startUnitsUpperLeft = { pos = { 17.75, 0.96, -22.75 }, rot = { 0, 0, 0 } },
+    materialCounterPos = { pos = { 18.43, 1.09, -28.09 }, rot = { 0, 0, 0 } },
+    combatDieUpperLeft = { pos = { 55.69, 1.96, -33.63 }, rot = { 270, 0, 0 } },
+    factoryPilePos = { pos = { 76.45, 1.37, -26.76 }, rot = { 0, 0, 0 } },
+    bastionPilePos = { pos = { 76.59, 1.21, -24.24 }, rot = { 0, 0, 0 } },
+    cityPilePos = { pos = { 76.59, 1.50, -21.74 }, rot = { 0, 0, 0 } },
+    upgradeCardUpperLeft = { pos = { 57.27, 1.28, -22.85 }, rot = { 0, 180, 0 } },
+    modelPileUpperLeft = { pos = { 63.51, 1.21, -35.33 }, rot = { 0, 0, 0 } },
+    startTilePos = { pos = { 20.75, 1.11, -13.75 }, rot = { 0, 180, 180 } },
     dir = 1
   },
   Blue = {
     combatStart = 'b06168',
     combatEnd = '75dde9',
     tokenReset = 'c2f4c8',
+    orderTokenUpperLeft = { pos = { 9.75, 1.06, 28.25 }, rot = { 0, 0, 180.00 } },
+    factionCardPos = { pos = { 18.22, 0.91, 30.75 }, rot = { 0, 0, 0 } },
+    objectiveTokenPos = { pos = { 18.00, 1.20, 33.11 }, rot = { 0, 0, 180 } },
+    combatDeckPos = { pos = { 26.75, 1.02, 28.75 }, rot = { 0, 0, 0 } },
+    eventCardPos = { pos = { 26.75, 1.01, 33.75 }, rot = { 0, 0, 0 } },
+    startUnitsUpperLeft = { pos = { 26.54, 0.96, 22.20 }, rot = { 0, 0, 0 } },
+    materialCounterPos = { pos = { 17.96, 1.09, 27.72 }, rot = { 0, 180, 0 } },
+    combatDieUpperLeft = { pos = { 61.00, 1.90, 32.40 }, rot = { 270, 180, 0 } },
+    factoryPilePos = { pos = { 59.75, 1.31, 27.04 }, rot = { 0, 0, 0 } },
+    bastionPilePos = { pos = { 59.87, 1.15, 24.24 }, rot = { 0, 0, 0 } },
+    cityPilePos = { pos = { 59.86, 1.45, 21.94 }, rot = { 0, 0, 0 } },
+    upgradeCardUpperLeft = { pos = { 77.99, 1.23, 21.96 }, rot = { 0, 0, 0 } },
+    modelPileUpperLeft = { pos = nil, rot = nil },
+    startTilePos = { pos = { 21.75, 1.11, 13.75 }, rot = { 0, 0, 180 } },
     dir = -1
   },
   Green = {
     combatStart = 'dc2e41',
     combatEnd = 'a91d0c',
     tokenReset = 'a2d0c5',
+    orderTokenUpperLeft = { pos = nil, rot = nil },
+    factionCardPos = { pos = nil, rot = nil },
+    objectiveTokenPos = { pos = nil, rot = nil },
+    combatDeckPos = { pos = nil, rot = nil },
+    eventCardPos = { pos = nil, rot = nil },
+    startUnitsUpperLeft = { pos = nil, rot = nil },
+    materialCounterPos = { pos = nil, rot = nil },
+    combatDieUpperLeft = { pos = nil, rot = nil },
+    factoryPilePos = { pos = nil, rot = nil },
+    bastionPilePos = { pos = nil, rot = nil },
+    cityPilePos = { pos = nil, rot = nil },
+    upgradeCardUpperLeft = { pos = nil, rot = nil },
+    modelPileUpperLeft = { pos = nil, rot = nil },
+    startTilePos = { pos = nil, rot = nil },
     dir = -1
   }
 }
@@ -430,24 +503,9 @@ end
 
 function setupButtons()
 
-  local redCombatStartButton = getObjectFromGUID('713059')
-  local redCombatEndButton = getObjectFromGUID('e0982e');
-  local redTokenResetButton = getObjectFromGUID('0e761d')
+  factionButton('7d957a', "Chaos")
+  factionButton('a9cb2b', 'Eldar')
 
-  local yellowTokenResetButton = getObjectFromGUID('f39151');
-  --Chaos
-
-  --initFaction("Red", "Chaos")
-
-  --Eldar
-  tokenResetButton(yellowTokenResetButton,
-    findAll('Eldar order token'))
-  combatStartButton(getObjectFromGUID('6e8dbf'),
-    find('Eldar Combat Cards').getGUID(),
-    "Yellow")
-  combatEndButton(getObjectFromGUID('53d047'),
-    find('Eldar Combat Cards').getGUID(),
-    findAll('Eldar combat die'))
   --SMs
   tokenResetButton(getObjectFromGUID('c2f4c8'),
     findAll('Space Marine order token'))
@@ -471,6 +529,17 @@ function setupButtons()
   for k, v in pairs(findAllLike('Combat upgrades')) do
     --upgradeButton(getObjectFromGUID(v))
   end
+end
+
+function factionButton(domino, faction)
+  state.factionButtons[domino] = faction
+  detailedbutton(getObjectFromGUID(domino), faction, "assignFaction", 220)
+end
+
+function assignFaction(domino, playerColor)
+  local faction = state.factionButtons[domino.getGUID()]
+  initFaction(playerColor, faction)
+  removeButtons(domino)
 end
 
 function upgradeButton(deck)
@@ -731,8 +800,10 @@ end
 
 function bagCollision(info)
   if (info and info.object and info.collision_object and info.collision_object.getGUID()) then
+    local id = 'retrieveItems' .. info.collision_object.getGUID()
+    Timer.destroy(id)
     Timer.create({
-      identifier = 'retrieveItems' .. info.collision_object.getGUID(),
+      identifier = id,
       function_name = 'retrieveItems',
       parameters = { bag = info.object },
       delay = 0.2
