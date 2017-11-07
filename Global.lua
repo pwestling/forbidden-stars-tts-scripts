@@ -193,21 +193,30 @@ default_state = {
   },
   commandTokenObjects = {},
   factionButtons = {},
-  buttons = {}
+  buttons = {},
+  putBackFaction = {}
 }
 
 state = {}
 
 function onSave()
-  return ""
-  --return JSON.encode(state)
+  return JSON.encode(state)
+end
+
+function onObjectSpawn(object)
+  if (string.find(object.getName(), "order token")) then
+    setOnCollisionEnter({ object.getGUID() }, 'commandTokenCollision');
+  end
+  if (object.tag == 'Bag') then
+    setOnCollisionEnter({ object.getGUID() }, 'bagCollision');
+  end
 end
 
 function onLoad(statestring)
   print("Loading")
 
   --setOnCollisionEnter(findAllLike('order token'), 'commandTokenCollision')
-  --setOnCollisionEnter(findAllWithTag('Bag'), 'bagCollision')
+  setOnCollisionEnter(findAllWithTag('Bag'), 'bagCollision')
   --setOnCollisionEnter(findAllLike('Combat Pawn'), 'combatPawnCollision')
   --clearLua(findAllWithTag('Infinite'))
   --clearLua(findAllLike('order token'))
@@ -227,6 +236,61 @@ function onLoad(statestring)
   end
 end
 
+function nameDecks()
+  local objs = getAllObjects()
+  local cardsToDeckName = {}
+  for k, obj in pairs(objs) do
+    if (obj.tag == "Deck") then
+      local desc = obj.getDescription()
+      local p = obj.getPosition()
+      local cards = obj.getObjects()
+      local card1 = obj.takeObject({
+        guid = cards[1].guid,
+        position = { p[1], p[2] + 2, p[3] }
+      })
+      Timer.create({
+        identifier = cards[1].guid,
+        function_name = 'rename',
+        parameters = { guid = cards[1].guid, name = desc },
+        delay = 0.5
+      })
+      Timer.create({
+        identifier = cards[2].guid,
+        function_name = 'rename',
+        parameters = { guid = cards[2].guid, name = desc },
+        delay = 0.5
+      })
+      cardsToDeckName[card1.getGUID()] = obj.getName()
+    end
+  end
+  Timer.create({
+    identifier = "name decks",
+    function_name = 'finishNameDecks',
+    parameters = { cardsToDeckName = cardsToDeckName },
+    delay = 5
+  })
+end
+
+function rename(params)
+  local o = getObjectFromGUID(params.guid)
+  o.setName(params.name)
+end
+
+
+function finishNameDecks(params)
+  local cardsToDeckName = params.cardsToDeckName
+  local objs = getAllObjects()
+  for k, obj in pairs(objs) do
+    if (obj.tag == "Deck") then
+      for k2, card in pairs(obj.getObjects()) do
+        if(cardsToDeckName[card.guid] ~= nil) then
+          obj.setName(cardsToDeckName[card.guid])
+        end
+      end
+    end
+  end
+end
+
 function concatArrs(arrs)
   local result = {}
   for k, a in pairs(arrs) do
@@ -240,7 +304,7 @@ end
 
 factionInitInfo = {
   Chaos = {
-    objectiveTokens = {
+    orderTokens = {
       advance = { '911f30', '656f0c' },
       deploy = { '2d02ab', '7fc185' },
       strategize = { '787faf', 'b5b9ec' },
@@ -265,7 +329,7 @@ factionInitInfo = {
     factionBag = 'bff26b'
   },
   Eldar = {
-    objectiveTokens = {
+    orderTokens = {
       advance = { 'ea7418', '91d7c0' },
       deploy = { '8ec1f0', '99d309' },
       strategize = { '9d41d1', 'b05da8' },
@@ -289,6 +353,165 @@ factionInitInfo = {
       '5c09c9'
     },
     factionBag = 'a67614'
+  },
+  ["Space Marines"] = {
+    orderTokens = {
+      advance = { 'e51f7b', '080a73' },
+      deploy = { 'cd262d', 'f70c5d' },
+      strategize = { 'd36c19', 'd2e8ea' },
+      dominate = { 'e3142f', '88b2c7' }
+    },
+    startingUnits = {
+      '9f9cfe',
+      'b5c001',
+      'e5db19',
+      'c06264',
+      '6a0d9f',
+      '65835a',
+      'f7ac1c'
+    },
+    modelPiles = {
+      '90596a',
+      'bbfa5a',
+      'ad6b7f',
+      '3a3e84',
+      '145d82',
+      '06cc47'
+    },
+    factionBag = '8984b5'
+  },
+  Orks = {
+    orderTokens = {
+      advance = { 'f20013', 'ff822a' },
+      deploy = { '6faf2d', 'b23647' },
+      strategize = { '3bf6c2', '8c2b92' },
+      dominate = { 'd48b28', '05f879' }
+    },
+    startingUnits = {
+      '716219',
+      '0b4934',
+      'a72c09',
+      'fa50a5',
+      'ca69f1',
+      'd28224',
+      'c1c684'
+    },
+    modelPiles = {
+      '6c4efd',
+      'b8e6b9',
+      '6f4d29',
+      'cab63c',
+      '5ab3e3',
+      '7ece2b'
+    },
+    factionBag = '114154'
+  },
+  ["Imperial Guard"] = {
+    orderTokens = {
+      advance = { 'e30b66', '0a7090' },
+      deploy = { 'c0f11b', '477d0f' },
+      strategize = { 'df1507', '0a8b59' },
+      dominate = { '4a5065', 'a30c48' }
+    },
+    startingUnits = {
+      'fdd1cb',
+      '102b93',
+      '94ab48',
+      'cc0518',
+      'a8a870',
+      'df09e0',
+      'bdb09d'
+    },
+    modelPiles = {
+      '4f48cb',
+      '0d0862',
+      '11b722',
+      'c56d5c',
+      'bc8877',
+      'b85518'
+    },
+    factionBag = '3aae55',
+    cardAdjust = { 5, 0, 0 }
+  },
+  Tyranids = {
+    orderTokens = {
+      advance = { '92e042', 'df645e' },
+      deploy = { 'a274fd', 'bc5ed0' },
+      strategize = { 'f45433', '4fa90e' },
+      dominate = { 'a85d8e', '867bad' }
+    },
+    startingUnits = {
+      '75b90f',
+      '9e4074',
+      '58ca1b',
+      '3fc616',
+      '6ff2fc',
+      '954a6f',
+      'bdb09d'
+    },
+    modelPiles = {
+      '5f10c0',
+      '0068a9',
+      'a0b050',
+      '783034',
+      'ec30a8',
+      '29d882'
+    },
+    factionBag = '74f0ea',
+    cardAdjust = { 5, 0, 0 }
+  },
+  Necrons = {
+    orderTokens = {
+      advance = { '6b0aaf', 'bee4f2' },
+      deploy = { '7803fb', 'c8ad1f' },
+      strategize = { '801153', 'b692ea' },
+      dominate = { 'c02ed7', 'aadbd2' }
+    },
+    startingUnits = {
+      '3c25bf',
+      'ea6929',
+      '36eb36',
+      'd4c201',
+      'f4c47a',
+      '60e97c',
+      'bdb09d'
+    },
+    modelPiles = {
+      '18b4c4',
+      '31a379',
+      '578ec9',
+      '932589',
+      'fa5011',
+      '738e47'
+    },
+    factionBag = 'a10fac',
+    cardAdjust = { 5, 0, 0 }
+  },
+  Tau = {
+    orderTokens = {
+      advance = { 'c19aa1', '752eb7' },
+      deploy = { '98c85f', '1d7638' },
+      strategize = { 'b18f24', '609487' },
+      dominate = { 'ce470e', '997bd3' }
+    },
+    startingUnits = {
+      '7b5e29',
+      'd39392',
+      '326a7d',
+      '114d85',
+      'bc327f',
+      'bdb09d'
+    },
+    modelPiles = {
+      '257c05',
+      '039f6b',
+      'de2075',
+      '561861',
+      '1677bd',
+      'c9c04f'
+    },
+    factionBag = '27c17a',
+    cardAdjust = { 5, 0, 0 }
   }
 }
 
@@ -303,12 +526,16 @@ function getByPred(objectDescriptors, pred)
 end
 
 function getByNameLike(objectDescriptors, name)
-  local result = getByPred(objectDescriptors, function(desc) return string.find(desc.name, name) end)
+  local result = getByPred(objectDescriptors, function(desc)
+    return string.find(string.lower(desc.name), string.lower(name))
+  end)
   return result
 end
 
 function getByName(objectDescriptors, name)
-  local result = getByPred(objectDescriptors, function(desc) return desc.name == name end)
+  local result = getByPred(objectDescriptors, function(desc)
+    return string.lower(desc.name) == string.lower(name)
+  end)
   return result
 end
 
@@ -318,12 +545,12 @@ playerInitInfo = {
     combatEnd = 'e0982e',
     tokenReset = '0e761d',
     orderTokenUpperLeft = { pos = { -9.25, 1.06, -28.25 }, rot = { 0.00, 180, 180 } },
-    factionCardPos = { pos = { -18.75, 0.91, -30.80 }, rot = { 0.00, 179.85, 0.00 } },
+    factionCardPos = { pos = { -18.75, 1, -30.80 }, rot = { 0.00, 179.85, 0.00 } },
     objectiveTokenPos = { pos = { -18.41, 1.53, -33.14 }, rot = { 0.00, 180.00, 180.00 } },
     combatDeckPos = { pos = { -27.75, 1.02, -28.75 }, rot = { 0.00, 180.00, 0.00 } },
     eventCardPos = { pos = { -27.75, 1.01, -33.75 }, rot = { 0.00, 180.00, 0.00 } },
     startUnitsUpperLeft = { pos = { -24.25, 0.96, -22.75 }, rot = { 0, 0, 0 } },
-    materialCounterPos = { pos = { -18.49, 0.95, -28.20 }, rot = { 0, 0, 0 } },
+    materialCounterPos = { pos = { -18.49, 1, -28.20 }, rot = { 0, 0, 0 } },
     combatDieUpperLeft = { pos = { -61.89, 1.48, -31.75 }, rot = { 270.00, 360, 0.00 } },
     factoryPilePos = { pos = { -59.26, 0.89, -26.02 }, rot = { 0, 0, 0 } },
     bastionPilePos = { pos = { -59.24, 0.73, -24.09 }, rot = { 0, 0, 0 } },
@@ -338,12 +565,12 @@ playerInitInfo = {
     combatEnd = '53d047',
     tokenReset = 'f39151',
     orderTokenUpperLeft = { pos = { 6.25, 1.06, -28.25 }, rot = { 0.00, 180, 180 } },
-    factionCardPos = { pos = { 18.25, 0.91, -30.75 }, rot = { 0, 180, 0 } },
+    factionCardPos = { pos = { 18.25, 1, -30.75 }, rot = { 0, 180, 0 } },
     objectiveTokenPos = { pos = { 18.46, 1.20, -33.16 }, rot = { 0, 180, 180 } },
     combatDeckPos = { pos = { 26.75, 1.02, -28.75 }, rot = { 0, 180, 0 } },
     eventCardPos = { pos = { 26.75, 1.01, -33.75 }, rot = { 0, 180, 0 } },
     startUnitsUpperLeft = { pos = { 17.75, 0.96, -22.75 }, rot = { 0, 0, 0 } },
-    materialCounterPos = { pos = { 18.43, 1.09, -28.09 }, rot = { 0, 0, 0 } },
+    materialCounterPos = { pos = { 18.43, 1, -28.09 }, rot = { 0, 0, 0 } },
     combatDieUpperLeft = { pos = { 55.69, 1.96, -33.63 }, rot = { 270, 0, 0 } },
     factoryPilePos = { pos = { 76.45, 1.37, -26.76 }, rot = { 0, 0, 0 } },
     bastionPilePos = { pos = { 76.59, 1.21, -24.24 }, rot = { 0, 0, 0 } },
@@ -358,18 +585,18 @@ playerInitInfo = {
     combatEnd = '75dde9',
     tokenReset = 'c2f4c8',
     orderTokenUpperLeft = { pos = { 9.75, 1.06, 28.25 }, rot = { 0, 0, 180.00 } },
-    factionCardPos = { pos = { 18.22, 0.91, 30.75 }, rot = { 0, 0, 0 } },
+    factionCardPos = { pos = { 18.22, 1, 30.75 }, rot = { 0, 0, 0 } },
     objectiveTokenPos = { pos = { 18.00, 1.20, 33.11 }, rot = { 0, 0, 180 } },
     combatDeckPos = { pos = { 26.75, 1.02, 28.75 }, rot = { 0, 0, 0 } },
     eventCardPos = { pos = { 26.75, 1.01, 33.75 }, rot = { 0, 0, 0 } },
     startUnitsUpperLeft = { pos = { 26.54, 0.96, 22.20 }, rot = { 0, 0, 0 } },
-    materialCounterPos = { pos = { 17.96, 1.09, 27.72 }, rot = { 0, 180, 0 } },
+    materialCounterPos = { pos = { 17.96, 1, 27.72 }, rot = { 0, 180, 0 } },
     combatDieUpperLeft = { pos = { 61.00, 1.90, 32.40 }, rot = { 270, 180, 0 } },
     factoryPilePos = { pos = { 59.75, 1.31, 27.04 }, rot = { 0, 0, 0 } },
     bastionPilePos = { pos = { 59.87, 1.15, 24.24 }, rot = { 0, 0, 0 } },
     cityPilePos = { pos = { 59.86, 1.45, 21.94 }, rot = { 0, 0, 0 } },
     upgradeCardUpperLeft = { pos = { 77.99, 1.23, 21.96 }, rot = { 0, 0, 0 } },
-    modelPileUpperLeft = { pos = nil, rot = nil },
+    modelPileUpperLeft = { pos = { 78.30, 1.26, 33.54 }, rot = { 0, 0, 0 } },
     startTilePos = { pos = { 21.75, 1.11, 13.75 }, rot = { 0, 0, 180 } },
     dir = -1
   },
@@ -377,20 +604,20 @@ playerInitInfo = {
     combatStart = 'dc2e41',
     combatEnd = 'a91d0c',
     tokenReset = 'a2d0c5',
-    orderTokenUpperLeft = { pos = nil, rot = nil },
-    factionCardPos = { pos = nil, rot = nil },
-    objectiveTokenPos = { pos = nil, rot = nil },
-    combatDeckPos = { pos = nil, rot = nil },
-    eventCardPos = { pos = nil, rot = nil },
-    startUnitsUpperLeft = { pos = nil, rot = nil },
-    materialCounterPos = { pos = nil, rot = nil },
-    combatDieUpperLeft = { pos = nil, rot = nil },
-    factoryPilePos = { pos = nil, rot = nil },
-    bastionPilePos = { pos = nil, rot = nil },
-    cityPilePos = { pos = nil, rot = nil },
-    upgradeCardUpperLeft = { pos = nil, rot = nil },
-    modelPileUpperLeft = { pos = nil, rot = nil },
-    startTilePos = { pos = nil, rot = nil },
+    orderTokenUpperLeft = { pos = { -7.25, 1.06, 28.25 }, rot = { 0, 0, 180 } },
+    factionCardPos = { pos = { -18.72, 1, 30.74 }, rot = { 0, 0, 0 } },
+    objectiveTokenPos = { pos = { -18.94, 1.20, 33.17 }, rot = { 0, 0, 180 } },
+    combatDeckPos = { pos = { -27.74, 1.02, 28.76 }, rot = { 0, 0, 0 } },
+    eventCardPos = { pos = { -27.75, 1.01, 33.75 }, rot = { 0, 0, 0 } },
+    startUnitsUpperLeft = { pos = { -18.17, 0.97, 22.25 }, rot = { 0, 0, 0 } },
+    materialCounterPos = { pos = { -19.06, 1, 28.08 }, rot = { 0, 180, 0 } },
+    combatDieUpperLeft = { pos = { -57.02, 1.68, 32.88 }, rot = { 270, 180, 0 } },
+    factoryPilePos = { pos = { -77.81, 1.09, 29.42 }, rot = { 0, 0, 0 } },
+    bastionPilePos = { pos = { -77.81, 0.93, 26.92 }, rot = { 0, 180, 0 } },
+    cityPilePos = { pos = { -77.81, 1.23, 24.92 }, rot = { 0, 0, 0 } },
+    upgradeCardUpperLeft = { pos = { -57.46, 1.00, 22.93 }, rot = { 0, 0, 0 } },
+    modelPileUpperLeft = { pos = { -64.60, 1.03, 34.75 }, rot = { 0, 0, 0 } },
+    startTilePos = { pos = { -21.75, 1.11, 14.75 }, rot = { 0, 0, 180 } },
     dir = -1
   }
 }
@@ -398,26 +625,31 @@ playerInitInfo = {
 cardWidth = 3.7
 cardHeight = 4.8
 
-function lockCallback(obj, params)
+function moveToCallback(obj, params)
   obj.setLock(params.lock)
 end
 
-function moveTo(guids, pos, bag, lock)
-  bag.takeObject({
+function moveTo(guids, pos, bag, lock, scale)
+  local obj = bag.takeObject({
     guid = guids[1],
     position = pos.pos,
     rotation = pos.rot,
-    callback = "lockCallback",
+    callback = "moveToCallback",
     callback_owner = Global,
     params = { lock = lock }
   })
+  obj.use_grid = false
+  obj.use_snap_points = false
+  if(scale) then
+    obj.setScale(scale)
+  end
 end
 
 function DIV(a, b)
   return (a - a % b) / b
 end
 
-function gridLayout(guids, pos, dir, cols, x, z, bag, lock)
+function gridLayout(guids, pos, dir, cols, x, z, bag, lock, scale)
   local index = 0
   for i, g in pairs(guids) do
     for i, guid in pairs(g) do
@@ -425,10 +657,21 @@ function gridLayout(guids, pos, dir, cols, x, z, bag, lock)
       newPos['x'] = pos.pos[1] + ((index % cols) * x * dir)
       newPos['z'] = pos.pos[3] + (DIV(index, cols) * z * (-dir))
       newPos['y'] = pos.pos[2]
-      moveTo({ guid }, { pos = newPos, rot = pos.rot }, bag, lock)
+      moveTo({ guid }, { pos = newPos, rot = pos.rot }, bag, lock, scale)
       index = index + 1
     end
   end
+end
+
+function adjust(origPos, adjustment, dir)
+  if (adjustment == nil) then
+    return origPos
+  end
+  local newPos = {}
+  newPos['x'] = origPos.pos[1] + (adjustment[1] * -dir)
+  newPos['z'] = origPos.pos[3] + adjustment[3]
+  newPos['y'] = origPos.pos[2] + adjustment[2]
+  return { pos = newPos, rot = origPos.rot }
 end
 
 function initFaction(color, faction)
@@ -437,44 +680,50 @@ function initFaction(color, faction)
   local objectDescriptors = factionBag.getObjects()
   local factionCard = getByName(objectDescriptors, "Faction Card")
   local eventDeck = getByName(objectDescriptors, "Event cards")
-  local combatDeck = getByName(objectDescriptors, faction .. " Combat Cards")
+  local combatDeck = getByNameLike(objectDescriptors, "Combat Cards")
   local objectiveTokens = getByName(objectDescriptors, "Objective tokens")
   local factionTile = getByName(objectDescriptors, "System tile")
   local cities = getByName(objectDescriptors, "Cities")
   local factories = getByName(objectDescriptors, "Factories")
   local bastions = getByName(objectDescriptors, "Bastions")
-  local dice = getByName(objectDescriptors, faction .. " combat die")
+  local dice = getByNameLike(objectDescriptors, "combat die")
   local level0upgrades = getByName(objectDescriptors, "Combat upgrades (LV 0)")
   local level2upgrades = getByName(objectDescriptors, "Combat upgrades (LV 2)")
   local level3upgrades = getByName(objectDescriptors, "Combat upgrades (LV 3)")
   local orderUpgrades = getByName(objectDescriptors, "Order upgrades")
   local counter = getByName(objectDescriptors, "materiel")
   local colorTable = playerInitInfo[color]
+
+  local materielPos = adjust(colorTable.materialCounterPos, factionTable.cardAdjust, colorTable.dir)
+  local objectiveTokenPos = adjust(colorTable.objectiveTokenPos, factionTable.cardAdjust, colorTable.dir)
+
+  local cardScale = {1.5,1,1.5}
+
   moveTo(factionCard, colorTable.factionCardPos, factionBag, true)
-  moveTo(eventDeck, colorTable.eventCardPos, factionBag, false)
-  moveTo(combatDeck, colorTable.combatDeckPos, factionBag, false)
-  moveTo(objectiveTokens, colorTable.objectiveTokenPos, factionBag, false)
+  moveTo(eventDeck, colorTable.eventCardPos, factionBag, false, cardScale)
+  moveTo(combatDeck, colorTable.combatDeckPos, factionBag, false, cardScale)
+  moveTo(objectiveTokens, objectiveTokenPos, factionBag, false)
   moveTo(factionTile, colorTable.startTilePos, factionBag, false)
   moveTo(cities, colorTable.cityPilePos, factionBag, false)
   moveTo(factories, colorTable.factoryPilePos, factionBag, false)
   moveTo(bastions, colorTable.bastionPilePos, factionBag, false)
-  moveTo(counter, colorTable.materialCounterPos, factionBag, true)
+  moveTo(counter, materielPos, factionBag, true)
   gridLayout({ dice }, colorTable.combatDieUpperLeft, colorTable.dir, 4, dieXWidth + 0.1, dieXWidth + 0.1, factionBag, false)
   gridLayout({ factionTable.modelPiles }, colorTable.modelPileUpperLeft,
-    colorTable.dir, 10, 2.4, 2.4, factionBag, true)
+    colorTable.dir, 10, 2.7, 2.7, factionBag, true)
   gridLayout({ factionTable.startingUnits }, colorTable.startUnitsUpperLeft,
     colorTable.dir, 5, 3, 3, factionBag, false)
-  local objTokens = {
-    factionTable.objectiveTokens.advance,
-    factionTable.objectiveTokens.dominate,
-    factionTable.objectiveTokens.strategize,
-    factionTable.objectiveTokens.deploy
+  local orderTokens = {
+    factionTable.orderTokens.advance,
+    factionTable.orderTokens.dominate,
+    factionTable.orderTokens.strategize,
+    factionTable.orderTokens.deploy
   }
-  gridLayout(objTokens,
+  gridLayout(orderTokens,
     colorTable.orderTokenUpperLeft,
     colorTable.dir, 2, 2.5, 2.5, factionBag, false)
   gridLayout({ level0upgrades, orderUpgrades, level2upgrades, level3upgrades },
-    colorTable.upgradeCardUpperLeft, colorTable.dir, 5, cardWidth, cardHeight, factionBag, true)
+    colorTable.upgradeCardUpperLeft, colorTable.dir, 5, cardWidth, cardHeight, factionBag, true, cardScale)
   local id = "initPlayerButtons" .. color .. faction
   Timer.destroy(id)
   Timer.create({
@@ -482,13 +731,21 @@ function initFaction(color, faction)
     function_name = 'playerButtons',
     parameters = {
       colorTable = colorTable,
-      orderTokens = concatArrs(objTokens),
+      orderTokens = concatArrs(orderTokens),
       combatDeck = combatDeck[1],
       dice = dice,
       color = color,
       upgradeCards = concatArrs({ level0upgrades, level2upgrades, level3upgrades })
     },
     delay = 1
+  })
+  state.putBackFaction[color] = {}
+  state.putBackFaction[color]["faction"] = faction
+  state.putBackFaction[color]["bag"] = factionBag.getGUID()
+  state.putBackFaction[color]["guids"] = concatArrs({
+    factionCard, eventDeck, combatDeck, objectiveTokens, factionTile, cities,
+    factories, bastions, dice, level0upgrades, level2upgrades, level3upgrades,
+    orderUpgrades, counter, factionTable.modelPiles, concatArrs(orderTokens), factionTable.startingUnits
   })
 end
 
@@ -505,30 +762,14 @@ function setupButtons()
 
   factionButton('7d957a', "Chaos")
   factionButton('a9cb2b', 'Eldar')
+  factionButton('7a9c5a', "Space Marines")
+  factionButton('709e59', "Orks")
+  factionButton('6f71a1', "Imperial Guard")
+  factionButton('a96dc5', "Tyranids")
+  factionButton('9742c2', "Necrons")
+  factionButton('0d3a2b', 'Tau')
 
-  --SMs
-  tokenResetButton(getObjectFromGUID('c2f4c8'),
-    findAll('Space Marine order token'))
-  combatStartButton(getObjectFromGUID('b06168'),
-    find('Space Marine Combat Cards').getGUID(),
-    "Blue")
-  combatEndButton(getObjectFromGUID('75dde9'),
-    find('Space Marine Combat Cards').getGUID(),
-    findAll('Space Marine combat die'))
-  --Orks
-  tokenResetButton(getObjectFromGUID('a2d0c5'),
-    findAll('Ork order token'))
-  combatStartButton(getObjectFromGUID('dc2e41'),
-    find('Ork Combat Cards').getGUID(),
-    "Green")
-  combatEndButton(getObjectFromGUID('a91d0c'),
-    find('Ork Combat Cards').getGUID(),
-    findAll('Ork combat die'))
   Global.setVar("loaded", true)
-
-  for k, v in pairs(findAllLike('Combat upgrades')) do
-    --upgradeButton(getObjectFromGUID(v))
-  end
 end
 
 function factionButton(domino, faction)
@@ -537,17 +778,45 @@ function factionButton(domino, faction)
 end
 
 function assignFaction(domino, playerColor)
-  local faction = state.factionButtons[domino.getGUID()]
-  initFaction(playerColor, faction)
-  removeButtons(domino)
+  if (playerColor ~= "White" and state.putBackFaction[playerColor] == nil) then
+    local faction = state.factionButtons[domino.getGUID()]
+    initFaction(playerColor, faction)
+    removeButtons(domino)
+    detailedbutton(domino, "Put back " .. faction, "putBackFaction", 180)
+  end
 end
+
+function putAllInBag(guids, bagGuid)
+  local bag = getObjectFromGUID(bagGuid)
+  for k, v in pairs(guids) do
+    local obj = getObjectFromGUID(v)
+    if (obj ~= nil) then
+      bag.putObject(obj)
+    end
+  end
+end
+
+function putBackFaction(domino, playerColor)
+  local faction = state.factionButtons[domino.getGUID()]
+  if (state.putBackFaction[playerColor]["faction"] == faction) then
+    putAllInBag(state.putBackFaction[playerColor]["guids"], state.putBackFaction[playerColor]["bag"])
+    removeButtons(domino)
+    removeButtons(getObjectFromGUID(playerInitInfo[playerColor].combatStart))
+    removeButtons(getObjectFromGUID(playerInitInfo[playerColor].combatEnd))
+    removeButtons(getObjectFromGUID(playerInitInfo[playerColor].tokenReset))
+
+
+    factionButton(domino.getGUID(), faction)
+    state.putBackFaction[playerColor] = nil
+  end
+end
+
 
 function upgradeButton(deck)
   cardbutton(deck, "UP", "upgradeCards")
 end
 
 function upgradeCards(deck, playerColor)
-  print(playerColor, state.combatLock[playerColor])
   if (not state.combatLock[playerColor]) then
     state.combatLock[playerColor] = true
     local combatDeck = getObjectFromGUID(state.combatDecks[playerColor])
@@ -609,11 +878,15 @@ function finishUpgrade(clickedCard, playerColor)
         sideTablePos.y = height
         card.setPositionSmooth(sideTablePos)
         card.setLock(false)
+        card.use_snap_points = false
+        card.use_grid = false
         discardCardGuid = card.getGUID()
       else
         combatDeckPosition.y = height
         card.setPositionSmooth(combatDeckPosition)
         card.setLock(false)
+        card.use_snap_points = false
+        card.use_grid = false
         card.clearButtons()
         combatCardGuid = card.getGUID()
       end
@@ -685,7 +958,6 @@ function onObjectDropped(playerColor, obj)
   end
   if (obj.getName() == 'Combat token' and not obj.getVar("owned")) then
     state.combatTokensToPlayer[obj.getGUID()] = playerColor
-    print(obj.getGUID() .. " : " .. playerColor)
     obj.setVar("owned", true)
     obj.setVar("owner", playerColor)
     obj.highlightOn(playerHighlights[playerColor])
@@ -815,9 +1087,21 @@ function sign(x)
   return x > 0 and 1 or -1
 end
 
+function bagNameLike(bagName, n)
+  return string.find(bagName, n) or string.find(bagName, n .. "s") or string.find(bagName, string.gsub(n, "y$", "ies"))
+end
+
 function retrieveItems(params)
   local bagName = params.bag.getName()
-  if (not string.find(bagName, "Faction")) then
+  local countWithName = 0
+  local total = 0
+  for k, v in pairs(params.bag.getObjects()) do
+    total = total + 1
+    if (bagNameLike(bagName, v.name)) then
+      countWithName = countWithName + 1
+    end
+  end
+  if (countWithName > (total / 2)) then
     local retrieveOffset = 10
     local retrieveHeight = 2
     for k, v in pairs(params.bag.getObjects()) do
@@ -970,10 +1254,8 @@ function combatStartButton(domino, deckGuid, playerColor)
 end
 
 function startCombat(domino, playerColor)
-  print(playerColor, state.combatLock[playerColor])
   if (not state.combatLock[playerColor]) then
     state.combatLock[playerColor] = true
-    print(playerColor, state.combatLock[playerColor])
     local deck = getObjectFromGUID(state.combatDecks[playerColor])
     deck.flip()
     state.combatDeckContents[deck.getGUID()] = { table.unpack(deck.getObjects()) }
@@ -1006,7 +1288,6 @@ end
 
 function smoothMove(obj, pos)
   obj.setPositionSmooth(pos)
-  print("Moving " .. tostring(obj.isSmoothMoving()))
 end
 
 function playCard(card, playerColor)
@@ -1055,7 +1336,6 @@ function endCombat(domino, playerColor)
   for k, v in pairs(cards) do
     local card = getObjectFromGUID(v['guid'])
     if card ~= nil then
-      print(card)
       card.clearButtons()
       card.putObject(deck)
     end
