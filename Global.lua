@@ -200,7 +200,8 @@ default_state = {
 state = {}
 
 function onSave()
-  return JSON.encode(state)
+  return ""
+  --return JSON.encode(state)
 end
 
 function onObjectSpawn(object)
@@ -236,12 +237,52 @@ function onLoad(statestring)
   end
 end
 
+function onChat(message, color)
+  if (message == "renameDecks") then
+    print("renaming...")
+    nameDecks()
+  end
+  if (message == "uniqueDecks") then
+    print("uniqueing...")
+    uniqueDecks()
+  end
+end
+
+function uniqueDecks()
+  local objs = getAllObjects()
+  local cardsToDeckName = {}
+  for k, obj in pairs(objs) do
+    if (obj.tag == "Deck") then
+      local p = obj.getPosition()
+      local cards = obj.getObjects()
+      local height = 1
+      for i, c in pairs(cards) do
+        obj.takeObject({
+          guid = c.guid,
+          position = { p[1], p[2] + height, p[3] }
+        })
+        height = height + 0.5
+      end
+    end
+  end
+end
+
+nameSwaps = {
+  ["3"] = "Combat upgrades (LV 3)",
+  ["2"] = "Combat upgrades (LV 2)",
+  ["0"] = "Combat upgrades (LV 0)"
+}
+
 function nameDecks()
   local objs = getAllObjects()
   local cardsToDeckName = {}
   for k, obj in pairs(objs) do
     if (obj.tag == "Deck") then
       local desc = obj.getDescription()
+      local name = obj.getName()
+      if (nameSwaps[name]) then
+        name = nameSwaps[name]
+      end
       local p = obj.getPosition()
       local cards = obj.getObjects()
       local card1 = obj.takeObject({
@@ -260,7 +301,7 @@ function nameDecks()
         parameters = { guid = cards[2].guid, name = desc },
         delay = 0.5
       })
-      cardsToDeckName[card1.getGUID()] = obj.getName()
+      cardsToDeckName[card1.getGUID()] = name
     end
   end
   Timer.create({
@@ -283,7 +324,7 @@ function finishNameDecks(params)
   for k, obj in pairs(objs) do
     if (obj.tag == "Deck") then
       for k2, card in pairs(obj.getObjects()) do
-        if(cardsToDeckName[card.guid] ~= nil) then
+        if (cardsToDeckName[card.guid] ~= nil) then
           obj.setName(cardsToDeckName[card.guid])
         end
       end
@@ -444,9 +485,9 @@ factionInitInfo = {
       '75b90f',
       '9e4074',
       '58ca1b',
-      '3fc616',
-      '6ff2fc',
       '954a6f',
+      'f5c38a',
+      'f4c47a',
       'bdb09d'
     },
     modelPiles = {
@@ -470,10 +511,10 @@ factionInitInfo = {
     startingUnits = {
       '3c25bf',
       'ea6929',
+      'afe30d',
       '36eb36',
       'd4c201',
       'f4c47a',
-      '60e97c',
       'bdb09d'
     },
     modelPiles = {
@@ -640,7 +681,7 @@ function moveTo(guids, pos, bag, lock, scale)
   })
   obj.use_grid = false
   obj.use_snap_points = false
-  if(scale) then
+  if (scale) then
     obj.setScale(scale)
   end
 end
@@ -649,8 +690,11 @@ function DIV(a, b)
   return (a - a % b) / b
 end
 
-function gridLayout(guids, pos, dir, cols, x, z, bag, lock, scale)
+function gridLayout(guids, pos, dir, cols, x, z, bag, lock, scale, startIndex)
   local index = 0
+  if (startIndex ~= nil) then
+    index = startIndex
+  end
   for i, g in pairs(guids) do
     for i, guid in pairs(g) do
       local newPos = {}
@@ -696,17 +740,20 @@ function initFaction(color, faction)
 
   local materielPos = adjust(colorTable.materialCounterPos, factionTable.cardAdjust, colorTable.dir)
   local objectiveTokenPos = adjust(colorTable.objectiveTokenPos, factionTable.cardAdjust, colorTable.dir)
+  local cityPos = adjust(colorTable.cityPilePos, { cardWidth / 2, 0, 0 }, -colorTable.dir)
+  local bastionPos = adjust(colorTable.bastionPilePos, { cardWidth / 2, 0, 0 }, -colorTable.dir)
+  local factoryPos = adjust(colorTable.factoryPilePos, { cardWidth / 2, 0, 0 }, -colorTable.dir)
 
-  local cardScale = {1.5,1,1.5}
+  local cardScale = { 1.5, 1, 1.5 }
 
   moveTo(factionCard, colorTable.factionCardPos, factionBag, true)
   moveTo(eventDeck, colorTable.eventCardPos, factionBag, false, cardScale)
   moveTo(combatDeck, colorTable.combatDeckPos, factionBag, false, cardScale)
   moveTo(objectiveTokens, objectiveTokenPos, factionBag, false)
   moveTo(factionTile, colorTable.startTilePos, factionBag, false)
-  moveTo(cities, colorTable.cityPilePos, factionBag, false)
-  moveTo(factories, colorTable.factoryPilePos, factionBag, false)
-  moveTo(bastions, colorTable.bastionPilePos, factionBag, false)
+  moveTo(cities, cityPos, factionBag, false)
+  moveTo(factories, factoryPos, factionBag, false)
+  moveTo(bastions, bastionPos, factionBag, false)
   moveTo(counter, materielPos, factionBag, true)
   gridLayout({ dice }, colorTable.combatDieUpperLeft, colorTable.dir, 4, dieXWidth + 0.1, dieXWidth + 0.1, factionBag, false)
   gridLayout({ factionTable.modelPiles }, colorTable.modelPileUpperLeft,
@@ -722,8 +769,10 @@ function initFaction(color, faction)
   gridLayout(orderTokens,
     colorTable.orderTokenUpperLeft,
     colorTable.dir, 2, 2.5, 2.5, factionBag, false)
-  gridLayout({ level0upgrades, orderUpgrades, level2upgrades, level3upgrades },
-    colorTable.upgradeCardUpperLeft, colorTable.dir, 5, cardWidth, cardHeight, factionBag, true, cardScale)
+  gridLayout({ level0upgrades, orderUpgrades },
+    colorTable.upgradeCardUpperLeft, colorTable.dir, 6, cardWidth, cardHeight, factionBag, true, cardScale)
+  gridLayout({ level2upgrades, level3upgrades },
+    colorTable.upgradeCardUpperLeft, colorTable.dir, 6, cardWidth, cardHeight, factionBag, true, cardScale, 6)
   local id = "initPlayerButtons" .. color .. faction
   Timer.destroy(id)
   Timer.create({
