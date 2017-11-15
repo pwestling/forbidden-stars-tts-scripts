@@ -168,7 +168,7 @@ playerHighlights = {
   ["Green"] = { r = 0.0, b = 0.0, g = 1 }
 }
 
-tileRadius = 4.75
+tileRadius = 5.94
 MAIN_BOARD_ZONE = "288d26"
 
 
@@ -208,20 +208,17 @@ function onObjectSpawn(object)
   if (string.find(object.getName(), "order token")) then
     setOnCollisionEnter({ object.getGUID() }, 'commandTokenCollision');
   end
-  if (object.tag == 'Bag') then
-    setOnCollisionEnter({ object.getGUID() }, 'bagCollision');
-  end
 end
 
 function onLoad(statestring)
   print("Loading")
 
   --setOnCollisionEnter(findAllLike('order token'), 'commandTokenCollision')
-  setOnCollisionEnter(findAllWithTag('Bag'), 'bagCollision')
+  --setOnCollisionEnter(findAllWithTag('Bag'), 'bagCollision')
   --setOnCollisionEnter(findAllLike('Combat Pawn'), 'combatPawnCollision')
   --clearLua(findAllWithTag('Infinite'))
   --clearLua(findAllLike('order token'))
-  --clearLua(findAllWithTag('Bag'))
+  clearLua(findAllWithTag('Bag'))
 
   statestring = ""
   if (statestring == "") then
@@ -998,13 +995,14 @@ function isObjectInZones(zoneGUIDs, objectGUID)
   return false
 end
 
+function onObjectRandomize(object, playerColor)
+  if (string.find(object.getName(), "combat die") and diceRotations[playerColor]) then
+    rollCombatDie(object, playerColor)
+  end
+end
+
 function onObjectDropped(playerColor, obj)
   local p = obj.getPosition()
-  if (string.find(obj.getName(), "combat die") and diceRotations[playerColor]
-      and not isObjectInZones(diceTrayZones, obj.getGUID())
-      and not isObjectInZones(sideTableZones, obj.getGUID())) then
-    rollCombatDie(obj, playerColor)
-  end
   if (obj.getName() == 'Combat token' and not obj.getVar("owned")) then
     state.combatTokensToPlayer[obj.getGUID()] = playerColor
     obj.setVar("owned", true)
@@ -1020,6 +1018,15 @@ function onObjectDropped(playerColor, obj)
     obj.setVar("owned", true)
     obj.setVar("owner", playerColor)
     obj.highlightOn(playerHighlights[playerColor])
+  end
+  if (obj.getName() == "System tile") then
+    systemTileDropped(obj)
+  end
+end
+
+function onObjectPickUp(playerColor, obj)
+  if (obj.getName() == "System tile") then
+    removeTileFromGrid(obj)
   end
 end
 
@@ -1081,7 +1088,25 @@ function rollCombatDie(die, playerColor)
     identifier = id,
     function_name = 'moveObj',
     parameters = { obj = die, pos = pos, rot = rot },
-    delay = 1.5
+    delay = 0.5
+  })
+end
+
+function retrieveAll()
+  for k, o in pairs(getAllObjects()) do
+    if (o.tag == "Bag") then
+      retrieveItems(o)
+    end
+  end
+end
+
+function onObjectDestroy(o)
+  local id = "retriever"
+  Timer.destroy(id)
+  Timer.create({
+    identifier = id,
+    function_name = "retrieveAll",
+    delay = 0.5
   })
 end
 
@@ -1119,19 +1144,6 @@ function numObjectsInZoneWithRot(zone, rot)
   return count
 end
 
-function bagCollision(info)
-  if (info and info.object and info.collision_object and info.collision_object.getGUID()) then
-    local id = 'retrieveItems' .. info.collision_object.getGUID()
-    Timer.destroy(id)
-    Timer.create({
-      identifier = id,
-      function_name = 'retrieveItems',
-      parameters = { bag = info.object },
-      delay = 0.2
-    })
-  end
-end
-
 function sign(x)
   return x > 0 and 1 or -1
 end
@@ -1140,11 +1152,11 @@ function bagNameLike(bagName, n)
   return string.find(bagName, n) or string.find(bagName, n .. "s") or string.find(bagName, string.gsub(n, "y$", "ies"))
 end
 
-function retrieveItems(params)
-  local bagName = params.bag.getName()
+function retrieveItems(bag)
+  local bagName = bag.getName()
   local countWithName = 0
   local total = 0
-  for k, v in pairs(params.bag.getObjects()) do
+  for k, v in pairs(bag.getObjects()) do
     total = total + 1
     if (bagNameLike(bagName, v.name)) then
       countWithName = countWithName + 1
@@ -1153,15 +1165,15 @@ function retrieveItems(params)
   if (countWithName > (total / 2)) then
     local retrieveOffset = 10
     local retrieveHeight = 2
-    for k, v in pairs(params.bag.getObjects()) do
+    for k, v in pairs(bag.getObjects()) do
       local n = v.name
       if (not (string.find(bagName, n) or string.find(bagName, n .. "s") or string.find(bagName, string.gsub(n, "y$", "ies")))) then
         print("Retrieving")
-        local pos = params.bag.getPosition()
+        local pos = bag.getPosition()
         pos['x'] = pos['x'] + (retrieveOffset * (-1 * sign(pos['x'])))
         pos['z'] = pos['z'] + (retrieveOffset * (-1 * sign(pos['z'])))
         pos['y'] = pos['y'] + retrieveHeight
-        params.bag.takeObject({ guid = v.guid, position = pos })
+        bag.takeObject({ guid = v.guid, position = pos })
         retrieveHeight = retrieveHeight + 2
       end
     end
@@ -1306,7 +1318,9 @@ function startCombat(domino, playerColor)
   if (not state.combatLock[playerColor]) then
     state.combatLock[playerColor] = true
     local deck = getObjectFromGUID(state.combatDecks[playerColor])
-    deck.flip()
+    if (closeTo(deck.getRotation().z, 0, 1)) then
+      deck.flip()
+    end
     state.combatDeckContents[deck.getGUID()] = { table.unpack(deck.getObjects()) }
     deck.shuffle()
     deck.dealToColor(5, playerColor)
@@ -1377,20 +1391,28 @@ function combatEndButton(domino, deck, dice)
   state.combatDice[domino.getGUID()] = storePositions(dice)
 end
 
+function closeTo(num1, num2, tolerance)
+  return math.abs(num1 - num2) < tolerance
+end
+
 function endCombat(domino, playerColor)
   state.combatLock[playerColor] = true
   local deck = getObjectFromGUID(state.combatDecks[playerColor])
   state.playedCombatCards[playerColor] = {}
   local cards = state.combatDeckContents[deck.getGUID()]
-  for k, v in pairs(cards) do
-    local card = getObjectFromGUID(v['guid'])
-    if card ~= nil then
-      card.clearButtons()
-      card.putObject(deck)
+  if (cards) then
+    for k, v in pairs(cards) do
+      local card = getObjectFromGUID(v['guid'])
+      if card ~= nil then
+        card.clearButtons()
+        card.putObject(deck)
+      end
     end
   end
   state.combatDeckContents[deck.getGUID()] = {}
-  deck.flip()
+  if (closeTo(deck.getRotation().z, 180, 1)) then
+    deck.flip()
+  end
   for k, v in pairs(state.combatTokensToPlayer) do
     if (v == playerColor) then
       local obj = getObjectFromGUID(k)
@@ -1427,3 +1449,236 @@ function clearLua(guids)
     end
   end
 end
+
+function distance3D(point1, point2)
+  local x = point1.x - point2.x
+  local y = point1.y - point2.y
+  local z = point1.z - point2.z
+  return math.sqrt(x * x + y * y + z * z)
+end
+
+function distance2D(point1, point2)
+  local x = point1.x - point2.x
+  local z = point1.z - point2.z
+  return math.sqrt(x * x + z * z)
+end
+
+function numPlayers()
+  return #getSeatedPlayers();
+end
+
+-- state.tiles()
+-- state.laidTiles()
+
+default_state.tiles = {
+  tileData = {},
+  startingAttachment = { x = 0, y = 1, z = 0 }
+}
+
+function futureCenter()
+  local timerId = "center"
+  Timer.destroy(timerId)
+  Timer.create({
+    identifier = timerId,
+    function_name = "center",
+    delay = 0.75
+  })
+end
+
+function doAttach(tile, point)
+  if (distance2D(tile.getPosition(), point) < (tileRadius / 1.5)) then
+    attachTileToPoint(tile, point)
+    futureCenter()
+    return true
+  else
+    return false
+  end
+end
+
+function removeTileFromGrid(tile)
+  local val = state.tiles.tileData[tile.getGUID()]
+  if (val) then
+    state.tiles.tileData[tile.getGUID()] = nil
+    futureCenter()
+  end
+end
+
+function systemTileDropped(tile)
+  local shouldCheckStart = true
+  for tileGuid, tileData in pairs(state.tiles.tileData) do
+    shouldCheckStart = false
+    local pointArray = tileData.attachmentPoints
+    for index, point in pairs(pointArray) do
+      if (doAttach(tile, point)) then
+        return
+      end
+    end
+  end
+  if (shouldCheckStart and doAttach(tile, state.tiles.startingAttachment)) then
+    return
+  end
+end
+
+function move(point, dim, amount)
+  local newPoint = { x = point.x, y = point.y, z = point.z }
+  newPoint[dim] = newPoint[dim] + amount
+  return newPoint
+end
+
+function vecDiff(from, to)
+  return { x = to.x - from.x, y = to.y - from.y, z = to.z - from.z }
+end
+
+function vecAdd(p, vec)
+  return { x = vec.x + p.x, y = vec.y + p.y, z = vec.z + p.z }
+end
+
+function rotAdd(p, vec)
+  return { x = (vec.x + p.x) % 360, y = (vec.y + p.y) % 360, z = (vec.z + p.z) % 360 }
+end
+
+function rotateVec(vec, degrees)
+  return {
+    x = vec.x * math.cos(math.rad(degrees)) - vec.z * math.sin(math.rad(degrees)),
+    y = vec.y,
+    z = vec.x * math.sin(math.rad(degrees)) + vec.z * math.cos(math.rad(degrees))
+  }
+end
+
+function adjustUnits(tilePos, dest, maybeRot)
+  for k, unit in pairs(getAllObjects()) do
+    if (unit.getName() ~= "System tile" and
+        unit.getName() ~= nil and
+        unit.getName() ~= "" and
+        distance2D(unit.getPosition(), tilePos) < tileRadius) then
+      --transform target point by vec from model to tile center
+      print("Found " .. unit.getName() .. " " .. unit.getGUID() .. " " .. unit.name)
+      local vec = vecDiff(tilePos, unit.getPosition())
+      if (maybeRot) then
+        vec = rotateVec(vec, -maybeRot.y)
+      end
+      local newPos = vecAdd(dest, vec)
+      newPos.y = newPos.y + 0.3 --bump up a bit to avoid collisions
+      if (maybeRot) then
+        unit.setPosition(newPos)
+      else
+        unit.setPositionSmooth(newPos)
+      end
+      if (maybeRot) then
+        unit.setRotation(rotAdd(unit.getRotation(), maybeRot))
+      end
+    end
+  end
+end
+
+function copyPos(p)
+  return { x = p.x, y = p.y, z = p.z }
+end
+
+function generateAttachPoints(p, d)
+  local points = {}
+  table.insert(points, move(p, "x", d))
+  table.insert(points, move(p, "x", -d))
+  table.insert(points, move(p, "z", d))
+  table.insert(points, move(p, "z", -d))
+  return points
+end
+
+function attachTileToPoint(obj, p)
+  local origPos = copyPos(obj.getPosition())
+  obj.setPositionSmooth(p)
+  adjustUnits(origPos, p)
+  --obj.setLock(true)
+  print(tabToS(state.tiles))
+  print(tabToS(p))
+  print(tileRadius)
+  print(state.tiles.insert)
+  local d = 2 * tileRadius
+  local points = generateAttachPoints(p,d)
+  state.tiles.tileData[obj.getGUID()] = { attachmentPoints = points, center = p }
+end
+
+function fold(coll, init, foldFn)
+  local val = init
+  for k, v in pairs(coll) do
+    val = foldFn(val, v)
+  end
+  return val
+end
+
+mathBy = function(mathfn, attr)
+  return function(m, tileData) return mathfn(m, tileData.center[attr]) end
+end
+
+maxOf = function(tiles, attr)
+  return fold(tiles.tileData, -100000, mathBy(math.max, attr))
+end
+
+minOf = function(tiles, attr)
+  return fold(tiles.tileData, 100000, mathBy(math.min, attr))
+end
+
+function translateCenter()
+  local tiles = state.tiles
+  local getMiddle = function(attr, tiles)
+    local valMax = maxOf(tiles, attr)
+    local valMin = minOf(tiles, attr)
+    return (valMax + valMin) / 2
+  end
+
+  local centerx = getMiddle("x", tiles)
+  local centerz = getMiddle("z", tiles)
+
+  local currentCenter = { x = centerx, y = 1, z = centerz }
+  print("Current center: " .. tabToS(currentCenter))
+  local transformVector = vecDiff(currentCenter, state.tiles.startingAttachment)
+  print("Transform center by: " .. tabToS(transformVector))
+  for guid, tileData in pairs(tiles.tileData) do
+    local tile = getObjectFromGUID(guid)
+    local origPos = copyPos(tile.getPosition())
+    local newCenter = vecAdd(tile.getPosition(), transformVector)
+    tile.setPositionSmooth(newCenter)
+    adjustUnits(origPos, newCenter)
+    local newAttachments = {}
+    for k, aPoint in pairs(tileData.attachmentPoints) do
+      table.insert(newAttachments, vecAdd(aPoint, transformVector))
+    end
+    tileData.attachmentPoints = newAttachments
+    tileData.center = newCenter
+  end
+end
+
+function rotateCenter()
+  local tiles = state.tiles
+  local maxz = maxOf(tiles, "z")
+  local maxx = maxOf(tiles, "x")
+
+
+  if (maxz > 17.2 and maxx < 17.2) then
+    print("Rotating")
+
+    for guid, tileData in pairs(tiles.tileData) do
+      local tile = getObjectFromGUID(guid)
+      local pos = copyPos(tile.getPosition())
+      local newCenter = { x = pos.z, y = pos.y, z = pos.x }
+      local transform = vecDiff(pos, newCenter)
+      tile.setPosition(newCenter)
+      tile.setRotation(rotAdd(tile.getRotation(), { x = 0, y = 90, z = 0 }))
+      adjustUnits(pos, newCenter, { x = 0, y = 90, z = 0 })
+      local d = 2 * tileRadius
+      local newAttachments  = generateAttachPoints(newCenter,d)
+      tileData.attachmentPoints = newAttachments
+      tileData.center = newCenter
+    end
+    return true
+  end
+  return false
+end
+
+function center()
+  translateCenter()
+  if (rotateCenter()) then
+    futureCenter()
+  end
+end
+
