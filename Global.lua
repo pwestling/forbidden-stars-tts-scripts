@@ -200,7 +200,8 @@ default_state = {
   putBackFaction = {},
   options = {
     ["Tile Helper"] = true,
-    ["Blank State"] = false
+    ["Blank State"] = false,
+    ["Save State"] = true
   },
   optionButtons = {}
 }
@@ -208,7 +209,13 @@ default_state = {
 state = {}
 
 function onSave()
-  return JSON.encode(state)
+  if (state.options["Save State"]) then
+    return JSON.encode(state)
+  else
+    local stateToSave = copyTable(default_state)
+    stateToSave.options = state.options
+    return JSON.encode(stateToSave)
+  end
 end
 
 function onObjectSpawn(object)
@@ -837,7 +844,7 @@ function setupButtons()
 
   optionButton('dae75b', "Tile Helper")
   optionButton('d6e086', "Blank State")
-
+  optionButton('4baf3c', "Save State")
 
   Global.setVar("loaded", true)
 end
