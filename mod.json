@@ -2,7 +2,7 @@
   "SaveName": "FS 8 Faction V2",
   "GameMode": "Forbidden Stars",
   "Gravity": 0.5,
-  "Date": "11/22/2017 6:26:45 PM",
+  "Date": "11/25/2017 10:22:58 PM",
   "Table": "Table_Custom",
   "TableURL": "http://i.imgur.com/coMEVzn.jpg",
   "Sky": "Sky_Regal",
@@ -69,56 +69,56 @@
         "Color": "Red",
         "Transform": {
           "posX": -18.77375,
-          "posY": 3.474382,
+          "posY": 3.20026064,
           "posZ": -36.5253258,
           "rotX": 0.0,
           "rotY": 359.965668,
           "rotZ": 0.0,
-          "scaleX": 12.8411331,
+          "scaleX": 12.8416491,
           "scaleY": 7.0,
-          "scaleZ": 1.74979472
+          "scaleZ": 1.7497313
         }
       },
       {
         "Color": "Yellow",
         "Transform": {
           "posX": 18.2424564,
-          "posY": 3.474382,
+          "posY": 3.20026064,
           "posZ": -36.35904,
           "rotX": 0.0,
           "rotY": 359.965668,
           "rotZ": 0.0,
-          "scaleX": 12.8423357,
+          "scaleX": 12.8428526,
           "scaleY": 7.0,
-          "scaleZ": 1.52125835
+          "scaleZ": 1.52128041
         }
       },
       {
         "Color": "Green",
         "Transform": {
           "posX": -18.7796745,
-          "posY": 3.474382,
+          "posY": 3.20026064,
           "posZ": 36.42039,
           "rotX": 0.0,
           "rotY": 179.900162,
           "rotZ": 0.0,
-          "scaleX": 13.0028534,
+          "scaleX": 13.003665,
           "scaleY": 7.0,
-          "scaleZ": 1.88555
+          "scaleZ": 1.8857044
         }
       },
       {
         "Color": "Blue",
         "Transform": {
           "posX": 18.2664452,
-          "posY": 3.474382,
+          "posY": 3.20026064,
           "posZ": 36.45564,
           "rotX": 0.0,
           "rotY": 179.663574,
           "rotZ": 0.0,
-          "scaleX": 12.8008223,
+          "scaleX": 12.8024244,
           "scaleY": 7.0,
-          "scaleZ": 1.8542031
+          "scaleZ": 1.85433543
         }
       }
     ]
@@ -140,7 +140,7 @@
       "Name": "Bag",
       "Transform": {
         "posX": -46.75,
-        "posY": 0.780189,
+        "posY": 0.780188859,
         "posZ": 5.24997568,
         "rotX": 1.00060888E-11,
         "rotY": 180.0068,
@@ -508,7 +508,7 @@
         "posZ": -31.25,
         "rotX": 6.580144E-08,
         "rotY": 180.029053,
-        "rotZ": 3.53430323E-07,
+        "rotZ": 3.5342984E-07,
         "scaleX": 3.0843668,
         "scaleY": 1.0,
         "scaleZ": 3.0843668
@@ -620,11 +620,11 @@
       "Name": "Die_20",
       "Transform": {
         "posX": -46.7247,
-        "posY": 1.90596235,
-        "posZ": -0.544707835,
-        "rotX": 10.8123417,
-        "rotY": 178.998932,
-        "rotZ": 198.000031,
+        "posY": 1.90596342,
+        "posZ": -0.544709444,
+        "rotX": 10.81233,
+        "rotY": 178.998856,
+        "rotZ": 198.000015,
         "scaleX": 2.25,
         "scaleY": 2.25,
         "scaleZ": 2.25
@@ -818,9 +818,9 @@
       "Transform": {
         "posX": -50.26655,
         "posY": 1.08349,
-        "posZ": -8.231867,
-        "rotX": -4.435908E-05,
-        "rotY": 359.972473,
+        "posZ": -8.231859,
+        "rotX": -4.644319E-05,
+        "rotY": 359.972443,
         "rotZ": 180.000763,
         "scaleX": 0.900000036,
         "scaleY": 0.900000036,
@@ -860,8 +860,8 @@
       "Transform": {
         "posX": -50.25,
         "posY": 1.00521767,
-        "posZ": -0.249891654,
-        "rotX": -0.000266826741,
+        "posZ": -0.249885127,
+        "rotX": -0.000267953961,
         "rotY": 89.98928,
         "rotZ": 180.0,
         "scaleX": 2.0,
@@ -959,11 +959,11 @@
       "Name": "Custom_Token",
       "Transform": {
         "posX": -46.75,
-        "posY": 1.0652231,
-        "posZ": -6.75006962,
-        "rotX": -3.6559E-07,
-        "rotY": 270.004761,
-        "rotZ": 1.18025469E-06,
+        "posY": 1.06522322,
+        "posZ": -6.75007153,
+        "rotX": 4.804394E-07,
+        "rotY": 270.004822,
+        "rotZ": -5.860774E-07,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -1002,8 +1002,8 @@
       "Transform": {
         "posX": -53.2487,
         "posY": 1.0339731,
-        "posZ": 0.249914959,
-        "rotX": -8.97153257E-07,
+        "posZ": 0.2499108,
+        "rotX": -6.12243241E-07,
         "rotY": 269.99234,
         "rotZ": 180.0,
         "scaleX": 1.37499952,
@@ -3164,11 +3164,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": 94.21959,
-        "posY": 1.97995269,
-        "posZ": 9.165138,
-        "rotX": -8.1353204E-07,
+        "posY": 1.97995281,
+        "posZ": 9.165124,
+        "rotX": -3.868122E-07,
         "rotY": 180.006683,
-        "rotZ": -0.0006895422,
+        "rotZ": -0.0006865273,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -3177,8 +3177,8 @@
       "Description": "\n",
       "ColorDiffuse": {
         "r": 0.862847,
-        "g": 0.10429024,
-        "b": 0.10429024
+        "g": 0.104290076,
+        "b": 0.104290076
       },
       "Locked": false,
       "Grid": true,
@@ -8761,11 +8761,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": 97.74977,
-        "posY": 1.97999525,
+        "posY": 1.979995,
         "posZ": 9.250086,
-        "rotX": -0.0001794854,
-        "rotY": 14.9803467,
-        "rotZ": 0.0006641685,
+        "rotX": -0.000178711809,
+        "rotY": 14.980401,
+        "rotZ": 0.000667876157,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -8775,7 +8775,7 @@
       "ColorDiffuse": {
         "r": 0.917851567,
         "g": 0.9035631,
-        "b": 0.156498492
+        "b": 0.156498343
       },
       "Locked": false,
       "Grid": true,
@@ -13902,11 +13902,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": 97.6631851,
-        "posY": 1.97999454,
+        "posY": 1.9799943,
         "posZ": 5.787377,
-        "rotX": 2.746953E-07,
+        "rotX": 2.754885E-07,
         "rotY": 179.974731,
-        "rotZ": -0.000690274348,
+        "rotZ": -0.000686790852,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -13914,8 +13914,8 @@
       "Nickname": "Space Marine Faction Bag",
       "Description": "\n",
       "ColorDiffuse": {
-        "r": 0.100647412,
-        "g": 0.1444548,
+        "r": 0.100647278,
+        "g": 0.144454658,
         "b": 0.7401371
       },
       "Locked": false,
@@ -19223,11 +19223,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": 94.1509,
-        "posY": 1.97995257,
-        "posZ": 5.751933,
-        "rotX": 2.16791341E-06,
-        "rotY": 180.005524,
-        "rotZ": -0.0006940611,
+        "posY": 1.97995281,
+        "posZ": 5.75192833,
+        "rotX": 3.02132185E-06,
+        "rotY": 180.005508,
+        "rotZ": -0.000687721069,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -19235,9 +19235,9 @@
       "Nickname": "Ork Faction Bag",
       "Description": "\n",
       "ColorDiffuse": {
-        "r": 0.155261219,
+        "r": 0.15526107,
         "g": 0.9541138,
-        "b": 0.118391253
+        "b": 0.118391104
       },
       "Locked": false,
       "Grid": true,
@@ -24585,11 +24585,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": 94.1486359,
-        "posY": 1.97995257,
-        "posZ": 1.407494,
-        "rotX": -0.000685597654,
-        "rotY": 89.9825439,
-        "rotZ": 1.83688478E-08,
+        "posY": 1.97995234,
+        "posZ": 1.40749073,
+        "rotX": -0.000684888335,
+        "rotY": 89.98259,
+        "rotZ": -2.29073862E-06,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -24597,9 +24597,9 @@
       "Nickname": "Imperial Guard Faction",
       "Description": "",
       "ColorDiffuse": {
-        "r": 0.08559429,
-        "g": 0.392171562,
-        "b": 0.180188537
+        "r": 0.0855941847,
+        "g": 0.3921714,
+        "b": 0.180188388
       },
       "Locked": false,
       "Grid": false,
@@ -30396,11 +30396,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": 98.00779,
-        "posY": 1.97999859,
-        "posZ": 0.9447524,
-        "rotX": 0.000685672741,
-        "rotY": 270.023438,
-        "rotZ": 2.99719682E-06,
+        "posY": 1.979999,
+        "posZ": 0.9447499,
+        "rotX": 0.0006899847,
+        "rotY": 270.023651,
+        "rotZ": 8.00777457E-07,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -30409,7 +30409,7 @@
       "Description": "",
       "ColorDiffuse": {
         "r": 0.6687291,
-        "g": 0.243041515,
+        "g": 0.243041337,
         "b": 0.934782565
       },
       "Locked": false,
@@ -35912,11 +35912,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": 94.1509,
-        "posY": 1.97995234,
-        "posZ": -2.74803114,
-        "rotX": -0.00068982417,
-        "rotY": 90.0113449,
-        "rotZ": 3.46785578E-06,
+        "posY": 1.97995257,
+        "posZ": -2.74803329,
+        "rotX": -0.0006886213,
+        "rotY": 90.01111,
+        "rotZ": 3.766552E-06,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -40852,12 +40852,12 @@
     {
       "Name": "Bag",
       "Transform": {
-        "posX": 97.71727,
-        "posY": 1.97999561,
-        "posZ": -2.784143,
-        "rotX": 5.662198E-07,
-        "rotY": 180.0231,
-        "rotZ": -0.0006910096,
+        "posX": 98.36122,
+        "posY": 1.98000288,
+        "posZ": -2.70012474,
+        "rotX": 3.04003538E-06,
+        "rotY": 180.008667,
+        "rotZ": -0.000684634433,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -40866,8 +40866,8 @@
       "Description": "",
       "ColorDiffuse": {
         "r": 0.9559999,
-        "g": 0.3919981,
-        "b": 0.112998106
+        "g": 0.391997933,
+        "b": 0.112997942
       },
       "Locked": false,
       "Grid": false,
@@ -41443,273 +41443,6 @@
           "LuaScript": "",
           "LuaScriptState": "",
           "GUID": "b33e08"
-        },
-        {
-          "Name": "Deck",
-          "Transform": {
-            "posX": -6.750006,
-            "posY": 4.141658,
-            "posZ": -9.750198,
-            "rotX": 359.986938,
-            "rotY": 90.00003,
-            "rotZ": 359.7279,
-            "scaleX": 1.0,
-            "scaleY": 1.0,
-            "scaleZ": 1.0
-          },
-          "Nickname": "Order upgrades",
-          "Description": "",
-          "ColorDiffuse": {
-            "r": 0.713235259,
-            "g": 0.713235259,
-            "b": 0.713235259
-          },
-          "Locked": false,
-          "Grid": true,
-          "Snap": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "Hands": false,
-          "SidewaysCard": false,
-          "DeckIDs": [
-            16419,
-            16409,
-            16429,
-            16439,
-            16440
-          ],
-          "CustomDeck": {
-            "164": {
-              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
-              "NumWidth": 10,
-              "NumHeight": 5,
-              "BackIsHidden": false,
-              "UniqueBack": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "ContainedObjects": [
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": 0.2500001,
-                "posY": 1.03171372,
-                "posZ": 4.75,
-                "rotX": -2.35148107E-07,
-                "rotY": 89.99999,
-                "rotZ": 2.19984216E-07,
-                "scaleX": 1.0,
-                "scaleY": 1.0,
-                "scaleZ": 1.0
-              },
-              "Nickname": "",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "CardID": 16419,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "f85280"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": 0.24999994,
-                "posY": 1.08171368,
-                "posZ": 5.25,
-                "rotX": -2.35148136E-07,
-                "rotY": 89.99999,
-                "rotZ": 2.19984244E-07,
-                "scaleX": 1.0,
-                "scaleY": 1.0,
-                "scaleZ": 1.0
-              },
-              "Nickname": "",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "CardID": 16409,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "6191eb"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": 0.249999881,
-                "posY": 1.13171363,
-                "posZ": 5.75000048,
-                "rotX": -2.35148178E-07,
-                "rotY": 89.99998,
-                "rotZ": 2.19984258E-07,
-                "scaleX": 1.0,
-                "scaleY": 1.0,
-                "scaleZ": 1.0
-              },
-              "Nickname": "",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "CardID": 16429,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "a860b3"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -0.2499433,
-                "posY": 1.27797008,
-                "posZ": 6.24991131,
-                "rotX": 0.000261126843,
-                "rotY": 90.0,
-                "rotZ": -0.0003702147,
-                "scaleX": 1.0,
-                "scaleY": 1.0,
-                "scaleZ": 1.0
-              },
-              "Nickname": "",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "CardID": 16439,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "2b86f8"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -0.250113,
-                "posY": 1.31617665,
-                "posZ": 7.75235462,
-                "rotX": 359.983215,
-                "rotY": 90.05181,
-                "rotZ": 15.1610031,
-                "scaleX": 1.0,
-                "scaleY": 1.0,
-                "scaleZ": 1.0
-              },
-              "Nickname": "",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "CardID": 16440,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "c9c24c"
-            }
-          ],
-          "GUID": "eba888"
         },
         {
           "Name": "Custom_Model_Infinite_Bag",
@@ -43740,17 +43473,17 @@
         {
           "Name": "Deck",
           "Transform": {
-            "posX": 98.9277,
-            "posY": 4.279205,
-            "posZ": -2.74793625,
-            "rotX": 0.0201356616,
-            "rotY": 89.99977,
-            "rotZ": -0.00421516551,
+            "posX": -29.7504444,
+            "posY": 3.05843735,
+            "posZ": 3.75123715,
+            "rotX": 358.25235,
+            "rotY": 180.025223,
+            "rotZ": 359.097534,
             "scaleX": 1.0,
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "Event cards",
+          "Nickname": "Order upgrades",
           "Description": "",
           "ColorDiffuse": {
             "r": 0.713235259,
@@ -43767,22 +43500,19 @@
           "Hands": false,
           "SidewaysCard": false,
           "DeckIDs": [
-            16428,
+            16439,
             16438,
-            16437,
-            16427,
-            16418,
-            16417,
-            16407,
-            16408
+            16440,
+            16441,
+            16442
           ],
           "CustomDeck": {
             "164": {
-              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
+              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
               "NumWidth": 10,
-              "NumHeight": 5,
-              "BackIsHidden": false,
+              "NumHeight": 7,
+              "BackIsHidden": true,
               "UniqueBack": true
             }
           },
@@ -43792,12 +43522,12 @@
             {
               "Name": "Card",
               "Transform": {
-                "posX": -7.25,
-                "posY": 1.27796364,
-                "posZ": 3.75000024,
-                "rotX": -3.86213856E-07,
-                "rotY": 89.9999542,
-                "rotZ": 3.71722564E-07,
+                "posX": 6.24982643,
+                "posY": 1.03170288,
+                "posZ": 9.750001,
+                "rotX": -0.0006526834,
+                "rotY": 180.000031,
+                "rotZ": -0.000404133956,
                 "scaleX": 1.0,
                 "scaleY": 1.0,
                 "scaleZ": 1.0
@@ -43816,31 +43546,32 @@
               "Sticky": true,
               "Tooltip": true,
               "GridProjection": false,
-              "CardID": 16428,
+              "Hands": true,
+              "CardID": 16439,
               "SidewaysCard": false,
               "CustomDeck": {
                 "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
                   "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
                   "UniqueBack": true
                 }
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "GUID": "68b424"
+              "GUID": "75d45a"
             },
             {
               "Name": "Card",
               "Transform": {
-                "posX": -6.75,
-                "posY": 1.03171372,
-                "posZ": 2.25,
-                "rotX": -1.17268769E-06,
-                "rotY": 89.99998,
-                "rotZ": -3.779404E-07,
+                "posX": 6.24999475,
+                "posY": 1.18126833,
+                "posZ": 9.750016,
+                "rotX": 359.992554,
+                "rotY": 180.000412,
+                "rotZ": -0.005247942,
                 "scaleX": 1.0,
                 "scaleY": 1.0,
                 "scaleZ": 1.0
@@ -43859,31 +43590,32 @@
               "Sticky": true,
               "Tooltip": true,
               "GridProjection": false,
+              "Hands": true,
               "CardID": 16438,
               "SidewaysCard": false,
               "CustomDeck": {
                 "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
                   "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
                   "UniqueBack": true
                 }
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "GUID": "440fd0"
+              "GUID": "971d55"
             },
             {
               "Name": "Card",
               "Transform": {
-                "posX": -6.75,
-                "posY": 1.08171368,
-                "posZ": 2.75000024,
-                "rotX": -1.17268769E-06,
-                "rotY": 89.99998,
-                "rotZ": -3.77940466E-07,
+                "posX": 6.74997473,
+                "posY": 1.19862437,
+                "posZ": 9.25001049,
+                "rotX": -0.00422926,
+                "rotY": 179.999924,
+                "rotZ": 359.988129,
                 "scaleX": 1.0,
                 "scaleY": 1.0,
                 "scaleZ": 1.0
@@ -43902,31 +43634,32 @@
               "Sticky": true,
               "Tooltip": true,
               "GridProjection": false,
-              "CardID": 16437,
+              "Hands": true,
+              "CardID": 16440,
               "SidewaysCard": false,
               "CustomDeck": {
                 "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
                   "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
                   "UniqueBack": true
                 }
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "GUID": "10b320"
+              "GUID": "e774e3"
             },
             {
               "Name": "Card",
               "Transform": {
-                "posX": -6.75,
-                "posY": 1.22796369,
-                "posZ": 3.25000024,
-                "rotX": -3.862138E-07,
-                "rotY": 89.99998,
-                "rotZ": 3.71722535E-07,
+                "posX": 6.24999857,
+                "posY": 1.18492436,
+                "posZ": 9.750003,
+                "rotX": -0.0007282369,
+                "rotY": 180.0,
+                "rotZ": -0.00042218194,
                 "scaleX": 1.0,
                 "scaleY": 1.0,
                 "scaleZ": 1.0
@@ -43945,31 +43678,32 @@
               "Sticky": true,
               "Tooltip": true,
               "GridProjection": false,
-              "CardID": 16427,
+              "Hands": true,
+              "CardID": 16441,
               "SidewaysCard": false,
               "CustomDeck": {
                 "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
                   "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
                   "UniqueBack": true
                 }
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "GUID": "2051e0"
+              "GUID": "e9d43c"
             },
             {
               "Name": "Card",
               "Transform": {
-                "posX": -7.25,
-                "posY": 1.32796359,
-                "posZ": 4.75,
-                "rotX": -3.86213884E-07,
-                "rotY": 89.9999542,
-                "rotZ": 3.71722621E-07,
+                "posX": 5.74998,
+                "posY": 1.182798,
+                "posZ": 9.750006,
+                "rotX": -0.00150602614,
+                "rotY": 180.0,
+                "rotZ": 359.99292,
                 "scaleX": 1.0,
                 "scaleY": 1.0,
                 "scaleZ": 1.0
@@ -43988,574 +43722,35 @@
               "Sticky": true,
               "Tooltip": true,
               "GridProjection": false,
-              "CardID": 16418,
+              "Hands": true,
+              "CardID": 16442,
               "SidewaysCard": false,
               "CustomDeck": {
                 "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
                   "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
                   "UniqueBack": true
                 }
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "GUID": "a80830"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -7.25000048,
-                "posY": 1.37796354,
-                "posZ": 5.75,
-                "rotX": -3.86213941E-07,
-                "rotY": 89.99993,
-                "rotZ": 3.71722678E-07,
-                "scaleX": 1.0,
-                "scaleY": 1.0,
-                "scaleZ": 1.0
-              },
-              "Nickname": "",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "CardID": 16417,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "533b1f"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -7.24999952,
-                "posY": 1.4279635,
-                "posZ": 6.75,
-                "rotX": -3.86214055E-07,
-                "rotY": 89.99998,
-                "rotZ": 3.71722678E-07,
-                "scaleX": 1.0,
-                "scaleY": 1.0,
-                "scaleZ": 1.0
-              },
-              "Nickname": "",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "CardID": 16407,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "dbe842"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -7.74998951,
-                "posY": 1.03171372,
-                "posZ": 8.262129,
-                "rotX": 6.538903E-07,
-                "rotY": 89.8774261,
-                "rotZ": -8.19493E-06,
-                "scaleX": 1.0,
-                "scaleY": 1.0,
-                "scaleZ": 1.0
-              },
-              "Nickname": "",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "CardID": 16408,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "e28950"
+              "GUID": "a21d63"
             }
           ],
-          "GUID": "f5fb4a"
+          "GUID": "136139"
         },
         {
           "Name": "Deck",
           "Transform": {
-            "posX": 45.2383652,
-            "posY": 2.177437,
-            "posZ": -3.21587658,
-            "rotX": 2.208666E-06,
-            "rotY": 150.036179,
-            "rotZ": -4.15036129E-06,
-            "scaleX": 1.0,
-            "scaleY": 1.0,
-            "scaleZ": 1.0
-          },
-          "Nickname": "Combat upgrades (LV 0)",
-          "Description": "",
-          "ColorDiffuse": {
-            "r": 0.713235259,
-            "g": 0.713235259,
-            "b": 0.713235259
-          },
-          "Locked": false,
-          "Grid": true,
-          "Snap": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "Hands": false,
-          "SidewaysCard": false,
-          "DeckIDs": [
-            16430,
-            16410
-          ],
-          "CustomDeck": {
-            "164": {
-              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
-              "NumWidth": 10,
-              "NumHeight": 5,
-              "BackIsHidden": false,
-              "UniqueBack": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "ContainedObjects": [
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -10.7500038,
-                "posY": 1.03168881,
-                "posZ": -4.25000143,
-                "rotX": -0.00151028635,
-                "rotY": 150.002747,
-                "rotZ": -0.000919741869,
-                "scaleX": 1.0,
-                "scaleY": 1.0,
-                "scaleZ": 1.0
-              },
-              "Nickname": "Kauyon",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "Hands": true,
-              "CardID": 16430,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "c3565b"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -10.75003,
-                "posY": 1.16619217,
-                "posZ": -4.24999046,
-                "rotX": 359.984253,
-                "rotY": 150.002777,
-                "rotZ": 359.9921,
-                "scaleX": 1.0,
-                "scaleY": 1.0,
-                "scaleZ": 1.0
-              },
-              "Nickname": "Kauyon",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "Hands": true,
-              "CardID": 16410,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "c21cfc"
-            }
-          ],
-          "GUID": "3f75b4"
-        },
-        {
-          "Name": "Deck",
-          "Transform": {
-            "posX": 45.8587952,
-            "posY": 2.17745256,
-            "posZ": -3.14192533,
-            "rotX": -3.142931E-06,
-            "rotY": 164.971344,
-            "rotZ": -1.0095956E-05,
-            "scaleX": 1.0,
-            "scaleY": 1.0,
-            "scaleZ": 1.0
-          },
-          "Nickname": "Combat upgrades (LV 0)",
-          "Description": "",
-          "ColorDiffuse": {
-            "r": 0.713235259,
-            "g": 0.713235259,
-            "b": 0.713235259
-          },
-          "Locked": false,
-          "Grid": true,
-          "Snap": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "Hands": false,
-          "SidewaysCard": false,
-          "DeckIDs": [
-            16435,
-            16415
-          ],
-          "CustomDeck": {
-            "164": {
-              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
-              "NumWidth": 10,
-              "NumHeight": 5,
-              "BackIsHidden": false,
-              "UniqueBack": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "ContainedObjects": [
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -8.250003,
-                "posY": 1.031689,
-                "posZ": 9.75,
-                "rotX": -0.00149796659,
-                "rotY": 164.971329,
-                "rotZ": -0.000887909,
-                "scaleX": 1.0,
-                "scaleY": 1.0,
-                "scaleZ": 1.0
-              },
-              "Nickname": "Feigned Retreat",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "Hands": true,
-              "CardID": 16435,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "918fcf"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -8.250019,
-                "posY": 1.16619241,
-                "posZ": 9.750014,
-                "rotX": 359.984222,
-                "rotY": 164.971313,
-                "rotZ": 359.992035,
-                "scaleX": 1.0,
-                "scaleY": 1.0,
-                "scaleZ": 1.0
-              },
-              "Nickname": "Feigned Retreat",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "Hands": true,
-              "CardID": 16415,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "c4aa71"
-            }
-          ],
-          "GUID": "decb76"
-        },
-        {
-          "Name": "Deck",
-          "Transform": {
-            "posX": -12.25,
-            "posY": 3.04828,
-            "posZ": -6.75,
-            "rotX": -3.63633626E-06,
-            "rotY": 180.0339,
-            "rotZ": -4.44538728E-06,
-            "scaleX": 1.0,
-            "scaleY": 1.0,
-            "scaleZ": 1.0
-          },
-          "Nickname": "Combat upgrades (LV 3)",
-          "Description": "",
-          "ColorDiffuse": {
-            "r": 0.713235259,
-            "g": 0.713235259,
-            "b": 0.713235259
-          },
-          "Locked": false,
-          "Grid": true,
-          "Snap": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "Hands": false,
-          "SidewaysCard": false,
-          "DeckIDs": [
-            16433,
-            16413
-          ],
-          "CustomDeck": {
-            "164": {
-              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
-              "NumWidth": 10,
-              "NumHeight": 5,
-              "BackIsHidden": false,
-              "UniqueBack": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "ContainedObjects": [
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -19.2500019,
-                "posY": 1.03168893,
-                "posZ": -7.249998,
-                "rotX": -0.00151075178,
-                "rotY": 180.0339,
-                "rotZ": -0.0008816074,
-                "scaleX": 1.0,
-                "scaleY": 1.0,
-                "scaleZ": 1.0
-              },
-              "Nickname": "Supremacy",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "Hands": true,
-              "CardID": 16433,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "559ed0"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -19.2500153,
-                "posY": 1.16619217,
-                "posZ": -7.24997568,
-                "rotX": 359.984253,
-                "rotY": 180.033951,
-                "rotZ": 359.992065,
-                "scaleX": 1.0,
-                "scaleY": 1.0,
-                "scaleZ": 1.0
-              },
-              "Nickname": "Supremacy",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "Hands": true,
-              "CardID": 16413,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "c144c3"
-            }
-          ],
-          "GUID": "794586"
-        },
-        {
-          "Name": "Deck",
-          "Transform": {
-            "posX": -17.25,
-            "posY": 3.03182364,
-            "posZ": -2.75,
-            "rotX": 4.84231623E-06,
-            "rotY": 165.0099,
-            "rotZ": -8.296411E-06,
+            "posX": -29.2496719,
+            "posY": 3.06460071,
+            "posZ": 3.251176,
+            "rotX": 357.992065,
+            "rotY": 179.979263,
+            "rotZ": 0.758109748,
             "scaleX": 1.0,
             "scaleY": 1.0,
             "scaleZ": 1.0
@@ -44577,24 +43772,24 @@
           "Hands": false,
           "SidewaysCard": false,
           "DeckIDs": [
-            16412,
-            16432,
+            16407,
             16402,
-            16422,
-            16401,
-            16421,
-            16424,
+            16409,
             16404,
-            16434,
-            16414
+            16405,
+            16400,
+            16408,
+            16403,
+            16406,
+            16401
           ],
           "CustomDeck": {
             "164": {
-              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
+              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
               "NumWidth": 10,
-              "NumHeight": 5,
-              "BackIsHidden": false,
+              "NumHeight": 7,
+              "BackIsHidden": true,
               "UniqueBack": true
             }
           },
@@ -44604,17 +43799,17 @@
             {
               "Name": "Card",
               "Transform": {
-                "posX": -24.251667,
+                "posX": -9.750166,
                 "posY": 1.03168917,
-                "posZ": -3.25516343,
-                "rotX": -0.00149885286,
-                "rotY": 165.0097,
-                "rotZ": -0.0008895838,
+                "posZ": -1.250014,
+                "rotX": -0.0015042423,
+                "rotY": 180.0,
+                "rotZ": -0.000892141135,
                 "scaleX": 1.0,
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "Pathfinders",
+              "Nickname": "Stealth Teams",
               "Description": "",
               "ColorDiffuse": {
                 "r": 0.713235259,
@@ -44629,80 +43824,36 @@
               "Tooltip": true,
               "GridProjection": false,
               "Hands": true,
-              "CardID": 16412,
+              "CardID": 16407,
               "SidewaysCard": false,
               "CustomDeck": {
                 "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
                   "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
                   "UniqueBack": true
                 }
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "GUID": "02fbd7"
+              "GUID": "b24d24"
             },
             {
               "Name": "Card",
               "Transform": {
-                "posX": -24.2516823,
-                "posY": 1.16619241,
-                "posZ": -3.25514913,
+                "posX": -9.750177,
+                "posY": 1.16619265,
+                "posZ": -1.24999416,
                 "rotX": 359.984222,
-                "rotY": 165.0097,
-                "rotZ": 359.992035,
+                "rotY": 180.000015,
+                "rotZ": 359.991943,
                 "scaleX": 1.0,
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "Pathfinders",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "Hands": true,
-              "CardID": 16432,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "a77fe8"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -25.2500057,
-                "posY": 1.03168893,
-                "posZ": 1.249998,
-                "rotX": -0.00150151458,
-                "rotY": 165.00975,
-                "rotZ": -0.000888426963,
-                "scaleX": 1.0,
-                "scaleY": 1.0,
-                "scaleZ": 1.0
-              },
-              "Nickname": "Tactical Retreat",
+              "Nickname": "Stealth Teams",
               "Description": "",
               "ColorDiffuse": {
                 "r": 0.713235259,
@@ -44721,27 +43872,203 @@
               "SidewaysCard": false,
               "CustomDeck": {
                 "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
                   "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
                   "UniqueBack": true
                 }
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "GUID": "b61fdb"
+              "GUID": "e024e2"
             },
             {
               "Name": "Card",
               "Transform": {
-                "posX": -25.2500248,
-                "posY": 1.16619229,
-                "posZ": 1.25001419,
+                "posX": -12.7502851,
+                "posY": 1.03168917,
+                "posZ": -2.7500174,
+                "rotX": -0.00150438841,
+                "rotY": 180.000336,
+                "rotZ": -0.0008918784,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Thousand Daggers",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 16409,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "164": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "4c1227"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": -12.7502966,
+                "posY": 1.16619265,
+                "posZ": -2.74999762,
+                "rotX": 359.984222,
+                "rotY": 180.000366,
+                "rotZ": 359.991943,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Thousand Daggers",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 16404,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "164": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "b6257f"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": -5.7500205,
+                "posY": 1.03168881,
+                "posZ": -3.24999881,
+                "rotX": -0.00151019485,
+                "rotY": 180.000015,
+                "rotZ": -0.0008929046,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Crossfire",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 16405,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "164": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "16ead4"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": -5.750034,
+                "posY": 1.16619241,
+                "posZ": -3.24997616,
                 "rotX": 359.984253,
-                "rotY": 165.00975,
-                "rotZ": 359.9921,
+                "rotY": 180.000046,
+                "rotZ": 359.991974,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Crossfire",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 16400,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "164": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "521460"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": -9.250188,
+                "posY": 1.031689,
+                "posZ": -6.24999857,
+                "rotX": -0.00150422147,
+                "rotY": 180.000015,
+                "rotZ": -0.000892287062,
                 "scaleX": 1.0,
                 "scaleY": 1.0,
                 "scaleZ": 1.0
@@ -44761,36 +44088,124 @@
               "Tooltip": true,
               "GridProjection": false,
               "Hands": true,
-              "CardID": 16422,
+              "CardID": 16408,
               "SidewaysCard": false,
               "CustomDeck": {
                 "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
                   "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
                   "UniqueBack": true
                 }
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "GUID": "836001"
+              "GUID": "e8a6b4"
             },
             {
               "Name": "Card",
               "Transform": {
-                "posX": -21.75007,
-                "posY": 1.03168893,
-                "posZ": -2.74978018,
-                "rotX": -0.00150063878,
-                "rotY": 165.009674,
-                "rotZ": -0.000889780058,
+                "posX": -9.250199,
+                "posY": 1.16619265,
+                "posZ": -6.249979,
+                "rotX": 359.984222,
+                "rotY": 180.000046,
+                "rotZ": 359.991943,
                 "scaleX": 1.0,
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "Stealth Teams",
+              "Nickname": "Tactical Retreat",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 16403,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "164": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "eabc10"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": -7.25001955,
+                "posY": 1.031689,
+                "posZ": 2.25000143,
+                "rotX": -0.0015049394,
+                "rotY": 180.000015,
+                "rotZ": -0.000891944,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Pathfinders",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 16406,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "164": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "d8395a"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": -7.250031,
+                "posY": 1.16619265,
+                "posZ": 2.25002122,
+                "rotX": 359.984222,
+                "rotY": 180.000046,
+                "rotZ": 359.991943,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Pathfinders",
               "Description": "",
               "ColorDiffuse": {
                 "r": 0.713235259,
@@ -44809,387 +44224,30 @@
               "SidewaysCard": false,
               "CustomDeck": {
                 "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
                   "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
                   "UniqueBack": true
                 }
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "GUID": "75a6ee"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -21.75009,
-                "posY": 1.16619229,
-                "posZ": -2.74976373,
-                "rotX": 359.984253,
-                "rotY": 165.009674,
-                "rotZ": 359.9921,
-                "scaleX": 1.0,
-                "scaleY": 1.0,
-                "scaleZ": 1.0
-              },
-              "Nickname": "Stealth Teams",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "Hands": true,
-              "CardID": 16421,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "4431f5"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -24.2500057,
-                "posY": 1.03168893,
-                "posZ": -6.75000238,
-                "rotX": -0.0015013793,
-                "rotY": 165.00975,
-                "rotZ": -0.000889179,
-                "scaleX": 1.0,
-                "scaleY": 1.0,
-                "scaleZ": 1.0
-              },
-              "Nickname": "Crossfire",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "Hands": true,
-              "CardID": 16424,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "d53708"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -24.2500248,
-                "posY": 1.16619229,
-                "posZ": -6.74998569,
-                "rotX": 359.984253,
-                "rotY": 165.009735,
-                "rotZ": 359.9921,
-                "scaleX": 1.0,
-                "scaleY": 1.0,
-                "scaleZ": 1.0
-              },
-              "Nickname": "Crossfire",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "Hands": true,
-              "CardID": 16404,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "f35128"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -28.2500057,
-                "posY": 1.03168893,
-                "posZ": -4.25000238,
-                "rotX": -0.00150166627,
-                "rotY": 165.009735,
-                "rotZ": -0.0008890926,
-                "scaleX": 1.0,
-                "scaleY": 1.0,
-                "scaleZ": 1.0
-              },
-              "Nickname": "Thousand Daggers",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "Hands": true,
-              "CardID": 16434,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "c2df92"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -28.2500248,
-                "posY": 1.16619229,
-                "posZ": -4.24998569,
-                "rotX": 359.984253,
-                "rotY": 165.009735,
-                "rotZ": 359.9921,
-                "scaleX": 1.0,
-                "scaleY": 1.0,
-                "scaleZ": 1.0
-              },
-              "Nickname": "Thousand Daggers",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "Hands": true,
-              "CardID": 16414,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "516733"
+              "GUID": "a23d6c"
             }
           ],
-          "GUID": "99bf67"
+          "GUID": "1f6e7d"
         },
         {
           "Name": "Deck",
           "Transform": {
-            "posX": -12.7509356,
-            "posY": 3.10608244,
-            "posZ": 2.250702,
-            "rotX": 358.857666,
-            "rotY": 164.974869,
-            "rotZ": 359.0196,
-            "scaleX": 1.0,
-            "scaleY": 1.0,
-            "scaleZ": 1.0
-          },
-          "Nickname": "Combat upgrades (LV 0)",
-          "Description": "",
-          "ColorDiffuse": {
-            "r": 0.713235259,
-            "g": 0.713235259,
-            "b": 0.713235259
-          },
-          "Locked": false,
-          "Grid": true,
-          "Snap": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "Hands": false,
-          "SidewaysCard": false,
-          "DeckIDs": [
-            16425,
-            16405
-          ],
-          "CustomDeck": {
-            "164": {
-              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
-              "NumWidth": 10,
-              "NumHeight": 5,
-              "BackIsHidden": false,
-              "UniqueBack": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "ContainedObjects": [
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -15.2500029,
-                "posY": 1.03168893,
-                "posZ": 3.74999928,
-                "rotX": -0.00150097185,
-                "rotY": 164.960327,
-                "rotZ": -0.0008917894,
-                "scaleX": 1.0,
-                "scaleY": 1.0,
-                "scaleZ": 1.0
-              },
-              "Nickname": "Mont'ka",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "Hands": true,
-              "CardID": 16425,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "216eb3"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -15.2500219,
-                "posY": 1.16619217,
-                "posZ": 3.75001574,
-                "rotX": 359.984253,
-                "rotY": 164.960327,
-                "rotZ": 359.9921,
-                "scaleX": 1.0,
-                "scaleY": 1.0,
-                "scaleZ": 1.0
-              },
-              "Nickname": "Mont'ka",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "Hands": true,
-              "CardID": 16405,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "7bb0d1"
-            }
-          ],
-          "GUID": "027d41"
-        },
-        {
-          "Name": "Deck",
-          "Transform": {
-            "posX": -12.2483807,
-            "posY": 3.09577465,
-            "posZ": 2.25113869,
-            "rotX": 359.822266,
-            "rotY": 149.9946,
-            "rotZ": 2.6218164,
+            "posX": -29.2497654,
+            "posY": 3.06770754,
+            "posZ": 3.75150132,
+            "rotX": 358.132233,
+            "rotY": 179.966522,
+            "rotZ": 0.449546576,
             "scaleX": 1.0,
             "scaleY": 1.0,
             "scaleZ": 1.0
@@ -45211,16 +44269,16 @@
           "Hands": false,
           "SidewaysCard": false,
           "DeckIDs": [
-            16436,
-            16416
+            16428,
+            16426
           ],
           "CustomDeck": {
             "164": {
-              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
+              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
               "NumWidth": 10,
-              "NumHeight": 5,
-              "BackIsHidden": false,
+              "NumHeight": 7,
+              "BackIsHidden": true,
               "UniqueBack": true
             }
           },
@@ -45230,12 +44288,12 @@
             {
               "Name": "Card",
               "Transform": {
-                "posX": -29.2500038,
-                "posY": 1.03168893,
-                "posZ": 0.749998569,
-                "rotX": -0.00150933594,
-                "rotY": 150.0006,
-                "rotZ": -0.00092061644,
+                "posX": 2.256316,
+                "posY": 1.03168917,
+                "posZ": 4.74999332,
+                "rotX": -0.00150480634,
+                "rotY": 179.978821,
+                "rotZ": -0.0008918043,
                 "scaleX": 1.0,
                 "scaleY": 1.0,
                 "scaleZ": 1.0
@@ -45255,31 +44313,31 @@
               "Tooltip": true,
               "GridProjection": false,
               "Hands": true,
-              "CardID": 16436,
+              "CardID": 16428,
               "SidewaysCard": false,
               "CustomDeck": {
                 "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
                   "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
                   "UniqueBack": true
                 }
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "GUID": "0b48d2"
+              "GUID": "86a4d8"
             },
             {
               "Name": "Card",
               "Transform": {
-                "posX": -29.2500286,
-                "posY": 1.16619217,
-                "posZ": 0.7500091,
-                "rotX": 359.984253,
-                "rotY": 150.000626,
-                "rotZ": 359.9921,
+                "posX": 2.25630474,
+                "posY": 1.16619265,
+                "posZ": 4.750013,
+                "rotX": 359.984222,
+                "rotY": 179.978851,
+                "rotZ": 359.991943,
                 "scaleX": 1.0,
                 "scaleY": 1.0,
                 "scaleZ": 1.0
@@ -45299,34 +44357,171 @@
               "Tooltip": true,
               "GridProjection": false,
               "Hands": true,
-              "CardID": 16416,
+              "CardID": 16426,
               "SidewaysCard": false,
               "CustomDeck": {
                 "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
                   "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
                   "UniqueBack": true
                 }
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "GUID": "23bdac"
+              "GUID": "6a9d4f"
             }
           ],
-          "GUID": "dc6ab8"
+          "GUID": "465f7f"
         },
         {
           "Name": "Deck",
           "Transform": {
-            "posX": -13.2514191,
-            "posY": 3.07412648,
-            "posZ": 2.750938,
-            "rotX": 358.382019,
-            "rotY": 165.014389,
-            "rotZ": 358.268677,
+            "posX": -24.75,
+            "posY": 3.04828358,
+            "posZ": 3.75,
+            "rotX": -1.71285467E-06,
+            "rotY": 180.000046,
+            "rotZ": -5.43732949E-06,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Combat upgrades (LV 3)",
+          "Description": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "Hands": false,
+          "SidewaysCard": false,
+          "DeckIDs": [
+            16429,
+            16427
+          ],
+          "CustomDeck": {
+            "164": {
+              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
+              "NumWidth": 10,
+              "NumHeight": 7,
+              "BackIsHidden": true,
+              "UniqueBack": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "ContainedObjects": [
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 6.74997663,
+                "posY": 1.031689,
+                "posZ": 4.75000048,
+                "rotX": -0.0015040898,
+                "rotY": 180.000046,
+                "rotZ": -0.000891289266,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Supremacy",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 16429,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "164": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "a18f1e"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 6.749965,
+                "posY": 1.16619265,
+                "posZ": 4.75002,
+                "rotX": 359.984222,
+                "rotY": 180.000061,
+                "rotZ": 359.991943,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Supremacy",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 16427,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "164": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "a813e1"
+            }
+          ],
+          "GUID": "4f4bb1"
+        },
+        {
+          "Name": "Deck",
+          "Transform": {
+            "posX": -31.75,
+            "posY": 3.048284,
+            "posZ": -6.75,
+            "rotX": -5.172714E-06,
+            "rotY": 180.00618,
+            "rotZ": -5.55586666E-06,
             "scaleX": 1.0,
             "scaleY": 1.0,
             "scaleZ": 1.0
@@ -45348,16 +44543,16 @@
           "Hands": false,
           "SidewaysCard": false,
           "DeckIDs": [
-            16426,
-            16406
+            16415,
+            16410
           ],
           "CustomDeck": {
             "164": {
-              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
+              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
               "NumWidth": 10,
-              "NumHeight": 5,
-              "BackIsHidden": false,
+              "NumHeight": 7,
+              "BackIsHidden": true,
               "UniqueBack": true
             }
           },
@@ -45367,17 +44562,17 @@
             {
               "Name": "Card",
               "Transform": {
-                "posX": -7.750003,
-                "posY": 1.03168917,
-                "posZ": 2.24999952,
-                "rotX": -0.00149787369,
-                "rotY": 164.9687,
-                "rotZ": -0.0008877791,
+                "posX": -0.2489337,
+                "posY": 1.03168893,
+                "posZ": -5.74996662,
+                "rotX": -0.00150953687,
+                "rotY": 180.00618,
+                "rotZ": -0.000892877753,
                 "scaleX": 1.0,
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "Outmanuever",
+              "Nickname": "Evasion",
               "Description": "",
               "ColorDiffuse": {
                 "r": 0.713235259,
@@ -45392,36 +44587,36 @@
               "Tooltip": true,
               "GridProjection": false,
               "Hands": true,
-              "CardID": 16426,
+              "CardID": 16415,
               "SidewaysCard": false,
               "CustomDeck": {
                 "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
                   "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
                   "UniqueBack": true
                 }
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "GUID": "b3bbe6"
+              "GUID": "21d963"
             },
             {
               "Name": "Card",
               "Transform": {
-                "posX": -7.750019,
+                "posX": -0.248946711,
                 "posY": 1.16619241,
-                "posZ": 2.250014,
-                "rotX": 359.984222,
-                "rotY": 164.9687,
-                "rotZ": 359.992035,
+                "posZ": -5.749944,
+                "rotX": 359.984253,
+                "rotY": 180.00621,
+                "rotZ": 359.991974,
                 "scaleX": 1.0,
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "Outmanuever",
+              "Nickname": "Evasion",
               "Description": "",
               "ColorDiffuse": {
                 "r": 0.713235259,
@@ -45436,39 +44631,39 @@
               "Tooltip": true,
               "GridProjection": false,
               "Hands": true,
-              "CardID": 16406,
+              "CardID": 16410,
               "SidewaysCard": false,
               "CustomDeck": {
                 "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
                   "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
                   "UniqueBack": true
                 }
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "GUID": "a4694c"
+              "GUID": "f7a680"
             }
           ],
-          "GUID": "b1f825"
+          "GUID": "5a1491"
         },
         {
           "Name": "Deck",
           "Transform": {
-            "posX": -12.7505226,
-            "posY": 3.06843,
-            "posZ": 3.25158763,
-            "rotX": 358.375916,
-            "rotY": 195.011734,
-            "rotZ": 358.5616,
+            "posX": -24.25,
+            "posY": 3.048284,
+            "posZ": -6.75,
+            "rotX": -4.24822338E-06,
+            "rotY": 180.0001,
+            "rotZ": -3.55104771E-06,
             "scaleX": 1.0,
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "Combat upgrades (LV 2)",
+          "Nickname": "Combat upgrades (LV 0)",
           "Description": "",
           "ColorDiffuse": {
             "r": 0.713235259,
@@ -45485,16 +44680,16 @@
           "Hands": false,
           "SidewaysCard": false,
           "DeckIDs": [
-            16420,
-            16400
+            16417,
+            16412
           ],
           "CustomDeck": {
             "164": {
-              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
+              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
               "NumWidth": 10,
-              "NumHeight": 5,
-              "BackIsHidden": false,
+              "NumHeight": 7,
+              "BackIsHidden": true,
               "UniqueBack": true
             }
           },
@@ -45504,17 +44699,17 @@
             {
               "Name": "Card",
               "Transform": {
-                "posX": -21.25,
+                "posX": 7.25010967,
                 "posY": 1.03168893,
-                "posZ": 3.75000238,
-                "rotX": -0.00152520637,
-                "rotY": 194.9726,
-                "rotZ": -0.0008933081,
+                "posZ": -5.749996,
+                "rotX": -0.00151044258,
+                "rotY": 180.0001,
+                "rotZ": -0.0008932833,
                 "scaleX": 1.0,
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "Heavy Assault",
+              "Nickname": "Kauyon",
               "Description": "",
               "ColorDiffuse": {
                 "r": 0.713235259,
@@ -45529,36 +44724,36 @@
               "Tooltip": true,
               "GridProjection": false,
               "Hands": true,
-              "CardID": 16420,
+              "CardID": 16417,
               "SidewaysCard": false,
               "CustomDeck": {
                 "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
                   "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
                   "UniqueBack": true
                 }
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "GUID": "26661e"
+              "GUID": "b82665"
             },
             {
               "Name": "Card",
               "Transform": {
-                "posX": -21.2500057,
-                "posY": 1.16619229,
-                "posZ": 3.75002837,
-                "rotX": 359.984222,
-                "rotY": 194.972641,
-                "rotZ": 359.992035,
+                "posX": 7.25009632,
+                "posY": 1.16619241,
+                "posZ": -5.749974,
+                "rotX": 359.984253,
+                "rotY": 180.000122,
+                "rotZ": 359.991974,
                 "scaleX": 1.0,
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "Heavy Assault",
+              "Nickname": "Kauyon",
               "Description": "",
               "ColorDiffuse": {
                 "r": 0.713235259,
@@ -45573,34 +44768,34 @@
               "Tooltip": true,
               "GridProjection": false,
               "Hands": true,
-              "CardID": 16400,
+              "CardID": 16412,
               "SidewaysCard": false,
               "CustomDeck": {
                 "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
                   "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
                   "UniqueBack": true
                 }
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "GUID": "cc0481"
+              "GUID": "a70088"
             }
           ],
-          "GUID": "e7d4ed"
+          "GUID": "605d88"
         },
         {
           "Name": "Deck",
           "Transform": {
-            "posX": -12.24854,
-            "posY": 3.100026,
-            "posZ": 1.74939311,
-            "rotX": 1.19715548,
-            "rotY": 164.996384,
-            "rotZ": 1.70882928,
+            "posX": -26.75,
+            "posY": 3.048284,
+            "posZ": -1.25,
+            "rotX": -2.13857192E-07,
+            "rotY": 180.004944,
+            "rotZ": -4.81896677E-06,
             "scaleX": 1.0,
             "scaleY": 1.0,
             "scaleZ": 1.0
@@ -45623,15 +44818,15 @@
           "SidewaysCard": false,
           "DeckIDs": [
             16423,
-            16403
+            16420
           ],
           "CustomDeck": {
             "164": {
-              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
+              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
               "NumWidth": 10,
-              "NumHeight": 5,
-              "BackIsHidden": false,
+              "NumHeight": 7,
+              "BackIsHidden": true,
               "UniqueBack": true
             }
           },
@@ -45641,17 +44836,17 @@
             {
               "Name": "Card",
               "Transform": {
-                "posX": -18.7500038,
-                "posY": 1.03168893,
-                "posZ": 10.75,
-                "rotX": -0.00150150666,
-                "rotY": 164.968842,
-                "rotZ": -0.0008902534,
+                "posX": 4.750944,
+                "posY": 1.031689,
+                "posZ": -0.249969661,
+                "rotX": -0.001503995,
+                "rotY": 180.004944,
+                "rotZ": -0.0008924138,
                 "scaleX": 1.0,
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "Regroup",
+              "Nickname": "Firefight",
               "Description": "",
               "ColorDiffuse": {
                 "r": 0.713235259,
@@ -45670,169 +44865,32 @@
               "SidewaysCard": false,
               "CustomDeck": {
                 "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
                   "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
                   "UniqueBack": true
                 }
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "GUID": "4db1e2"
+              "GUID": "48e565"
             },
             {
               "Name": "Card",
               "Transform": {
-                "posX": -18.7500229,
-                "posY": 1.16619217,
-                "posZ": 10.7500162,
-                "rotX": 359.984253,
-                "rotY": 164.968811,
-                "rotZ": 359.9921,
-                "scaleX": 1.0,
-                "scaleY": 1.0,
-                "scaleZ": 1.0
-              },
-              "Nickname": "Regroup",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "Hands": true,
-              "CardID": 16403,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "912c2c"
-            }
-          ],
-          "GUID": "78f530"
-        },
-        {
-          "Name": "Deck",
-          "Transform": {
-            "posX": -12.248374,
-            "posY": 3.098317,
-            "posZ": 2.25066042,
-            "rotX": 359.154633,
-            "rotY": 179.978317,
-            "rotZ": 2.20159149,
-            "scaleX": 1.0,
-            "scaleY": 1.0,
-            "scaleZ": 1.0
-          },
-          "Nickname": "Combat upgrades (LV 0)",
-          "Description": "",
-          "ColorDiffuse": {
-            "r": 0.713235259,
-            "g": 0.713235259,
-            "b": 0.713235259
-          },
-          "Locked": false,
-          "Grid": true,
-          "Snap": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "Hands": false,
-          "SidewaysCard": false,
-          "DeckIDs": [
-            16431,
-            16411
-          ],
-          "CustomDeck": {
-            "164": {
-              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
-              "NumWidth": 10,
-              "NumHeight": 5,
-              "BackIsHidden": false,
-              "UniqueBack": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "ContainedObjects": [
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -26.7500019,
-                "posY": 1.03168917,
-                "posZ": 9.250002,
-                "rotX": -0.00150647957,
-                "rotY": 180.00412,
-                "rotZ": -0.000883406843,
-                "scaleX": 1.0,
-                "scaleY": 1.0,
-                "scaleZ": 1.0
-              },
-              "Nickname": "Evasion",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "Hands": true,
-              "CardID": 16431,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "fb4590"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -26.7500134,
-                "posY": 1.16619241,
-                "posZ": 9.250022,
+                "posX": 4.75093269,
+                "posY": 1.16619265,
+                "posZ": -0.249949738,
                 "rotX": 359.984222,
-                "rotY": 180.004166,
-                "rotZ": 359.992035,
+                "rotY": 180.004959,
+                "rotZ": 359.991943,
                 "scaleX": 1.0,
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "Evasion",
+              "Nickname": "Firefight",
               "Description": "",
               "ColorDiffuse": {
                 "r": 0.713235259,
@@ -45847,34 +44905,34 @@
               "Tooltip": true,
               "GridProjection": false,
               "Hands": true,
-              "CardID": 16411,
+              "CardID": 16420,
               "SidewaysCard": false,
               "CustomDeck": {
                 "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
                   "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
                   "UniqueBack": true
                 }
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "GUID": "5474ba"
+              "GUID": "382c26"
             }
           ],
-          "GUID": "1d1bf5"
+          "GUID": "7a1f9a"
         },
         {
           "Name": "Deck",
           "Transform": {
-            "posX": -12.7503605,
-            "posY": 3.07028818,
-            "posZ": 3.25154948,
-            "rotX": 358.086731,
-            "rotY": 180.052032,
-            "rotZ": 359.408142,
+            "posX": -19.25,
+            "posY": 3.048284,
+            "posZ": -1.25,
+            "rotX": -4.28311353E-07,
+            "rotY": 179.996185,
+            "rotZ": -5.3055137E-06,
             "scaleX": 1.0,
             "scaleY": 1.0,
             "scaleZ": 1.0
@@ -45896,16 +44954,16 @@
           "Hands": false,
           "SidewaysCard": false,
           "DeckIDs": [
-            16442,
-            16441
+            16425,
+            16422
           ],
           "CustomDeck": {
             "164": {
-              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
+              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
               "NumWidth": 10,
-              "NumHeight": 5,
-              "BackIsHidden": false,
+              "NumHeight": 7,
+              "BackIsHidden": true,
               "UniqueBack": true
             }
           },
@@ -45915,17 +44973,17 @@
             {
               "Name": "Card",
               "Transform": {
-                "posX": -19.7500038,
-                "posY": 1.03168893,
-                "posZ": -15.749999,
-                "rotX": -0.00151200639,
-                "rotY": 180.033875,
-                "rotZ": -0.0008822611,
+                "posX": 12.2500925,
+                "posY": 1.031689,
+                "posZ": -0.2501934,
+                "rotX": -0.0015048671,
+                "rotY": 179.996185,
+                "rotZ": -0.0008919622,
                 "scaleX": 1.0,
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "Firefight",
+              "Nickname": "Regroup",
               "Description": "",
               "ColorDiffuse": {
                 "r": 0.713235259,
@@ -45940,36 +44998,36 @@
               "Tooltip": true,
               "GridProjection": false,
               "Hands": true,
-              "CardID": 16442,
+              "CardID": 16425,
               "SidewaysCard": false,
               "CustomDeck": {
                 "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
                   "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
                   "UniqueBack": true
                 }
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "GUID": "c144c5"
+              "GUID": "9df911"
             },
             {
               "Name": "Card",
               "Transform": {
-                "posX": -19.7500172,
-                "posY": 1.16619217,
-                "posZ": -15.7499762,
-                "rotX": 359.984253,
-                "rotY": 180.0339,
-                "rotZ": 359.992065,
+                "posX": 12.2500811,
+                "posY": 1.16619265,
+                "posZ": -0.250173569,
+                "rotX": 359.984222,
+                "rotY": 179.996216,
+                "rotZ": 359.991943,
                 "scaleX": 1.0,
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "Firefight",
+              "Nickname": "Regroup",
               "Description": "",
               "ColorDiffuse": {
                 "r": 0.713235259,
@@ -45984,24 +45042,979 @@
               "Tooltip": true,
               "GridProjection": false,
               "Hands": true,
-              "CardID": 16441,
+              "CardID": 16422,
               "SidewaysCard": false,
               "CustomDeck": {
                 "164": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/taucards-edit.png",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/taubacks-edit.png",
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
                   "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
                   "UniqueBack": true
                 }
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "GUID": "c144c4"
+              "GUID": "adb9a6"
             }
           ],
-          "GUID": "26853f"
+          "GUID": "fc014c"
+        },
+        {
+          "Name": "Deck",
+          "Transform": {
+            "posX": -27.75,
+            "posY": 3.04828358,
+            "posZ": -6.75,
+            "rotX": -4.11589645E-06,
+            "rotY": 180.000015,
+            "rotZ": -3.14971271E-06,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Combat upgrades (LV 0)",
+          "Description": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "Hands": false,
+          "SidewaysCard": false,
+          "DeckIDs": [
+            16416,
+            16411
+          ],
+          "CustomDeck": {
+            "164": {
+              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
+              "NumWidth": 10,
+              "NumHeight": 7,
+              "BackIsHidden": true,
+              "UniqueBack": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "ContainedObjects": [
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 3.74998021,
+                "posY": 1.03168893,
+                "posZ": -5.749998,
+                "rotX": -0.00151035481,
+                "rotY": 180.000031,
+                "rotZ": -0.000893052551,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Feigned Retreat",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 16416,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "164": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "d8e64c"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 3.749967,
+                "posY": 1.16619241,
+                "posZ": -5.74997568,
+                "rotX": 359.984253,
+                "rotY": 180.000061,
+                "rotZ": 359.991974,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Feigned Retreat",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 16411,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "164": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "93ffbf"
+            }
+          ],
+          "GUID": "fd51a1"
+        },
+        {
+          "Name": "Deck",
+          "Transform": {
+            "posX": -17.75,
+            "posY": 3.04828453,
+            "posZ": -6.75,
+            "rotX": -3.385549E-06,
+            "rotY": 179.99617,
+            "rotZ": -5.04227546E-06,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Combat upgrades (LV 0)",
+          "Description": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "Hands": false,
+          "SidewaysCard": false,
+          "DeckIDs": [
+            16419,
+            16414
+          ],
+          "CustomDeck": {
+            "164": {
+              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
+              "NumWidth": 10,
+              "NumHeight": 7,
+              "BackIsHidden": true,
+              "UniqueBack": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "ContainedObjects": [
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 13.7501793,
+                "posY": 1.03168881,
+                "posZ": -5.750194,
+                "rotX": -0.0015103739,
+                "rotY": 179.996185,
+                "rotZ": -0.0008926445,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Superior Tactics",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 16419,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "164": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "eb43c3"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 13.7501659,
+                "posY": 1.16619241,
+                "posZ": -5.75017166,
+                "rotX": 359.984253,
+                "rotY": 179.9962,
+                "rotZ": 359.991974,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Superior Tactics",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 16414,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "164": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "7450f2"
+            }
+          ],
+          "GUID": "5b26a6"
+        },
+        {
+          "Name": "Deck",
+          "Transform": {
+            "posX": -22.25,
+            "posY": 3.048284,
+            "posZ": -1.25,
+            "rotX": -1.341105E-06,
+            "rotY": 179.999847,
+            "rotZ": 7.440585E-06,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Combat upgrades (LV 2)",
+          "Description": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "Hands": false,
+          "SidewaysCard": false,
+          "DeckIDs": [
+            16424,
+            16421
+          ],
+          "CustomDeck": {
+            "164": {
+              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
+              "NumWidth": 10,
+              "NumHeight": 7,
+              "BackIsHidden": true,
+              "UniqueBack": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "ContainedObjects": [
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 9.249774,
+                "posY": 1.03168881,
+                "posZ": -0.250012,
+                "rotX": -0.00150933524,
+                "rotY": 179.999847,
+                "rotZ": -0.00089324516,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Heavy Assault",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 16424,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "164": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "e339ff"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 9.249761,
+                "posY": 1.16619241,
+                "posZ": -0.2499893,
+                "rotX": 359.984253,
+                "rotY": 179.999863,
+                "rotZ": 359.991974,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Heavy Assault",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 16421,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "164": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "551c27"
+            }
+          ],
+          "GUID": "a9112e"
+        },
+        {
+          "Name": "Deck",
+          "Transform": {
+            "posX": -20.75,
+            "posY": 3.04828358,
+            "posZ": -6.75,
+            "rotX": -3.72918566E-06,
+            "rotY": 180.000381,
+            "rotZ": -3.28365559E-06,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Combat upgrades (LV 0)",
+          "Description": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "Hands": false,
+          "SidewaysCard": false,
+          "DeckIDs": [
+            16418,
+            16413
+          ],
+          "CustomDeck": {
+            "164": {
+              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
+              "NumWidth": 10,
+              "NumHeight": 7,
+              "BackIsHidden": true,
+              "UniqueBack": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "ContainedObjects": [
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 10.749691,
+                "posY": 1.03168881,
+                "posZ": -5.75001955,
+                "rotX": -0.00151006447,
+                "rotY": 180.000381,
+                "rotZ": -0.0008928118,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Mont'ka",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 16418,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "164": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "113551"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 10.7496777,
+                "posY": 1.16619241,
+                "posZ": -5.749997,
+                "rotX": 359.984253,
+                "rotY": 180.0004,
+                "rotZ": 359.991974,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Mont'ka",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 16413,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "164": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "a75013"
+            }
+          ],
+          "GUID": "85bff1"
+        },
+        {
+          "Name": "Deck",
+          "Transform": {
+            "posX": -11.2488842,
+            "posY": 3.05824828,
+            "posZ": -1.74943912,
+            "rotX": 358.886932,
+            "rotY": 179.932663,
+            "rotZ": 2.52215767,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Event cards",
+          "Description": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "Hands": false,
+          "SidewaysCard": false,
+          "DeckIDs": [
+            16434,
+            16436,
+            16432,
+            16433,
+            16437,
+            16435,
+            16431,
+            16430
+          ],
+          "CustomDeck": {
+            "164": {
+              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
+              "NumWidth": 10,
+              "NumHeight": 7,
+              "BackIsHidden": true,
+              "UniqueBack": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "ContainedObjects": [
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": -8.250258,
+                "posY": 1.03169882,
+                "posZ": 10.2499809,
+                "rotX": -0.0009064299,
+                "rotY": 180.000336,
+                "rotZ": -0.0005383579,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 16434,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "164": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "3f78d6"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": -8.250012,
+                "posY": 1.17535114,
+                "posZ": 10.25002,
+                "rotX": 359.99054,
+                "rotY": 180.000565,
+                "rotZ": -0.00478644576,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 16436,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "164": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "31f63d"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": -8.250002,
+                "posY": 1.19853258,
+                "posZ": 10.7500057,
+                "rotX": -0.000738127856,
+                "rotY": 180.000015,
+                "rotZ": -0.000497971952,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 16432,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "164": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "813ca1"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": -7.749992,
+                "posY": 1.1848067,
+                "posZ": 10.2500086,
+                "rotX": -0.00235215342,
+                "rotY": 180.000076,
+                "rotZ": 0.00202043541,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 16433,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "164": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "388599"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": -8.250002,
+                "posY": 1.18291819,
+                "posZ": 10.2500019,
+                "rotX": -0.000701623445,
+                "rotY": 180.000031,
+                "rotZ": -0.0004079619,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 16437,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "164": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "1b6d8f"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": -8.250002,
+                "posY": 1.18557847,
+                "posZ": 10.2500019,
+                "rotX": -0.000674336,
+                "rotY": 180.0,
+                "rotZ": -0.000392688176,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 16435,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "164": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "86eaaa"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": -8.250002,
+                "posY": 1.19057131,
+                "posZ": 10.2500019,
+                "rotX": -0.0006489911,
+                "rotY": 180.000381,
+                "rotZ": -0.0003791838,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 16431,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "164": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "f78e32"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": -8.250003,
+                "posY": 1.19684374,
+                "posZ": 9.750002,
+                "rotX": 0.000468489743,
+                "rotY": 180.0,
+                "rotZ": -0.0009798696,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 16430,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "164": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/tau-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "7e5112"
+            }
+          ],
+          "GUID": "d7a033"
         }
       ],
       "GUID": "27c17a"
@@ -46009,13 +46022,13 @@
     {
       "Name": "Chess_Board",
       "Transform": {
-        "posX": -77.34024,
-        "posY": 2.35039115,
+        "posX": -67.981,
+        "posY": 2.35050344,
         "posZ": -2.83318138,
         "rotX": 0.0,
         "rotY": 0.0,
         "rotZ": 180.000687,
-        "scaleX": 1.40493333,
+        "scaleX": 0.3673236,
         "scaleY": 1.0,
         "scaleZ": 1.0
       },
