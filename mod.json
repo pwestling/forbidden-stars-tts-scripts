@@ -2,7 +2,7 @@
   "SaveName": "FS 8 Faction V2",
   "GameMode": "Forbidden Stars",
   "Gravity": 0.5,
-  "Date": "11/25/2017 10:22:58 PM",
+  "Date": "12/3/2017 10:20:25 AM",
   "Table": "Table_Custom",
   "TableURL": "http://i.imgur.com/coMEVzn.jpg",
   "Sky": "Sky_Regal",
@@ -69,56 +69,56 @@
         "Color": "Red",
         "Transform": {
           "posX": -18.77375,
-          "posY": 3.20026064,
+          "posY": 3.14543676,
           "posZ": -36.5253258,
           "rotX": 0.0,
           "rotY": 359.965668,
           "rotZ": 0.0,
-          "scaleX": 12.8416491,
+          "scaleX": 12.8419027,
           "scaleY": 7.0,
-          "scaleZ": 1.7497313
+          "scaleZ": 1.74970007
         }
       },
       {
         "Color": "Yellow",
         "Transform": {
           "posX": 18.2424564,
-          "posY": 3.20026064,
+          "posY": 3.14543676,
           "posZ": -36.35904,
           "rotX": 0.0,
           "rotY": 359.965668,
           "rotZ": 0.0,
-          "scaleX": 12.8428526,
+          "scaleX": 12.8431072,
           "scaleY": 7.0,
-          "scaleZ": 1.52128041
+          "scaleZ": 1.52129126
         }
       },
       {
         "Color": "Green",
         "Transform": {
           "posX": -18.7796745,
-          "posY": 3.20026064,
+          "posY": 3.14543676,
           "posZ": 36.42039,
           "rotX": 0.0,
           "rotY": 179.900162,
           "rotZ": 0.0,
-          "scaleX": 13.003665,
+          "scaleX": 13.0040627,
           "scaleY": 7.0,
-          "scaleZ": 1.8857044
+          "scaleZ": 1.88578081
         }
       },
       {
         "Color": "Blue",
         "Transform": {
           "posX": 18.2664452,
-          "posY": 3.20026064,
+          "posY": 3.14543676,
           "posZ": 36.45564,
           "rotX": 0.0,
           "rotY": 179.663574,
           "rotZ": 0.0,
-          "scaleX": 12.8024244,
+          "scaleX": 12.803215,
           "scaleY": 7.0,
-          "scaleZ": 1.85433543
+          "scaleZ": 1.85440075
         }
       }
     ]
@@ -140,7 +140,7 @@
       "Name": "Bag",
       "Transform": {
         "posX": -46.75,
-        "posY": 0.780188859,
+        "posY": 0.780189,
         "posZ": 5.24997568,
         "rotX": 1.00060888E-11,
         "rotY": 180.0068,
@@ -508,7 +508,7 @@
         "posZ": -31.25,
         "rotX": 6.580144E-08,
         "rotY": 180.029053,
-        "rotZ": 3.5342984E-07,
+        "rotZ": 3.53429726E-07,
         "scaleX": 3.0843668,
         "scaleY": 1.0,
         "scaleZ": 3.0843668
@@ -620,11 +620,11 @@
       "Name": "Die_20",
       "Transform": {
         "posX": -46.7247,
-        "posY": 1.90596342,
-        "posZ": -0.544709444,
-        "rotX": 10.81233,
+        "posY": 1.90596175,
+        "posZ": -0.544710457,
+        "rotX": 10.8123283,
         "rotY": 178.998856,
-        "rotZ": 198.000015,
+        "rotZ": 198.0,
         "scaleX": 2.25,
         "scaleY": 2.25,
         "scaleZ": 2.25
@@ -817,9 +817,9 @@
       "Name": "Custom_Model",
       "Transform": {
         "posX": -50.26655,
-        "posY": 1.08349,
-        "posZ": -8.231859,
-        "rotX": -4.644319E-05,
+        "posY": 1.08348989,
+        "posZ": -8.231856,
+        "rotX": -4.583679E-05,
         "rotY": 359.972443,
         "rotZ": 180.000763,
         "scaleX": 0.900000036,
@@ -860,8 +860,8 @@
       "Transform": {
         "posX": -50.25,
         "posY": 1.00521767,
-        "posZ": -0.249885127,
-        "rotX": -0.000267953961,
+        "posZ": -0.249883533,
+        "rotX": -0.0002670246,
         "rotY": 89.98928,
         "rotZ": 180.0,
         "scaleX": 2.0,
@@ -959,11 +959,11 @@
       "Name": "Custom_Token",
       "Transform": {
         "posX": -46.75,
-        "posY": 1.06522322,
+        "posY": 1.0652231,
         "posZ": -6.75007153,
-        "rotX": 4.804394E-07,
-        "rotY": 270.004822,
-        "rotZ": -5.860774E-07,
+        "rotX": 3.362912E-06,
+        "rotY": 270.004852,
+        "rotZ": -2.14903048E-06,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -1002,8 +1002,8 @@
       "Transform": {
         "posX": -53.2487,
         "posY": 1.0339731,
-        "posZ": 0.2499108,
-        "rotX": -6.12243241E-07,
+        "posZ": 0.249909475,
+        "rotX": 8.65005234E-07,
         "rotY": 269.99234,
         "rotZ": 180.0,
         "scaleX": 1.37499952,
@@ -3164,11 +3164,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": 94.21959,
-        "posY": 1.97995281,
-        "posZ": 9.165124,
-        "rotX": -3.868122E-07,
+        "posY": 1.97995329,
+        "posZ": 9.16512,
+        "rotX": -4.65537732E-06,
         "rotY": 180.006683,
-        "rotZ": -0.0006865273,
+        "rotZ": -0.000691054855,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -3177,8 +3177,8 @@
       "Description": "\n",
       "ColorDiffuse": {
         "r": 0.862847,
-        "g": 0.104290076,
-        "b": 0.104290076
+        "g": 0.104290046,
+        "b": 0.104290046
       },
       "Locked": false,
       "Grid": true,
@@ -8761,11 +8761,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": 97.74977,
-        "posY": 1.979995,
-        "posZ": 9.250086,
-        "rotX": -0.000178711809,
-        "rotY": 14.980401,
-        "rotZ": 0.000667876157,
+        "posY": 1.97999549,
+        "posZ": 9.250085,
+        "rotX": -0.000177882626,
+        "rotY": 14.9805384,
+        "rotZ": 0.0006648635,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -8775,7 +8775,7 @@
       "ColorDiffuse": {
         "r": 0.917851567,
         "g": 0.9035631,
-        "b": 0.156498343
+        "b": 0.156498313
       },
       "Locked": false,
       "Grid": true,
@@ -13902,11 +13902,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": 97.6631851,
-        "posY": 1.9799943,
+        "posY": 1.97999454,
         "posZ": 5.787377,
-        "rotX": 2.754885E-07,
-        "rotY": 179.974731,
-        "rotZ": -0.000686790852,
+        "rotX": 7.027685E-07,
+        "rotY": 179.974747,
+        "rotZ": -0.000685148465,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -13914,8 +13914,8 @@
       "Nickname": "Space Marine Faction Bag",
       "Description": "\n",
       "ColorDiffuse": {
-        "r": 0.100647278,
-        "g": 0.144454658,
+        "r": 0.100647248,
+        "g": 0.144454628,
         "b": 0.7401371
       },
       "Locked": false,
@@ -19223,11 +19223,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": 94.1509,
-        "posY": 1.97995281,
+        "posY": 1.97995234,
         "posZ": 5.75192833,
-        "rotX": 3.02132185E-06,
+        "rotX": 4.302069E-06,
         "rotY": 180.005508,
-        "rotZ": -0.000687721069,
+        "rotZ": -0.000689200242,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -19235,9 +19235,9 @@
       "Nickname": "Ork Faction Bag",
       "Description": "\n",
       "ColorDiffuse": {
-        "r": 0.15526107,
+        "r": 0.15526104,
         "g": 0.9541138,
-        "b": 0.118391104
+        "b": 0.118391074
       },
       "Locked": false,
       "Grid": true,
@@ -24584,12 +24584,12 @@
     {
       "Name": "Bag",
       "Transform": {
-        "posX": 94.1486359,
-        "posY": 1.97995234,
-        "posZ": 1.40749073,
-        "rotX": -0.000684888335,
-        "rotY": 89.98259,
-        "rotZ": -2.29073862E-06,
+        "posX": 93.86879,
+        "posY": 1.97994947,
+        "posZ": 1.52394986,
+        "rotX": -0.000658259436,
+        "rotY": 89.9820251,
+        "rotZ": -4.64036157E-06,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -24597,9 +24597,9 @@
       "Nickname": "Imperial Guard Faction",
       "Description": "",
       "ColorDiffuse": {
-        "r": 0.0855941847,
-        "g": 0.3921714,
-        "b": 0.180188388
+        "r": 0.08559417,
+        "g": 0.392171383,
+        "b": 0.180188358
       },
       "Locked": false,
       "Grid": false,
@@ -24614,405 +24614,6 @@
       "LuaScript": "",
       "LuaScriptState": "",
       "ContainedObjects": [
-        {
-          "Name": "Deck",
-          "Transform": {
-            "posX": -27.75,
-            "posY": 1.01469,
-            "posZ": 33.75,
-            "rotX": 2.82316932E-07,
-            "rotY": 1.180963E-05,
-            "rotZ": -7.243614E-09,
-            "scaleX": 1.53054512,
-            "scaleY": 1.0,
-            "scaleZ": 1.53054512
-          },
-          "Nickname": "Event cards",
-          "Description": "",
-          "ColorDiffuse": {
-            "r": 0.713235259,
-            "g": 0.713235259,
-            "b": 0.713235259
-          },
-          "Locked": false,
-          "Grid": true,
-          "Snap": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "Hands": false,
-          "SidewaysCard": false,
-          "DeckIDs": [
-            18538,
-            18537,
-            18528,
-            18527,
-            18518,
-            18517,
-            18508,
-            18507
-          ],
-          "CustomDeck": {
-            "185": {
-              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-              "NumWidth": 10,
-              "NumHeight": 5,
-              "BackIsHidden": false,
-              "UniqueBack": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "ContainedObjects": [
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": 50.74959,
-                "posY": 1.19522047,
-                "posZ": -12.7506247,
-                "rotX": 359.6809,
-                "rotY": 89.99053,
-                "rotZ": 179.522232,
-                "scaleX": 1.53054512,
-                "scaleY": 1.0,
-                "scaleZ": 1.53054512
-              },
-              "Nickname": "",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "CardID": 18538,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "9c5155"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": 51.25,
-                "posY": 1.19223881,
-                "posZ": -13.25,
-                "rotX": -3.06922374E-07,
-                "rotY": 89.9890442,
-                "rotZ": 180.0,
-                "scaleX": 1.53054512,
-                "scaleY": 1.0,
-                "scaleZ": 1.53054512
-              },
-              "Nickname": "",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "CardID": 18537,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "cf0304"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": 50.75,
-                "posY": 1.187246,
-                "posZ": -12.75,
-                "rotX": 7.88818056E-07,
-                "rotY": 89.98478,
-                "rotZ": 180.000015,
-                "scaleX": 1.53054512,
-                "scaleY": 1.0,
-                "scaleZ": 1.53054512
-              },
-              "Nickname": "",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "CardID": 18528,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "d8968c"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": 51.25,
-                "posY": 1.18458533,
-                "posZ": -12.75,
-                "rotX": -9.54662056E-08,
-                "rotY": 89.9890442,
-                "rotZ": 180.0,
-                "scaleX": 1.53054512,
-                "scaleY": 1.0,
-                "scaleZ": 1.53054512
-              },
-              "Nickname": "",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "CardID": 18527,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "57a396"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": 50.74959,
-                "posY": 1.18324721,
-                "posZ": -12.7506247,
-                "rotX": 359.6809,
-                "rotY": 89.99053,
-                "rotZ": 179.522232,
-                "scaleX": 1.53054512,
-                "scaleY": 1.0,
-                "scaleZ": 1.53054512
-              },
-              "Nickname": "",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "CardID": 18518,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "c57c3f"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": 51.25,
-                "posY": 1.20026541,
-                "posZ": -12.25,
-                "rotX": -2.84910925E-07,
-                "rotY": 89.9890442,
-                "rotZ": 180.000015,
-                "scaleX": 1.53054512,
-                "scaleY": 1.0,
-                "scaleZ": 1.53054512
-              },
-              "Nickname": "",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "CardID": 18517,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "f58fe0"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": 51.25,
-                "posY": 1.18299532,
-                "posZ": -12.75,
-                "rotX": 1.98122152E-07,
-                "rotY": 89.9890442,
-                "rotZ": 180.0,
-                "scaleX": 1.53054512,
-                "scaleY": 1.0,
-                "scaleZ": 1.53054512
-              },
-              "Nickname": "",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "CardID": 18508,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "7b01d8"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": 51.25,
-                "posY": 1.03575408,
-                "posZ": -12.25,
-                "rotX": 2.54150763E-07,
-                "rotY": 89.9890442,
-                "rotZ": 180.0,
-                "scaleX": 1.53054512,
-                "scaleY": 1.0,
-                "scaleZ": 1.53054512
-              },
-              "Nickname": "",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "CardID": 18507,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "15185c"
-            }
-          ],
-          "GUID": "e6fe1f"
-        },
         {
           "Name": "DeckCustom",
           "Transform": {
@@ -25908,273 +25509,6 @@
           "LuaScript": "",
           "LuaScriptState": "",
           "GUID": "b78525"
-        },
-        {
-          "Name": "Deck",
-          "Transform": {
-            "posX": -72.26,
-            "posY": 1.266499,
-            "posZ": 22.93,
-            "rotX": 0.0,
-            "rotY": 0.0,
-            "rotZ": 0.0,
-            "scaleX": 1.53054512,
-            "scaleY": 1.0,
-            "scaleZ": 1.53054512
-          },
-          "Nickname": "Order Upgrades",
-          "Description": "",
-          "ColorDiffuse": {
-            "r": 0.713235259,
-            "g": 0.713235259,
-            "b": 0.713235259
-          },
-          "Locked": true,
-          "Grid": false,
-          "Snap": false,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "Hands": false,
-          "SidewaysCard": false,
-          "DeckIDs": [
-            18509,
-            18519,
-            18529,
-            18539,
-            18540
-          ],
-          "CustomDeck": {
-            "185": {
-              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-              "NumWidth": 10,
-              "NumHeight": 5,
-              "BackIsHidden": false,
-              "UniqueBack": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "ContainedObjects": [
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": 61.25,
-                "posY": -2.4055717,
-                "posZ": -10.75,
-                "rotX": 5.48146524E-08,
-                "rotY": 90.0,
-                "rotZ": 1.98856E-08,
-                "scaleX": 1.53054512,
-                "scaleY": 1.0,
-                "scaleZ": 1.53054512
-              },
-              "Nickname": "",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "CardID": 18509,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "930fa3"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": 60.7499962,
-                "posY": -2.258161,
-                "posZ": -10.7500353,
-                "rotX": -6.997567E-06,
-                "rotY": 89.99995,
-                "rotZ": 0.00634902855,
-                "scaleX": 1.53054512,
-                "scaleY": 1.0,
-                "scaleZ": 1.53054512
-              },
-              "Nickname": "",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "CardID": 18519,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "c097b7"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": 60.75,
-                "posY": -2.24073029,
-                "posZ": -10.75,
-                "rotX": 1.17391949E-06,
-                "rotY": 90.0,
-                "rotZ": 1.52771941E-06,
-                "scaleX": 1.53054512,
-                "scaleY": 1.0,
-                "scaleZ": 1.53054512
-              },
-              "Nickname": "",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "CardID": 18529,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "223985"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": 61.25,
-                "posY": -2.255712,
-                "posZ": -9.75,
-                "rotX": 0.0,
-                "rotY": 90.0,
-                "rotZ": 0.0,
-                "scaleX": 1.53054512,
-                "scaleY": 1.0,
-                "scaleZ": 1.53054512
-              },
-              "Nickname": "",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "CardID": 18539,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "5235c4"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": 61.2499962,
-                "posY": -2.25765228,
-                "posZ": -10.75,
-                "rotX": 0.0,
-                "rotY": 90.0,
-                "rotZ": 0.0,
-                "scaleX": 1.53054512,
-                "scaleY": 1.0,
-                "scaleZ": 1.53054512
-              },
-              "Nickname": "",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "CardID": 18540,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "774a85"
-            }
-          ],
-          "GUID": "1d8004"
         },
         {
           "Name": "Counter",
@@ -28662,1250 +27996,17 @@
         {
           "Name": "Deck",
           "Transform": {
-            "posX": 8.808842,
-            "posY": 3.09874916,
-            "posZ": -0.0428998359,
-            "rotX": 0.67189157,
-            "rotY": 0.0117731085,
-            "rotZ": 1.35635352,
-            "scaleX": 1.53054512,
+            "posX": 5.74976254,
+            "posY": 3.06442618,
+            "posZ": 2.750926,
+            "rotX": 358.028381,
+            "rotY": 179.992889,
+            "rotZ": 359.437042,
+            "scaleX": 1.0,
             "scaleY": 1.0,
-            "scaleZ": 1.53054512
+            "scaleZ": 1.0
           },
-          "Nickname": "Combat upgrades (LV 0)",
-          "Description": "",
-          "ColorDiffuse": {
-            "r": 0.713235259,
-            "g": 0.713235259,
-            "b": 0.713235259
-          },
-          "Locked": false,
-          "Grid": false,
-          "Snap": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "Hands": false,
-          "SidewaysCard": false,
-          "DeckIDs": [
-            18515,
-            18535
-          ],
-          "CustomDeck": {
-            "185": {
-              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-              "NumWidth": 10,
-              "NumHeight": 5,
-              "BackIsHidden": false,
-              "UniqueBack": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "ContainedObjects": [
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -2.93088627,
-                "posY": 1.03168821,
-                "posZ": -10.057353,
-                "rotX": -0.00101084192,
-                "rotY": 9.441067E-06,
-                "rotZ": -0.0005804181,
-                "scaleX": 1.53054512,
-                "scaleY": 1.0,
-                "scaleZ": 1.53054512
-              },
-              "Nickname": "Ogryn",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": false,
-              "Snap": false,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "Hands": true,
-              "CardID": 18515,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "fdd3dd"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -2.93087888,
-                "posY": 1.16618669,
-                "posZ": -10.0573664,
-                "rotX": 359.989532,
-                "rotY": 1.92222178E-05,
-                "rotZ": -0.005245393,
-                "scaleX": 1.53054512,
-                "scaleY": 1.0,
-                "scaleZ": 1.53054512
-              },
-              "Nickname": "Ogryn",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": false,
-              "Snap": false,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "Hands": true,
-              "CardID": 18535,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "860f74"
-            }
-          ],
-          "GUID": "258b17"
-        },
-        {
-          "Name": "Deck",
-          "Transform": {
-            "posX": -7.406669,
-            "posY": 3.024283,
-            "posZ": -3.97624421,
-            "rotX": -8.1472507E-07,
-            "rotY": -1.2344176E-05,
-            "rotZ": 2.67216024E-06,
-            "scaleX": 1.53054512,
-            "scaleY": 1.0,
-            "scaleZ": 1.53054512
-          },
-          "Nickname": "Combat upgrades (LV 0)",
-          "Description": "",
-          "ColorDiffuse": {
-            "r": 0.713235259,
-            "g": 0.713235259,
-            "b": 0.713235259
-          },
-          "Locked": false,
-          "Grid": false,
-          "Snap": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "Hands": false,
-          "SidewaysCard": false,
-          "DeckIDs": [
-            18503,
-            18523
-          ],
-          "CustomDeck": {
-            "185": {
-              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-              "NumWidth": 10,
-              "NumHeight": 5,
-              "BackIsHidden": false,
-              "UniqueBack": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "ContainedObjects": [
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -19.14748,
-                "posY": 1.03168833,
-                "posZ": -13.9902039,
-                "rotX": -0.001011435,
-                "rotY": 4.05544324E-06,
-                "rotZ": -0.0005821514,
-                "scaleX": 1.53054512,
-                "scaleY": 1.0,
-                "scaleZ": 1.53054512
-              },
-              "Nickname": "Bullgryn",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": false,
-              "Snap": false,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "Hands": true,
-              "CardID": 18503,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "bcad3e"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -19.1474724,
-                "posY": 1.16618669,
-                "posZ": -13.9902172,
-                "rotX": 359.989532,
-                "rotY": 9.312895E-06,
-                "rotZ": -0.00524651958,
-                "scaleX": 1.53054512,
-                "scaleY": 1.0,
-                "scaleZ": 1.53054512
-              },
-              "Nickname": "Bullgryn",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": false,
-              "Snap": false,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "Hands": true,
-              "CardID": 18523,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "fc3baa"
-            }
-          ],
-          "GUID": "bae195"
-        },
-        {
-          "Name": "Deck",
-          "Transform": {
-            "posX": 5.850959,
-            "posY": 3.024283,
-            "posZ": 20.8227062,
-            "rotX": -3.54312021E-07,
-            "rotY": 1.11394629E-05,
-            "rotZ": 2.1296637E-06,
-            "scaleX": 1.53054512,
-            "scaleY": 1.0,
-            "scaleZ": 1.53054512
-          },
-          "Nickname": "Combat upgrades (LV 0)",
-          "Description": "",
-          "ColorDiffuse": {
-            "r": 0.713235259,
-            "g": 0.713235259,
-            "b": 0.713235259
-          },
-          "Locked": false,
-          "Grid": false,
-          "Snap": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "Hands": false,
-          "SidewaysCard": false,
-          "DeckIDs": [
-            18511,
-            18531
-          ],
-          "CustomDeck": {
-            "185": {
-              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-              "NumWidth": 10,
-              "NumHeight": 5,
-              "BackIsHidden": false,
-              "UniqueBack": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "ContainedObjects": [
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -5.88985348,
-                "posY": 1.03168833,
-                "posZ": 10.8087635,
-                "rotX": -0.00101204682,
-                "rotY": 1.39612857E-05,
-                "rotZ": -0.000580857042,
-                "scaleX": 1.53054512,
-                "scaleY": 1.0,
-                "scaleZ": 1.53054512
-              },
-              "Nickname": "Sentinels",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": false,
-              "Snap": false,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "Hands": true,
-              "CardID": 18511,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "abe9e9"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -5.889845,
-                "posY": 1.16618657,
-                "posZ": 10.8087482,
-                "rotX": 359.989532,
-                "rotY": 2.4138415E-05,
-                "rotZ": -0.005234931,
-                "scaleX": 1.53054512,
-                "scaleY": 1.0,
-                "scaleZ": 1.53054512
-              },
-              "Nickname": "Sentinels",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": false,
-              "Snap": false,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "Hands": true,
-              "CardID": 18531,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "04b90d"
-            }
-          ],
-          "GUID": "b99b66"
-        },
-        {
-          "Name": "Deck",
-          "Transform": {
-            "posX": 3.23888278,
-            "posY": 3.024283,
-            "posZ": 12.1197634,
-            "rotX": -3.95425644E-07,
-            "rotY": 1.80704028E-05,
-            "rotZ": 1.86151021E-06,
-            "scaleX": 1.53054512,
-            "scaleY": 1.0,
-            "scaleZ": 1.53054512
-          },
-          "Nickname": "Combat upgrades (LV 2)",
-          "Description": "",
-          "ColorDiffuse": {
-            "r": 0.713235259,
-            "g": 0.713235259,
-            "b": 0.713235259
-          },
-          "Locked": false,
-          "Grid": false,
-          "Snap": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "Hands": false,
-          "SidewaysCard": false,
-          "DeckIDs": [
-            18505,
-            18525
-          ],
-          "CustomDeck": {
-            "185": {
-              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-              "NumWidth": 10,
-              "NumHeight": 5,
-              "BackIsHidden": false,
-              "UniqueBack": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "ContainedObjects": [
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -8.501929,
-                "posY": 1.03168833,
-                "posZ": 2.1057992,
-                "rotX": -0.00101222936,
-                "rotY": 1.68577444E-05,
-                "rotZ": -0.0005804709,
-                "scaleX": 1.53054512,
-                "scaleY": 1.0,
-                "scaleZ": 1.53054512
-              },
-              "Nickname": "Regiment",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": false,
-              "Snap": false,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "Hands": true,
-              "CardID": 18505,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "f43362"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -8.501921,
-                "posY": 1.16618657,
-                "posZ": 2.10578418,
-                "rotX": 359.989532,
-                "rotY": 2.54570186E-05,
-                "rotZ": -0.005235683,
-                "scaleX": 1.53054512,
-                "scaleY": 1.0,
-                "scaleZ": 1.53054512
-              },
-              "Nickname": "Regiment",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": false,
-              "Snap": false,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "Hands": true,
-              "CardID": 18525,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "4432e0"
-            }
-          ],
-          "GUID": "11400d"
-        },
-        {
-          "Name": "Deck",
-          "Transform": {
-            "posX": -9.856007,
-            "posY": 3.02428341,
-            "posZ": 15.3615685,
-            "rotX": -3.63137E-06,
-            "rotY": 1.17612726E-05,
-            "rotZ": 1.06858249E-06,
-            "scaleX": 1.53054512,
-            "scaleY": 1.0,
-            "scaleZ": 1.53054512
-          },
-          "Nickname": "Combat upgrades (LV 3)",
-          "Description": "",
-          "ColorDiffuse": {
-            "r": 0.713235259,
-            "g": 0.713235259,
-            "b": 0.713235259
-          },
-          "Locked": false,
-          "Grid": false,
-          "Snap": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "Hands": false,
-          "SidewaysCard": false,
-          "DeckIDs": [
-            18513,
-            18533
-          ],
-          "CustomDeck": {
-            "185": {
-              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-              "NumWidth": 10,
-              "NumHeight": 5,
-              "BackIsHidden": false,
-              "UniqueBack": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "ContainedObjects": [
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -21.5968189,
-                "posY": 1.03168821,
-                "posZ": 5.34760332,
-                "rotX": -0.00101240922,
-                "rotY": 1.23905993E-05,
-                "rotZ": -0.0005807324,
-                "scaleX": 1.53054512,
-                "scaleY": 1.0,
-                "scaleZ": 1.53054512
-              },
-              "Nickname": "Titan Advance",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": false,
-              "Snap": false,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "Hands": true,
-              "CardID": 18513,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "aa3110"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -21.5968113,
-                "posY": 1.16618657,
-                "posZ": 5.34758854,
-                "rotX": 359.989532,
-                "rotY": 1.73231674E-05,
-                "rotZ": -0.00523512065,
-                "scaleX": 1.53054512,
-                "scaleY": 1.0,
-                "scaleZ": 1.53054512
-              },
-              "Nickname": "Titan Advance",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": false,
-              "Snap": false,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "Hands": true,
-              "CardID": 18533,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "ea2638"
-            }
-          ],
-          "GUID": "a9e488"
-        },
-        {
-          "Name": "Deck",
-          "Transform": {
-            "posX": -9.266577,
-            "posY": 3.02428341,
-            "posZ": 3.58287454,
-            "rotX": -3.15495458E-06,
-            "rotY": -3.41417126E-06,
-            "rotZ": 1.62589458E-06,
-            "scaleX": 1.53054512,
-            "scaleY": 1.0,
-            "scaleZ": 1.53054512
-          },
-          "Nickname": "Combat upgrades (LV 3)",
-          "Description": "",
-          "ColorDiffuse": {
-            "r": 0.713235259,
-            "g": 0.713235259,
-            "b": 0.713235259
-          },
-          "Locked": false,
-          "Grid": false,
-          "Snap": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "Hands": false,
-          "SidewaysCard": false,
-          "DeckIDs": [
-            18516,
-            18536
-          ],
-          "CustomDeck": {
-            "185": {
-              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-              "NumWidth": 10,
-              "NumHeight": 5,
-              "BackIsHidden": false,
-              "UniqueBack": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "ContainedObjects": [
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -21.00739,
-                "posY": 1.03168821,
-                "posZ": -6.43108463,
-                "rotX": -0.00101217884,
-                "rotY": 5.26516624E-06,
-                "rotZ": -0.000580703141,
-                "scaleX": 1.53054512,
-                "scaleY": 1.0,
-                "scaleZ": 1.53054512
-              },
-              "Nickname": "Titan Support",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": false,
-              "Snap": false,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "Hands": true,
-              "CardID": 18516,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "2c8e9f"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -21.0073814,
-                "posY": 1.16618669,
-                "posZ": -6.43109941,
-                "rotX": 359.989532,
-                "rotY": 1.51945205E-05,
-                "rotZ": -0.00523501867,
-                "scaleX": 1.53054512,
-                "scaleY": 1.0,
-                "scaleZ": 1.53054512
-              },
-              "Nickname": "Titan Support",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": false,
-              "Snap": false,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "Hands": true,
-              "CardID": 18536,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "71713f"
-            }
-          ],
-          "GUID": "7f2da1"
-        },
-        {
-          "Name": "Deck",
-          "Transform": {
-            "posX": 1.06593335,
-            "posY": 3.024283,
-            "posZ": 3.35040927,
-            "rotX": -3.67228239E-07,
-            "rotY": 2.67626874E-05,
-            "rotZ": 1.59950173E-06,
-            "scaleX": 1.53054512,
-            "scaleY": 1.0,
-            "scaleZ": 1.53054512
-          },
-          "Nickname": "Combat upgrades (LV 2)",
-          "Description": "",
-          "ColorDiffuse": {
-            "r": 0.713235259,
-            "g": 0.713235259,
-            "b": 0.713235259
-          },
-          "Locked": false,
-          "Grid": false,
-          "Snap": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "Hands": false,
-          "SidewaysCard": false,
-          "DeckIDs": [
-            18510,
-            18530
-          ],
-          "CustomDeck": {
-            "185": {
-              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-              "NumWidth": 10,
-              "NumHeight": 5,
-              "BackIsHidden": false,
-              "UniqueBack": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "ContainedObjects": [
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -10.6748762,
-                "posY": 1.03168833,
-                "posZ": -6.66355,
-                "rotX": -0.001012215,
-                "rotY": 2.525562E-05,
-                "rotZ": -0.000580232765,
-                "scaleX": 1.53054512,
-                "scaleY": 1.0,
-                "scaleZ": 1.53054512
-              },
-              "Nickname": "Wyvern",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": false,
-              "Snap": false,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "Hands": true,
-              "CardID": 18510,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "30b4cc"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -10.6748676,
-                "posY": 1.16618657,
-                "posZ": -6.66356468,
-                "rotX": 359.989532,
-                "rotY": 3.095939E-05,
-                "rotZ": -0.00523486827,
-                "scaleX": 1.53054512,
-                "scaleY": 1.0,
-                "scaleZ": 1.53054512
-              },
-              "Nickname": "Wyvern",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": false,
-              "Snap": false,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "Hands": true,
-              "CardID": 18530,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "fce4cf"
-            }
-          ],
-          "GUID": "9c848b"
-        },
-        {
-          "Name": "Deck",
-          "Transform": {
-            "posX": 11.2378654,
-            "posY": 3.024283,
-            "posZ": 11.8583775,
-            "rotX": -4.24223146E-07,
-            "rotY": 8.540774E-06,
-            "rotZ": 1.54006352E-06,
-            "scaleX": 1.53054512,
-            "scaleY": 1.0,
-            "scaleZ": 1.53054512
-          },
-          "Nickname": "Combat upgrades (LV 0)",
-          "Description": "",
-          "ColorDiffuse": {
-            "r": 0.713235259,
-            "g": 0.713235259,
-            "b": 0.713235259
-          },
-          "Locked": false,
-          "Grid": false,
-          "Snap": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "Hands": false,
-          "SidewaysCard": false,
-          "DeckIDs": [
-            18506,
-            18526
-          ],
-          "CustomDeck": {
-            "185": {
-              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-              "NumWidth": 10,
-              "NumHeight": 5,
-              "BackIsHidden": false,
-              "UniqueBack": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "ContainedObjects": [
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -0.502946,
-                "posY": 1.03168833,
-                "posZ": 1.84441364,
-                "rotX": -0.00101227488,
-                "rotY": 9.171005E-06,
-                "rotZ": -0.000580247957,
-                "scaleX": 1.53054512,
-                "scaleY": 1.0,
-                "scaleZ": 1.53054512
-              },
-              "Nickname": "Chimeras",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": false,
-              "Snap": false,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "Hands": true,
-              "CardID": 18506,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "eb581a"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -0.502937436,
-                "posY": 1.16618669,
-                "posZ": 1.84439862,
-                "rotX": 359.989532,
-                "rotY": 2.057352E-05,
-                "rotZ": -0.0052351607,
-                "scaleX": 1.53054512,
-                "scaleY": 1.0,
-                "scaleZ": 1.53054512
-              },
-              "Nickname": "Chimeras",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": false,
-              "Snap": false,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "Hands": true,
-              "CardID": 18526,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "925bc5"
-            }
-          ],
-          "GUID": "cc36c7"
-        },
-        {
-          "Name": "Deck",
-          "Transform": {
-            "posX": -2.627363,
-            "posY": 3.024283,
-            "posZ": 13.6970348,
-            "rotX": 1.90678378E-07,
-            "rotY": 1.18546441E-05,
-            "rotZ": 2.28014233E-06,
-            "scaleX": 1.53054512,
-            "scaleY": 1.0,
-            "scaleZ": 1.53054512
-          },
-          "Nickname": "Combat upgrades (LV 2)",
-          "Description": "",
-          "ColorDiffuse": {
-            "r": 0.713235259,
-            "g": 0.713235259,
-            "b": 0.713235259
-          },
-          "Locked": false,
-          "Grid": false,
-          "Snap": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "Hands": false,
-          "SidewaysCard": false,
-          "DeckIDs": [
-            18500,
-            18520
-          ],
-          "CustomDeck": {
-            "185": {
-              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-              "NumWidth": 10,
-              "NumHeight": 5,
-              "BackIsHidden": false,
-              "UniqueBack": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "ContainedObjects": [
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -14.3681746,
-                "posY": 1.03168833,
-                "posZ": 3.683071,
-                "rotX": -0.00101225858,
-                "rotY": 5.870252E-06,
-                "rotZ": -0.000580776134,
-                "scaleX": 1.53054512,
-                "scaleY": 1.0,
-                "scaleZ": 1.53054512
-              },
-              "Nickname": "Basilisk",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": false,
-              "Snap": false,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "Hands": true,
-              "CardID": 18500,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "60839e"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -14.368166,
-                "posY": 1.16618657,
-                "posZ": 3.68305588,
-                "rotX": 359.989532,
-                "rotY": 1.7369448E-05,
-                "rotZ": -0.005235514,
-                "scaleX": 1.53054512,
-                "scaleY": 1.0,
-                "scaleZ": 1.53054512
-              },
-              "Nickname": "Basilisk",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": false,
-              "Snap": false,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "Hands": true,
-              "CardID": 18520,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "b3f4f8"
-            }
-          ],
-          "GUID": "765d14"
-        },
-        {
-          "Name": "Deck",
-          "Transform": {
-            "posX": 9.750643,
-            "posY": 3.06375885,
-            "posZ": 0.7505911,
-            "rotX": 1.04180348,
-            "rotY": 359.9805,
-            "rotZ": 358.762848,
-            "scaleX": 1.53054512,
-            "scaleY": 1.0,
-            "scaleZ": 1.53054512
-          },
-          "Nickname": "Combat cards",
+          "Nickname": "Event cards",
           "Description": "",
           "ColorDiffuse": {
             "r": 0.713235259,
@@ -29922,24 +28023,22 @@
           "Hands": false,
           "SidewaysCard": false,
           "DeckIDs": [
-            18534,
-            18514,
-            18532,
-            18512,
-            18524,
-            18504,
-            18522,
-            18502,
-            18521,
-            18501
+            18737,
+            18730,
+            18732,
+            18731,
+            18736,
+            18735,
+            18734,
+            18733
           ],
           "CustomDeck": {
-            "185": {
-              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
+            "187": {
+              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
               "NumWidth": 10,
-              "NumHeight": 5,
-              "BackIsHidden": false,
+              "NumHeight": 7,
+              "BackIsHidden": true,
               "UniqueBack": true
             }
           },
@@ -29949,17 +28048,17 @@
             {
               "Name": "Card",
               "Transform": {
-                "posX": 10.7500019,
-                "posY": 1.03168833,
-                "posZ": -16.7500019,
-                "rotX": -0.00101117941,
-                "rotY": 3.41507E-05,
-                "rotZ": -0.000581294,
-                "scaleX": 1.53054512,
+                "posX": 3.77648115,
+                "posY": 1.03183138,
+                "posZ": -10.248827,
+                "rotX": 359.994019,
+                "rotY": 179.938248,
+                "rotZ": 359.9939,
+                "scaleX": 1.0,
                 "scaleY": 1.0,
-                "scaleZ": 1.53054512
+                "scaleZ": 1.0
               },
-              "Nickname": "For the Emperor!",
+              "Nickname": "",
               "Description": "",
               "ColorDiffuse": {
                 "r": 0.713235259,
@@ -29974,36 +28073,36 @@
               "Tooltip": true,
               "GridProjection": false,
               "Hands": true,
-              "CardID": 18534,
+              "CardID": 18737,
               "SidewaysCard": false,
               "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
                   "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
                   "UniqueBack": true
                 }
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "GUID": "5af25d"
+              "GUID": "74aee8"
             },
             {
               "Name": "Card",
               "Transform": {
-                "posX": 10.75001,
-                "posY": 1.16618681,
-                "posZ": -16.7500153,
-                "rotX": 359.989532,
-                "rotY": 3.938793E-05,
-                "rotZ": -0.005244311,
-                "scaleX": 1.53054512,
+                "posX": 3.74975252,
+                "posY": 1.12579262,
+                "posZ": -10.254364,
+                "rotX": 1.61825836,
+                "rotY": 180.006149,
+                "rotZ": 0.00364631927,
+                "scaleX": 1.0,
                 "scaleY": 1.0,
-                "scaleZ": 1.53054512
+                "scaleZ": 1.0
               },
-              "Nickname": "For the Emperor!",
+              "Nickname": "",
               "Description": "",
               "ColorDiffuse": {
                 "r": 0.713235259,
@@ -30018,36 +28117,36 @@
               "Tooltip": true,
               "GridProjection": false,
               "Hands": true,
-              "CardID": 18514,
+              "CardID": 18730,
               "SidewaysCard": false,
               "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
                   "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
                   "UniqueBack": true
                 }
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "GUID": "06b39d"
+              "GUID": "cd93e3"
             },
             {
               "Name": "Card",
               "Transform": {
-                "posX": 6.750002,
-                "posY": 1.03168833,
-                "posZ": -16.2500019,
-                "rotX": -0.00101115543,
-                "rotY": 3.45752669E-05,
-                "rotZ": -0.0005818015,
-                "scaleX": 1.53054512,
+                "posX": 3.25001526,
+                "posY": 1.19855881,
+                "posZ": -10.7499866,
+                "rotX": -0.00444876356,
+                "rotY": 179.984634,
+                "rotZ": 0.0100971,
+                "scaleX": 1.0,
                 "scaleY": 1.0,
-                "scaleZ": 1.53054512
+                "scaleZ": 1.0
               },
-              "Nickname": "Heavy Weapons Team",
+              "Nickname": "",
               "Description": "",
               "ColorDiffuse": {
                 "r": 0.713235259,
@@ -30062,36 +28161,36 @@
               "Tooltip": true,
               "GridProjection": false,
               "Hands": true,
-              "CardID": 18532,
+              "CardID": 18732,
               "SidewaysCard": false,
               "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
                   "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
                   "UniqueBack": true
                 }
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "GUID": "64a478"
+              "GUID": "c8be87"
             },
             {
               "Name": "Card",
               "Transform": {
-                "posX": 6.750009,
-                "posY": 1.16618681,
-                "posZ": -16.2500153,
-                "rotX": 359.989532,
-                "rotY": 4.414153E-05,
-                "rotZ": -0.005244718,
-                "scaleX": 1.53054512,
+                "posX": 3.7499938,
+                "posY": 1.18489015,
+                "posZ": -10.2499962,
+                "rotX": -0.000690454151,
+                "rotY": 180.008179,
+                "rotZ": -0.00219466863,
+                "scaleX": 1.0,
                 "scaleY": 1.0,
-                "scaleZ": 1.53054512
+                "scaleZ": 1.0
               },
-              "Nickname": "Heavy Weapons Team",
+              "Nickname": "",
               "Description": "",
               "ColorDiffuse": {
                 "r": 0.713235259,
@@ -30106,36 +28205,36 @@
               "Tooltip": true,
               "GridProjection": false,
               "Hands": true,
-              "CardID": 18512,
+              "CardID": 18731,
               "SidewaysCard": false,
               "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
                   "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
                   "UniqueBack": true
                 }
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "GUID": "1f2db0"
+              "GUID": "f6d168"
             },
             {
               "Name": "Card",
               "Transform": {
-                "posX": 2.750002,
-                "posY": 1.03168833,
-                "posZ": -16.2500019,
-                "rotX": -0.00101246941,
-                "rotY": 2.98517825E-05,
-                "rotZ": -0.0005816702,
-                "scaleX": 1.53054512,
+                "posX": 4.15355349,
+                "posY": 1.17846358,
+                "posZ": -10.2281227,
+                "rotX": 0.0004249865,
+                "rotY": 180.029663,
+                "rotZ": 359.98465,
+                "scaleX": 1.0,
                 "scaleY": 1.0,
-                "scaleZ": 1.53054512
+                "scaleZ": 1.0
               },
-              "Nickname": "Ratlings",
+              "Nickname": "",
               "Description": "",
               "ColorDiffuse": {
                 "r": 0.713235259,
@@ -30150,36 +28249,36 @@
               "Tooltip": true,
               "GridProjection": false,
               "Hands": true,
-              "CardID": 18524,
+              "CardID": 18736,
               "SidewaysCard": false,
               "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
                   "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
                   "UniqueBack": true
                 }
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "GUID": "ea3249"
+              "GUID": "756c37"
             },
             {
               "Name": "Card",
               "Transform": {
-                "posX": 2.75001025,
-                "posY": 1.16618669,
-                "posZ": -16.2500172,
-                "rotX": 359.989532,
-                "rotY": 4.11234869E-05,
-                "rotZ": -0.00523402961,
-                "scaleX": 1.53054512,
+                "posX": 4.25001,
+                "posY": 1.185477,
+                "posZ": -10.24999,
+                "rotX": -0.00184911967,
+                "rotY": 180.024048,
+                "rotZ": 0.005744483,
+                "scaleX": 1.0,
                 "scaleY": 1.0,
-                "scaleZ": 1.53054512
+                "scaleZ": 1.0
               },
-              "Nickname": "Ratlings",
+              "Nickname": "",
               "Description": "",
               "ColorDiffuse": {
                 "r": 0.713235259,
@@ -30194,36 +28293,36 @@
               "Tooltip": true,
               "GridProjection": false,
               "Hands": true,
-              "CardID": 18504,
+              "CardID": 18735,
               "SidewaysCard": false,
               "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
                   "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
                   "UniqueBack": true
                 }
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "GUID": "79f9fd"
+              "GUID": "2d722d"
             },
             {
               "Name": "Card",
               "Transform": {
-                "posX": -1.74999833,
-                "posY": 1.03168833,
-                "posZ": -16.2500019,
-                "rotX": -0.001011242,
-                "rotY": 2.962252E-05,
-                "rotZ": -0.00058173656,
-                "scaleX": 1.53054512,
+                "posX": 3.24998188,
+                "posY": 1.190458,
+                "posZ": -10.2499933,
+                "rotX": -0.001409639,
+                "rotY": 179.9869,
+                "rotZ": 359.9917,
+                "scaleX": 1.0,
                 "scaleY": 1.0,
-                "scaleZ": 1.53054512
+                "scaleZ": 1.0
               },
-              "Nickname": "Incoming!",
+              "Nickname": "",
               "Description": "",
               "ColorDiffuse": {
                 "r": 0.713235259,
@@ -30238,36 +28337,36 @@
               "Tooltip": true,
               "GridProjection": false,
               "Hands": true,
-              "CardID": 18522,
+              "CardID": 18734,
               "SidewaysCard": false,
               "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
                   "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
                   "UniqueBack": true
                 }
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "GUID": "a86582"
+              "GUID": "2a02dd"
             },
             {
               "Name": "Card",
               "Transform": {
-                "posX": -1.749991,
-                "posY": 1.16618681,
-                "posZ": -16.2500153,
-                "rotX": 359.989532,
-                "rotY": 3.91832327E-05,
-                "rotZ": -0.005244745,
-                "scaleX": 1.53054512,
+                "posX": 3.75000215,
+                "posY": 1.1968528,
+                "posZ": -10.2499952,
+                "rotX": -0.0008225019,
+                "rotY": 180.000015,
+                "rotZ": 0.00164378562,
+                "scaleX": 1.0,
                 "scaleY": 1.0,
-                "scaleZ": 1.53054512
+                "scaleZ": 1.0
               },
-              "Nickname": "Incoming!",
+              "Nickname": "",
               "Description": "",
               "ColorDiffuse": {
                 "r": 0.713235259,
@@ -30282,112 +28381,2163 @@
               "Tooltip": true,
               "GridProjection": false,
               "Hands": true,
-              "CardID": 18502,
+              "CardID": 18733,
               "SidewaysCard": false,
               "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
                   "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
                   "UniqueBack": true
                 }
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "GUID": "44da28"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -7.249998,
-                "posY": 1.03168833,
-                "posZ": -16.2500019,
-                "rotX": -0.00101104961,
-                "rotY": 2.97135011E-05,
-                "rotZ": -0.0005818552,
-                "scaleX": 1.53054512,
-                "scaleY": 1.0,
-                "scaleZ": 1.53054512
-              },
-              "Nickname": "Commissar",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "Hands": true,
-              "CardID": 18521,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "accfbd"
-            },
-            {
-              "Name": "Card",
-              "Transform": {
-                "posX": -7.249991,
-                "posY": 1.16618681,
-                "posZ": -16.2500153,
-                "rotX": 359.989532,
-                "rotY": 3.94167473E-05,
-                "rotZ": -0.00524462527,
-                "scaleX": 1.53054512,
-                "scaleY": 1.0,
-                "scaleZ": 1.53054512
-              },
-              "Nickname": "Commissar",
-              "Description": "",
-              "ColorDiffuse": {
-                "r": 0.713235259,
-                "g": 0.713235259,
-                "b": 0.713235259
-              },
-              "Locked": false,
-              "Grid": true,
-              "Snap": true,
-              "Autoraise": true,
-              "Sticky": true,
-              "Tooltip": true,
-              "GridProjection": false,
-              "Hands": true,
-              "CardID": 18501,
-              "SidewaysCard": false,
-              "CustomDeck": {
-                "185": {
-                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/impguardcards-edit.jpg",
-                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/httpcloud3steamusercontentcomugc9384737594954491790FEF642CE5ABA707F7BCA87F1629494589DD874.jpg",
-                  "NumWidth": 10,
-                  "NumHeight": 5,
-                  "BackIsHidden": false,
-                  "UniqueBack": true
-                }
-              },
-              "LuaScript": "",
-              "LuaScriptState": "",
-              "GUID": "ac5a70"
+              "GUID": "61eb82"
             }
           ],
-          "GUID": "20e365"
+          "GUID": "a2ef8b"
+        },
+        {
+          "Name": "Deck",
+          "Transform": {
+            "posX": -0.25,
+            "posY": 3.04027677,
+            "posZ": 1.25,
+            "rotX": 9.76376E-07,
+            "rotY": 180.01123,
+            "rotZ": -1.241827E-06,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Order upgrades",
+          "Description": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "Hands": false,
+          "SidewaysCard": false,
+          "DeckIDs": [
+            18738,
+            18740,
+            18742,
+            18741,
+            18739
+          ],
+          "CustomDeck": {
+            "187": {
+              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+              "NumWidth": 10,
+              "NumHeight": 7,
+              "BackIsHidden": true,
+              "UniqueBack": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "ContainedObjects": [
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": -10.2519464,
+                "posY": 1.09994888,
+                "posZ": -11.2500515,
+                "rotX": 359.9228,
+                "rotY": 179.969009,
+                "rotZ": 356.0045,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 18738,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "ea20bd"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": -10.2626619,
+                "posY": 1.24855053,
+                "posZ": -11.2468548,
+                "rotX": 359.8297,
+                "rotY": 180.135254,
+                "rotZ": 356.0132,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 18740,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "f1145d"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": -10.2512054,
+                "posY": 1.39493549,
+                "posZ": -10.7490482,
+                "rotX": 359.865265,
+                "rotY": 180.044357,
+                "rotZ": 356.015137,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 18742,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "6f8d5e"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": -9.748586,
+                "posY": 1.17312682,
+                "posZ": -10.7486954,
+                "rotX": 358.9392,
+                "rotY": 179.990677,
+                "rotZ": 1.680743,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 18741,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "361648"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": -9.749986,
+                "posY": 1.18278253,
+                "posZ": -11.2499895,
+                "rotX": -0.0022652233,
+                "rotY": 180.000046,
+                "rotZ": 0.006065129,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 18739,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "aebc25"
+            }
+          ],
+          "GUID": "4a8281"
+        },
+        {
+          "Name": "Deck",
+          "Transform": {
+            "posX": 6.25141954,
+            "posY": 3.07427621,
+            "posZ": 1.74949539,
+            "rotX": 0.9531626,
+            "rotY": 180.035156,
+            "rotZ": 2.510688,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Combat Cards",
+          "Description": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "Hands": false,
+          "SidewaysCard": false,
+          "DeckIDs": [
+            18704,
+            18710,
+            18705,
+            18711,
+            18703,
+            18709,
+            18701,
+            18707,
+            18700,
+            18706
+          ],
+          "CustomDeck": {
+            "187": {
+              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+              "NumWidth": 10,
+              "NumHeight": 7,
+              "BackIsHidden": true,
+              "UniqueBack": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "ContainedObjects": [
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 17.7499771,
+                "posY": 1.03168881,
+                "posZ": -18.2499924,
+                "rotX": -0.00151013653,
+                "rotY": 180.000046,
+                "rotZ": -0.000893163844,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Ratling Snipers",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 18704,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "df26c1"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 17.7499638,
+                "posY": 1.16619241,
+                "posZ": -18.24997,
+                "rotX": 359.984253,
+                "rotY": 180.000092,
+                "rotZ": 359.991974,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Ratling Snipers",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 18710,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "a155b6"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 14.7579823,
+                "posY": 1.03168917,
+                "posZ": -17.7500362,
+                "rotX": -0.001504866,
+                "rotY": 179.974045,
+                "rotZ": -0.0008924877,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Sanctioned Psykers",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 18705,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "b4e836"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 14.7579708,
+                "posY": 1.16619265,
+                "posZ": -17.7500172,
+                "rotX": 359.984222,
+                "rotY": 179.974075,
+                "rotZ": 359.991943,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Sanctioned Psykers",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 18711,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "451150"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 20.25036,
+                "posY": 1.031689,
+                "posZ": -18.2502079,
+                "rotX": -0.001504529,
+                "rotY": 179.9933,
+                "rotZ": -0.00089156063,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Incoming!",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 18703,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "51f9c0"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 20.250349,
+                "posY": 1.16619265,
+                "posZ": -18.2501888,
+                "rotX": 359.984222,
+                "rotY": 179.993347,
+                "rotZ": 359.991943,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Incoming!",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 18709,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "607d59"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 26.2499981,
+                "posY": 1.03168881,
+                "posZ": -18.2500076,
+                "rotX": -0.00150951149,
+                "rotY": 179.9997,
+                "rotZ": -0.0008931626,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "For the Emperor!",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 18701,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "a694e9"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 26.2499847,
+                "posY": 1.16619241,
+                "posZ": -18.2499847,
+                "rotX": 359.984253,
+                "rotY": 179.999725,
+                "rotZ": 359.991974,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "For the Emperor!",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 18707,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "c082b8"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 28.7503815,
+                "posY": 1.03168893,
+                "posZ": -18.2501945,
+                "rotX": -0.00150926551,
+                "rotY": 179.9927,
+                "rotZ": -0.0008931012,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Commissar",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 18700,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "c3647f"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 28.7503681,
+                "posY": 1.16619241,
+                "posZ": -18.2501717,
+                "rotX": 359.984253,
+                "rotY": 179.992722,
+                "rotZ": 359.991974,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Commissar",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 18706,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "7ad40c"
+            }
+          ],
+          "GUID": "375031"
+        },
+        {
+          "Name": "Deck",
+          "Transform": {
+            "posX": 6.252122,
+            "posY": 3.09332013,
+            "posZ": 2.25047541,
+            "rotX": 359.433472,
+            "rotY": 179.977249,
+            "rotZ": 2.65115714,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Alternate Starter Cards",
+          "Description": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "Hands": false,
+          "SidewaysCard": false,
+          "DeckIDs": [
+            18702,
+            18708
+          ],
+          "CustomDeck": {
+            "187": {
+              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+              "NumWidth": 10,
+              "NumHeight": 7,
+              "BackIsHidden": true,
+              "UniqueBack": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "ContainedObjects": [
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 23.2499828,
+                "posY": 1.03168881,
+                "posZ": -18.2499981,
+                "rotX": -0.00151036994,
+                "rotY": 180.0,
+                "rotZ": -0.0008936834,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Heavy Weapons Team",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 18702,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "410394"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 23.24997,
+                "posY": 1.16619241,
+                "posZ": -18.2499752,
+                "rotX": 359.984253,
+                "rotY": 180.000015,
+                "rotZ": 359.991974,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Heavy Weapons Team",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 18708,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "5a203f"
+            }
+          ],
+          "GUID": "cd1aa3"
+        },
+        {
+          "Name": "Deck",
+          "Transform": {
+            "posX": 6.25141573,
+            "posY": 3.08138061,
+            "posZ": 2.751234,
+            "rotX": 358.425385,
+            "rotY": 179.949646,
+            "rotZ": 1.95039558,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Combat upgrades (LV 2)",
+          "Description": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "Hands": false,
+          "SidewaysCard": false,
+          "DeckIDs": [
+            18721,
+            18724
+          ],
+          "CustomDeck": {
+            "187": {
+              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+              "NumWidth": 10,
+              "NumHeight": 7,
+              "BackIsHidden": true,
+              "UniqueBack": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "ContainedObjects": [
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 8.249737,
+                "posY": 1.031689,
+                "posZ": -17.2500153,
+                "rotX": -0.00150481251,
+                "rotY": 180.000244,
+                "rotZ": -0.0008923521,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Regiment",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 18721,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "e851e9"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 8.249725,
+                "posY": 1.16619265,
+                "posZ": -17.2499962,
+                "rotX": 359.984222,
+                "rotY": 180.000259,
+                "rotZ": 359.991943,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Regiment",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 18724,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "e99f02"
+            }
+          ],
+          "GUID": "4dca47"
+        },
+        {
+          "Name": "Deck",
+          "Transform": {
+            "posX": 4.75,
+            "posY": 3.048295,
+            "posZ": -2.25,
+            "rotX": -5.02902867E-06,
+            "rotY": 180.000015,
+            "rotZ": -3.07189248E-06,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Combat upgrades (LV 0)",
+          "Description": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "Hands": false,
+          "SidewaysCard": false,
+          "DeckIDs": [
+            18714,
+            18718
+          ],
+          "CustomDeck": {
+            "187": {
+              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+              "NumWidth": 10,
+              "NumHeight": 7,
+              "BackIsHidden": true,
+              "UniqueBack": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "ContainedObjects": [
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 6.74971151,
+                "posY": 1.03168893,
+                "posZ": -22.2500019,
+                "rotX": -0.00151023222,
+                "rotY": 180.000015,
+                "rotZ": -0.00089270866,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Sentinels",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 18714,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "ed9d2f"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 6.749698,
+                "posY": 1.16619241,
+                "posZ": -22.249979,
+                "rotX": 359.984253,
+                "rotY": 180.000046,
+                "rotZ": 359.991974,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Sentinels",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 18718,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "d38894"
+            }
+          ],
+          "GUID": "819d03"
+        },
+        {
+          "Name": "Deck",
+          "Transform": {
+            "posX": 10.75,
+            "posY": 3.048295,
+            "posZ": -2.25,
+            "rotX": -2.0880525E-06,
+            "rotY": 180.001251,
+            "rotZ": -5.919104E-06,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Combat upgrades (LV 0)",
+          "Description": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "Hands": false,
+          "SidewaysCard": false,
+          "DeckIDs": [
+            18712,
+            18716
+          ],
+          "CustomDeck": {
+            "187": {
+              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+              "NumWidth": 10,
+              "NumHeight": 7,
+              "BackIsHidden": true,
+              "UniqueBack": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "ContainedObjects": [
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 12.7505455,
+                "posY": 1.03168917,
+                "posZ": -22.24999,
+                "rotX": -0.00150419539,
+                "rotY": 180.001251,
+                "rotZ": -0.000891831936,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Chimeras",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 18712,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "b99955"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 12.7505341,
+                "posY": 1.16619265,
+                "posZ": -22.24997,
+                "rotX": 359.984222,
+                "rotY": 180.001282,
+                "rotZ": 359.991943,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Chimeras",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 18716,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "1701da"
+            }
+          ],
+          "GUID": "f590b0"
+        },
+        {
+          "Name": "Deck",
+          "Transform": {
+            "posX": 8.75,
+            "posY": 3.048295,
+            "posZ": 2.75,
+            "rotX": -1.851954E-06,
+            "rotY": 180.000656,
+            "rotZ": -6.29237138E-06,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Combat upgrades (LV 2)",
+          "Description": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "Hands": false,
+          "SidewaysCard": false,
+          "DeckIDs": [
+            18720,
+            18723
+          ],
+          "CustomDeck": {
+            "187": {
+              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+              "NumWidth": 10,
+              "NumHeight": 7,
+              "BackIsHidden": true,
+              "UniqueBack": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "ContainedObjects": [
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 10.7496243,
+                "posY": 1.031689,
+                "posZ": -17.2500248,
+                "rotX": -0.00150402554,
+                "rotY": 180.000656,
+                "rotZ": -0.0008915957,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Basilisk",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 18720,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "b741cd"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 10.7496128,
+                "posY": 1.16619265,
+                "posZ": -17.2500038,
+                "rotX": 359.984222,
+                "rotY": 180.000671,
+                "rotZ": 359.991943,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Basilisk",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 18723,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "01996b"
+            }
+          ],
+          "GUID": "8f6068"
+        },
+        {
+          "Name": "Deck",
+          "Transform": {
+            "posX": -1.25,
+            "posY": 3.04829454,
+            "posZ": 1.25,
+            "rotX": -9.48101558E-07,
+            "rotY": 180.000076,
+            "rotZ": 7.135835E-06,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Combat upgrades (LV 3)",
+          "Description": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "Hands": false,
+          "SidewaysCard": false,
+          "DeckIDs": [
+            18726,
+            18728
+          ],
+          "CustomDeck": {
+            "187": {
+              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+              "NumWidth": 10,
+              "NumHeight": 7,
+              "BackIsHidden": true,
+              "UniqueBack": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "ContainedObjects": [
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 0.7496108,
+                "posY": 1.03168881,
+                "posZ": -18.75,
+                "rotX": -0.00150971953,
+                "rotY": 180.000076,
+                "rotZ": -0.000892822747,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Titan Advance",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 18726,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "afaa79"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 0.7495977,
+                "posY": 1.16619241,
+                "posZ": -18.7499771,
+                "rotX": 359.984253,
+                "rotY": 180.0001,
+                "rotZ": 359.991974,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Titan Advance",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 18728,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "413f5b"
+            }
+          ],
+          "GUID": "aa677e"
+        },
+        {
+          "Name": "Deck",
+          "Transform": {
+            "posX": -4.75,
+            "posY": 3.04829454,
+            "posZ": 1.75,
+            "rotX": -3.91104641E-06,
+            "rotY": 180.000244,
+            "rotZ": -2.78650259E-06,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Combat upgrades (LV 3)",
+          "Description": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "Hands": false,
+          "SidewaysCard": false,
+          "DeckIDs": [
+            18727,
+            18729
+          ],
+          "CustomDeck": {
+            "187": {
+              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+              "NumWidth": 10,
+              "NumHeight": 7,
+              "BackIsHidden": true,
+              "UniqueBack": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "ContainedObjects": [
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": -2.75026536,
+                "posY": 1.03168893,
+                "posZ": -18.25002,
+                "rotX": -0.00151029311,
+                "rotY": 180.000244,
+                "rotZ": -0.0008933534,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Titan Support",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 18727,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "99b52f"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": -2.75027847,
+                "posY": 1.16619241,
+                "posZ": -18.2499962,
+                "rotX": 359.984253,
+                "rotY": 180.000259,
+                "rotZ": 359.991974,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Titan Support",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 18729,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "0bf25c"
+            }
+          ],
+          "GUID": "39dd63"
+        },
+        {
+          "Name": "Deck",
+          "Transform": {
+            "posX": 7.75,
+            "posY": 3.048294,
+            "posZ": -1.75,
+            "rotX": -1.671835E-06,
+            "rotY": 179.99968,
+            "rotZ": -5.76414641E-06,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Combat upgrades (LV 0)",
+          "Description": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "Hands": false,
+          "SidewaysCard": false,
+          "DeckIDs": [
+            18713,
+            18717
+          ],
+          "CustomDeck": {
+            "187": {
+              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+              "NumWidth": 10,
+              "NumHeight": 7,
+              "BackIsHidden": true,
+              "UniqueBack": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "ContainedObjects": [
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 9.750001,
+                "posY": 1.031689,
+                "posZ": -21.75001,
+                "rotX": -0.001504448,
+                "rotY": 179.99968,
+                "rotZ": -0.000891472038,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Ogryn",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 18713,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "3a2737"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 9.74998951,
+                "posY": 1.16619265,
+                "posZ": -21.7499886,
+                "rotX": 359.984222,
+                "rotY": 179.9997,
+                "rotZ": 359.991943,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Ogryn",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 18717,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "584507"
+            }
+          ],
+          "GUID": "2b943f"
+        },
+        {
+          "Name": "Deck",
+          "Transform": {
+            "posX": 1.75,
+            "posY": 3.048294,
+            "posZ": -2.25,
+            "rotX": 4.014316E-07,
+            "rotY": 180.0,
+            "rotZ": -6.116615E-06,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Combat upgrades (LV 0)",
+          "Description": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "Hands": false,
+          "SidewaysCard": false,
+          "DeckIDs": [
+            18715,
+            18719
+          ],
+          "CustomDeck": {
+            "187": {
+              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+              "NumWidth": 10,
+              "NumHeight": 7,
+              "BackIsHidden": true,
+              "UniqueBack": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "ContainedObjects": [
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 3.749814,
+                "posY": 1.031689,
+                "posZ": -22.2500019,
+                "rotX": -0.00150512462,
+                "rotY": 180.0,
+                "rotZ": -0.0008917809,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Veterans",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 18715,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "5dfbcd"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 3.74980283,
+                "posY": 1.16619265,
+                "posZ": -22.2499828,
+                "rotX": 359.984222,
+                "rotY": 180.0,
+                "rotZ": 359.991943,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Veterans",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 18719,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "3bb608"
+            }
+          ],
+          "GUID": "a5f9da"
+        },
+        {
+          "Name": "Deck",
+          "Transform": {
+            "posX": 3.25,
+            "posY": 3.048294,
+            "posZ": 2.75,
+            "rotX": -1.196877E-06,
+            "rotY": 179.987045,
+            "rotZ": -4.04747243E-06,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Combat upgrades (LV 2)",
+          "Description": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "Hands": false,
+          "SidewaysCard": false,
+          "DeckIDs": [
+            18722,
+            18725
+          ],
+          "CustomDeck": {
+            "187": {
+              "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+              "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+              "NumWidth": 10,
+              "NumHeight": 7,
+              "BackIsHidden": true,
+              "UniqueBack": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "ContainedObjects": [
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 5.25389338,
+                "posY": 1.031689,
+                "posZ": -17.2499886,
+                "rotX": -0.00150490133,
+                "rotY": 179.987045,
+                "rotZ": -0.000892249,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Wyvern",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 18722,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "75558c"
+            },
+            {
+              "Name": "Card",
+              "Transform": {
+                "posX": 5.253882,
+                "posY": 1.16619265,
+                "posZ": -17.24997,
+                "rotX": 359.984222,
+                "rotY": 179.987061,
+                "rotZ": 359.991943,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "Wyvern",
+              "Description": "",
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "Hands": true,
+              "CardID": 18725,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "187": {
+                  "FaceURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-fronts-v2.jpg",
+                  "BackURL": "https://s3.amazonaws.com/forbidden-stars-assets/ig-card-backs-v2.jpg",
+                  "NumWidth": 10,
+                  "NumHeight": 7,
+                  "BackIsHidden": true,
+                  "UniqueBack": true
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "GUID": "e80b29"
+            }
+          ],
+          "GUID": "b83ef2"
         }
       ],
       "GUID": "3aae55"
@@ -30396,11 +30546,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": 98.00779,
-        "posY": 1.979999,
-        "posZ": 0.9447499,
-        "rotX": 0.0006899847,
-        "rotY": 270.023651,
-        "rotZ": 8.00777457E-07,
+        "posY": 1.97999883,
+        "posZ": 0.944749057,
+        "rotX": 0.000685615349,
+        "rotY": 270.0238,
+        "rotZ": -1.77205959E-06,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -30409,7 +30559,7 @@
       "Description": "",
       "ColorDiffuse": {
         "r": 0.6687291,
-        "g": 0.243041337,
+        "g": 0.2430413,
         "b": 0.934782565
       },
       "Locked": false,
@@ -35912,11 +36062,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": 94.1509,
-        "posY": 1.97995257,
+        "posY": 1.9799521,
         "posZ": -2.74803329,
-        "rotX": -0.0006886213,
-        "rotY": 90.01111,
-        "rotZ": 3.766552E-06,
+        "rotX": -0.000689396868,
+        "rotY": 90.01116,
+        "rotZ": -6.319926E-07,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -40853,11 +41003,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": 98.36122,
-        "posY": 1.98000288,
-        "posZ": -2.70012474,
-        "rotX": 3.04003538E-06,
+        "posY": 1.98000276,
+        "posZ": -2.700126,
+        "rotX": 5.231509E-08,
         "rotY": 180.008667,
-        "rotZ": -0.000684634433,
+        "rotZ": -0.0006920451,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -40866,8 +41016,8 @@
       "Description": "",
       "ColorDiffuse": {
         "r": 0.9559999,
-        "g": 0.391997933,
-        "b": 0.112997942
+        "g": 0.3919979,
+        "b": 0.112997912
       },
       "Locked": false,
       "Grid": false,
@@ -46223,5 +46373,5 @@
       "id": 7
     }
   },
-  "VersionNumber": "v10.0.5"
+  "VersionNumber": "v10.1"
 }
