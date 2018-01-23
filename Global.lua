@@ -650,10 +650,10 @@ playerInitInfo = {
     combatEnd = '75dde9',
     tokenReset = 'c2f4c8',
     orderTokenUpperLeft = { pos = { 9.75, 1.06, 28.25 }, rot = { 0, 0, 180.00 } },
-    factionCardPos = { pos = { 18.22, 1, 30.75 }, rot = { 0, 0, 0 } },
+    factionCardPos = { pos = { 18.5, 1, 30.75 }, rot = { 0, 0, 0 } },
     objectiveTokenPos = { pos = { 18.00, 1.20, 33.11 }, rot = { 0, 0, 180 } },
-    combatDeckPos = { pos = { 26.75, 1.02, 28.75 }, rot = { 0, 0, 0 } },
-    eventCardPos = { pos = { 26.75, 1.01, 33.75 }, rot = { 0, 0, 0 } },
+    combatDeckPos = { pos = { 27, 1.02, 28.75 }, rot = { 0, 0, 0 } },
+    eventCardPos = { pos = { 27, 1.01, 33.75 }, rot = { 0, 0, 0 } },
     startUnitsUpperLeft = { pos = { 26.54, 0.96, 22.20 }, rot = { 0, 0, 0 } },
     materialCounterPos = { pos = { 17.96, 1, 27.72 }, rot = { 0, 180, 0 } },
     combatDieUpperLeft = { pos = { 61.00, 1.90, 32.40 }, rot = { 270, 180, 0 } },
@@ -919,45 +919,56 @@ function upgradeCards(deck, playerColor)
   if (not state.combatLock[playerColor]) then
     state.combatLock[playerColor] = true
     local combatDeck = getObjectFromGUID(state.combatDecks[playerColor])
-    state.plannedUpgrades[playerColor] = deck.getGUID()
-    local cards = combatDeck.getObjects()
-    local cardNamesToGuids = {}
-    for k, card in pairs(cards) do
-      if (not cardNamesToGuids[card.nickname]) then
-        cardNamesToGuids[card.nickname] = {}
-      end
-      table.insert(cardNamesToGuids[card.nickname], card.guid)
+    if (combatDeck == nil) then
+      combatDeck = findCombatDeckForColor(playerColor)
     end
-
-    local counter = 0
-    state.floatingCards[playerColor] = cardNamesToGuids
-    state.combatDeckPositions[playerColor] = vector_convertor(combatDeck.getPosition())
-    for cardName, guids in pairs(cardNamesToGuids) do
-      local goto1 = copyTable(combatDeck.getPosition())
-      goto1.x = goto1.x - (10) + (counter * 4)
-      goto1.y = 5
-      local goto2 = copyTable(goto1)
-      goto2.y = goto2.y - 0.1
-      local card1 = combatDeck.takeObject({ guid = guids[1] })
-
-      card1.setPositionSmooth(goto1)
-      card1.setLock(true)
-      cardbutton(card1, "DIS", "finishUpgrade")
-      if (counter < 4) then
-        local card2 = combatDeck.takeObject({ guid = guids[2] })
-        card2.setPositionSmooth(goto2)
-        card2.setLock(true)
-      else
-        local id = "moveCard" .. guids[2]
-        Timer.destroy(id)
-        Timer.create({
-          identifier = id,
-          function_name = 'moveObj',
-          parameters = { guid = guids[2], pos = goto2, lock = true },
-          delay = 0.1
-        })
+    if (closeTo(combatDeck.getRotation().z, 180, 1)) then
+      combatDeck.flip()
+    end
+    if (combatDeck ~= nil) then
+      state.plannedUpgrades[playerColor] = deck.getGUID()
+      local cards = combatDeck.getObjects()
+      local cardNamesToGuids = {}
+      for k, card in pairs(cards) do
+        if (not cardNamesToGuids[card.nickname]) then
+          cardNamesToGuids[card.nickname] = {}
+        end
+        table.insert(cardNamesToGuids[card.nickname], card.guid)
       end
-      counter = counter + 1
+
+      local counter = 0
+      state.floatingCards[playerColor] = cardNamesToGuids
+      state.combatDeckPositions[playerColor] = vector_convertor(combatDeck.getPosition())
+      for cardName, guids in pairs(cardNamesToGuids) do
+        local goto1 = copyTable(combatDeck.getPosition())
+        goto1.x = goto1.x - (10) + (counter * 4)
+        goto1.y = 5
+        local goto2 = copyTable(goto1)
+        goto2.y = goto2.y - 0.1
+        local card1 = combatDeck.takeObject({ guid = guids[1] })
+
+        card1.setPositionSmooth(goto1)
+        card1.setLock(true)
+        cardbutton(card1, "DIS", "finishUpgrade")
+        if (counter < 4) then
+          local card2 = combatDeck.takeObject({ guid = guids[2] })
+          card2.setPositionSmooth(goto2)
+          card2.setLock(true)
+        else
+          local id = "moveCard" .. guids[2]
+          Timer.destroy(id)
+          Timer.create({
+            identifier = id,
+            function_name = 'moveObj',
+            parameters = { guid = guids[2], pos = goto2, lock = true },
+            delay = 0.1
+          })
+        end
+        counter = counter + 1
+      end
+    else
+      broadcastToAll("Could not find combat deck for player "..playerColor)
+      state.combatLock[playerColor] = false
     end
   end
 end
@@ -1447,24 +1458,48 @@ function closeTo(num1, num2, tolerance)
   return math.abs(num1 - num2) < tolerance
 end
 
-function endCombat(domino, playerColor)
-  state.combatLock[playerColor] = true
-  local deck = getObjectFromGUID(state.combatDecks[playerColor])
-  state.playedCombatCards[playerColor] = {}
-  local cards = state.combatDeckContents[deck.getGUID()]
-  if (cards) then
-    for k, v in pairs(cards) do
-      local card = getObjectFromGUID(v['guid'])
-      if card ~= nil then
-        card.clearButtons()
-        card.putObject(deck)
+function findCombatDeckForColor(playerColor)
+  local expectedPos = playerInitInfo[playerColor].combatDeckPos
+  local closestDeck = nil
+  local closestDistance = nil
+  for k, obj in pairs(getAllObjects()) do
+    if (obj.tag == "Deck") then
+      if (closestDistance == nil or distance2D(obj.getPosititon(), expectedPos) < closestDistance) then
+        closestDeck = obj
+        closestDistance = distance2D(obj.getPosititon(), expectedPos)
       end
     end
   end
-  state.combatDeckContents[deck.getGUID()] = {}
-  if (closeTo(deck.getRotation().z, 180, 1)) then
-    deck.flip()
+  if (closestDeck ~= nil) then
+    state.combatDecks[playerColor] = closestDeck.getGUID()
+    closestDeck.setName("Combat Cards")
   end
+  return closestDeck
+end
+
+function endCombat(domino, playerColor)
+  state.combatLock[playerColor] = true
+  local deck = getObjectFromGUID(state.combatDecks[playerColor])
+  if (deck == nil) then
+    deck = findCombatDeckForColor(playerColor)
+  end
+  state.playedCombatCards[playerColor] = {}
+  if (deck ~= nil) then
+    local cards = state.combatDeckContents[deck.getGUID()]
+    if (cards) then
+      for k, v in pairs(cards) do
+        local card = getObjectFromGUID(v['guid'])
+        if card ~= nil then
+          card.clearButtons()
+          card.putObject(deck)
+        end
+      end
+    end
+    if (closeTo(deck.getRotation().z, 180, 1)) then
+      deck.flip()
+    end
+  end
+  state.combatDeckContents[deck.getGUID()] = {}
   for k, v in pairs(state.combatTokensToPlayer) do
     if (v == playerColor) then
       local obj = getObjectFromGUID(k)
