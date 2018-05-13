@@ -196,10 +196,11 @@ default_state = {
   },
   commandTokenObjects = {},
   factionButtons = {},
+  factionAssigned = {},
   buttons = {},
   putBackFaction = {},
   options = {
-    ["Tile Helper"] = true,
+    ["Tile Helper"] = false,
     ["Blank State"] = false,
     ["Save State"] = true
   },
@@ -842,7 +843,9 @@ function setupButtons()
   factionButton('9742c2', "Necrons")
   factionButton('0d3a2b', 'Tau')
 
-  optionButton('dae75b', "Tile Helper")
+  randomFaction('190101', "Random")
+
+  --  optionButton('dae75b', "Tile Helper")
   optionButton('d6e086', "Blank State")
   optionButton('4baf3c', "Save State")
 
@@ -876,9 +879,28 @@ function factionButton(domino, faction)
   detailedbutton(getObjectFromGUID(domino), faction, "assignFaction", 220)
 end
 
+function randomFaction(domino, name)
+  detailedbutton(getObjectFromGUID(domino), name, "chooseRandomFaction", 220)
+end
+
+function chooseRandomFaction(domino, playerColor)
+  local availableFactionButtons = {}
+  for k, v in pairs(state.factionButtons) do
+    if (not state.factionAssigned[v]) then
+      table.insert(availableFactionButtons, k)
+    end
+  end
+
+  local choice = math.random(1, #availableFactionButtons)
+  local buttonGUID = availableFactionButtons[choice]
+  local buttonObject = getObjectFromGUID(buttonGUID)
+  assignFaction(buttonObject, playerColor)
+end
+
 function assignFaction(domino, playerColor)
   if (playerColor ~= "White" and state.putBackFaction[playerColor] == nil) then
     local faction = state.factionButtons[domino.getGUID()]
+    state.factionAssigned[faction] = true
     initFaction(playerColor, faction)
     removeButtons(domino)
     detailedbutton(domino, "Put back " .. faction, "putBackFaction", 180)
@@ -898,6 +920,7 @@ end
 function putBackFaction(domino, playerColor)
   local faction = state.factionButtons[domino.getGUID()]
   if (state.putBackFaction[playerColor]["faction"] == faction) then
+    state.factionAssigned[faction] = false
     putAllInBag(state.putBackFaction[playerColor]["guids"], state.putBackFaction[playerColor]["bag"])
     removeButtons(domino)
     removeButtons(getObjectFromGUID(playerInitInfo[playerColor].combatStart))
@@ -967,7 +990,7 @@ function upgradeCards(deck, playerColor)
         counter = counter + 1
       end
     else
-      broadcastToAll("Could not find combat deck for player "..playerColor)
+      broadcastToAll("Could not find combat deck for player " .. playerColor)
       state.combatLock[playerColor] = false
     end
   end
