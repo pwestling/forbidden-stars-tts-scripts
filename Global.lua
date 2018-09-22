@@ -14,6 +14,7 @@ function detailedbutton(domino, label, fn, font_size)
   button.label = label
   button.font_size = font_size
   button.function_owner = nil
+  button.tooltip = label
   domino.createButton(button)
   state.buttons[domino.getGUID()] = button
 end
@@ -63,7 +64,7 @@ function recreateButtons()
     end
   end
   for objGuid, option in pairs(state.optionButtons) do
-    setOptionColor(getObjectFromGUID(objGuid), state.options[option])
+    --setOptionColor(getObjectFromGUID(objGuid), state.options[option])
   end
 end
 
@@ -266,11 +267,42 @@ function onChat(message, color)
   if (message == "renameDecks") then
     print("renaming...")
     nameDecks()
+    return false
   end
   if (message == "uniqueDecks") then
     print("uniqueing...")
     uniqueDecks()
+    return false
   end
+  if (message == "dieDistribution") then
+    printDieDistribution()
+    return false
+  end
+end
+
+function printDieDistribution()
+
+ local guns = Global.getVar("gunTimesRolled")
+ local shields = Global.getVar("shieldTimesRolled")
+ local morale = Global.getVar("moraleTimesRolled")
+
+ if not guns then
+   guns = 0
+ end
+
+ if not shields then
+  shields = 0
+end
+
+if not morale then
+  morale = 0
+end
+
+local total = (guns + shields + morale) * 1.0
+print("Total dice rolled: "..total)
+
+print("Side distribution:\nGuns: "..(guns / total).."\nShields: "..(shields / total).."\nMorale: "..(morale / total))
+
 end
 
 function uniqueDecks()
@@ -811,7 +843,7 @@ function initFaction(color, faction)
       color = color,
       upgradeCards = concatArrs({ level0upgrades, level2upgrades, level3upgrades })
     },
-    delay = 1
+    delay = 3
   })
   state.putBackFaction[color] = {}
   state.putBackFaction[color]["faction"] = faction
@@ -845,9 +877,6 @@ function setupButtons()
 
   randomFaction('190101', "Random")
 
-  --  optionButton('dae75b', "Tile Helper")
-  optionButton('d6e086', "Blank State")
-  optionButton('4baf3c', "Save State")
 
   Global.setVar("loaded", true)
 end
@@ -1165,6 +1194,14 @@ end
 function rollCombatDie(die, playerColor)
   local s = math.random(1, 6)
   local side = diceSideMap[s]
+  
+  local timesRolled = Global.getVar(side .. "TimesRolled")
+  if not timesRolled then
+    timesRolled = 0
+  end
+  timesRolled = timesRolled + 1
+  Global.setVar(side .. "TimesRolled", timesRolled)
+  
   local rot = diceRotations[playerColor][side]
   local pos = copyTable(dicePositions[playerColor][side])
   pos.x = pos.x + ((dieXWidth * 7) * dicePositions[playerColor].dir)
