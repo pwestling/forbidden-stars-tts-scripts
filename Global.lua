@@ -16,6 +16,7 @@ function detailedbutton(domino, label, fn, font_size)
   button.function_owner = nil
   button.tooltip = label
   domino.createButton(button)
+  domino.hide_when_face_down = false
   state.buttons[domino.getGUID()] = button
 end
 
@@ -196,6 +197,7 @@ default_state = {
   },
   commandTokenObjects = {},
   factionButtons = {},
+  customFactionBags = {},
   factionAssigned = {},
   buttons = {},
   putBackFaction = {},
@@ -275,6 +277,20 @@ function onChat(message, color)
   end
   if (message == "dieDistribution") then
     printDieDistribution()
+    return false
+  end
+  if (string.match(message, "^assignFaction .*")) then
+    print("assigning...")
+    assignedFactionName = string.match(message, " .*")
+    return false
+  end
+  if(string.match( message,"swap .*")) then
+    color1, color2 = string.match(message, "swap ([^ ]+) ([^ ]+)")
+    swapPlayerColors(color1, color2)
+    return false
+  end
+  if(string.match( message,"randomizeColors")) then
+    randomizeColorPositions()
     return false
   end
 end
@@ -654,6 +670,84 @@ function getByName(objectDescriptors, name)
   return result
 end
 
+function swapKey(tab, key1, key2)
+  local val1 = tab[key1]
+  tab[key1] = tab[key2]
+  tab[key2] = val1
+end
+
+function swapValEntry(tab, key, val1, val2)
+  for k,v in pairs(tab) do
+    if(v[key] == val1) then
+      v[key] = val2
+    elseif (v[key] == val2) then
+      v[key] = val1
+    end
+  end
+end
+
+function swapObjects(obj1, obj2)
+  local pos1 = obj1.getPosition()
+  local rot1 = obj1.getRotation()
+  local pos2 = obj2.getPosition()
+  local rot2 = obj2.getRotation()
+
+  obj1.setPosition(pos2)
+  obj1.setRotation(rot2)
+
+  obj2.setPosition(pos1)
+  obj2.setRotation(rot1)  
+end
+
+function swapPlayerColors(color1, color2)
+  local player1 = Player[color1]
+  local player2 = Player[color2]
+
+  local numHands = player1.getHandCount()
+
+  for i=1,numHands do
+    local trans1 = player1.getHandTransform(i)
+    local trans2 = player2.getHandTransform(i)
+    player1.setHandTransform(trans2, i)
+    player2.setHandTransform(trans1, i)
+  end
+
+  swapKey(diceRotations, color1, color2)
+  swapKey(dicePositions, color1, color2)
+  swapValEntry(diceTrayZones, "player", color1, color2)
+  swapValEntry(sideTableZones, "player", color1, color2)
+  swapKey(playerInitInfo, color1, color2)
+
+  swapObjects(getObjectFromGUID(playerDieBoards[color1]), getObjectFromGUID(playerDieBoards[color2]))
+  swapObjects(getObjectFromGUID(playerHiddenZones[color1]), getObjectFromGUID(playerHiddenZones[color2]))
+end
+
+function shuffle(list)
+
+end
+
+function randomizeColorPositions()
+  local list = {"Red", "Blue", "Green", "Yellow"}
+	for i = #list, 2, -1 do
+		local j = math.random(i)
+		swapPlayerColors(list[j], list[i])
+	end
+end
+
+playerDieBoards = {
+  Red = "7d6880",
+  Yellow = "566382",
+  Green = "c5bb77",
+  Blue = "d760de"
+}
+
+playerHiddenZones = {
+  Red = "a82193",
+  Yellow = "d48a52",
+  Green = "3f1125",
+  Blue = "5c5abb"
+}
+
 playerInitInfo = {
   Red = {
     combatStart = "713059",
@@ -681,7 +775,7 @@ playerInitInfo = {
     tokenReset = "f39151",
     orderTokenUpperLeft = {pos = {6.25, 1.06, -28.25}, rot = {0.00, 180, 180}},
     factionCardPos = {pos = {18.25, 1, -30.75}, rot = {0, 180, 0}},
-    objectiveTokenPos = {pos = {18.46, 1.20, -33.16}, rot = {0, 180, 180}},
+    objectiveTokenPos = {pos = {18.46, 1.53, -33.16}, rot = {0, 180, 180}},
     combatDeckPos = {pos = {26.75, 1.02, -28.75}, rot = {0, 180, 0}},
     eventCardPos = {pos = {26.75, 1.01, -33.75}, rot = {0, 180, 0}},
     startUnitsUpperLeft = {pos = {17.75, 0.96, -22.75}, rot = {0, 0, 0}},
@@ -701,7 +795,7 @@ playerInitInfo = {
     tokenReset = "c2f4c8",
     orderTokenUpperLeft = {pos = {9.75, 1.06, 28.25}, rot = {0, 0, 180.00}},
     factionCardPos = {pos = {18.5, 1, 30.75}, rot = {0, 0, 0}},
-    objectiveTokenPos = {pos = {18.00, 1.20, 33.11}, rot = {0, 0, 180}},
+    objectiveTokenPos = {pos = {18.00, 1.53, 33.11}, rot = {0, 0, 180}},
     combatDeckPos = {pos = {27, 1.02, 28.75}, rot = {0, 0, 0}},
     eventCardPos = {pos = {27, 1.01, 33.75}, rot = {0, 0, 0}},
     startUnitsUpperLeft = {pos = {26.54, 0.96, 22.20}, rot = {0, 0, 0}},
@@ -721,7 +815,7 @@ playerInitInfo = {
     tokenReset = "a2d0c5",
     orderTokenUpperLeft = {pos = {-7.25, 1.06, 28.25}, rot = {0, 0, 180}},
     factionCardPos = {pos = {-18.72, 1, 30.74}, rot = {0, 0, 0}},
-    objectiveTokenPos = {pos = {-18.94, 1.20, 33.17}, rot = {0, 0, 180}},
+    objectiveTokenPos = {pos = {-18.94, 1.53, 33.17}, rot = {0, 0, 180}},
     combatDeckPos = {pos = {-27.74, 1.02, 28.76}, rot = {0, 0, 0}},
     eventCardPos = {pos = {-27.75, 1.01, 33.75}, rot = {0, 0, 0}},
     startUnitsUpperLeft = {pos = {-18.17, 0.97, 22.25}, rot = {0, 0, 0}},
@@ -744,16 +838,19 @@ function moveToCallback(obj, params)
   obj.setLock(params.lock)
 end
 
-function moveTo(guids, pos, bag, lock, scale)
+function moveTo(guids, pos, bag, lock, scale, transform)
   local obj =
     bag.takeObject(
     {
       guid = guids[1],
       position = pos.pos,
       rotation = pos.rot,
-      callback = "moveToCallback",
-      callback_owner = Global,
-      params = {lock = lock}
+      callback_function = function(obj)
+        if transform ~= nil then
+          transform(obj)
+        end
+        moveToCallback(obj, {lock = lock})
+      end
     }
   )
   obj.use_grid = false
@@ -767,7 +864,7 @@ function DIV(a, b)
   return (a - a % b) / b
 end
 
-function gridLayout(guids, pos, dir, cols, x, z, bag, lock, scale, startIndex)
+function gridLayout(guids, pos, dir, cols, x, z, bag, lock, scale, startIndex, transform)
   local index = 0
   if (startIndex ~= nil) then
     index = startIndex
@@ -778,7 +875,7 @@ function gridLayout(guids, pos, dir, cols, x, z, bag, lock, scale, startIndex)
       newPos["x"] = pos.pos[1] + ((index % cols) * x * dir)
       newPos["z"] = pos.pos[3] + (DIV(index, cols) * z * (-dir))
       newPos["y"] = pos.pos[2]
-      moveTo({guid}, {pos = newPos, rot = pos.rot}, bag, lock, scale)
+      moveTo({guid}, {pos = newPos, rot = pos.rot}, bag, lock, scale, transform)
       index = index + 1
     end
   end
@@ -799,7 +896,53 @@ playerFaction = {}
 
 function initFaction(color, faction)
   local factionTable = factionInitInfo[faction]
-  local factionBag = getObjectFromGUID(factionTable.factionBag)
+  if factionTable ~= nil then
+    local factionBag = getObjectFromGUID(factionTable.factionBag)
+    initFactionHelper(color, faction, factionTable, factionBag)
+  else
+    local bagGuid = state.customFactionBags[faction]
+    initCustomFaction(color, getObjectFromGUID(bagGuid), faction)
+  end
+end
+
+function initCustomFaction(color, factionBag, faction)
+  local factionTable = factionBag.getTable("fs-meta")
+  initFactionHelper(color, faction, factionTable, factionBag)
+end
+
+bagToAssign = nil
+assignedFactionName = nil
+
+function onScriptingButtonDown(button_number, playerColor)
+  print("Scripting button " .. tostring(button_number))
+  local player = Player[playerColor]
+  if (button_number == 1 and player.getHoverObject().getTable("fs-meta") ~= nil) then
+    local obj = player.getHoverObject()
+    if state.customFactionBags == nil then
+      state.customFactionBags = {}
+    end
+    local name = "CustomFaction" .. tostring(#state.customFactionBags)
+    state.customFactionBags[name] = ""
+    initCustomFaction(playerColor, obj, name)
+  end    
+  if (button_number == 2 and player.getHoverObject() and player.getHoverObject().getTable("fs-meta") and bagToAssign == nil and assignedFactionName ~= nil) then
+    print("Assigning bag " .. player.getHoverObject().getGUID() .. " to faction " .. assignedFactionName)
+    bagToAssign = player.getHoverObject()
+  elseif (button_number == 2 and bagToAssign ~= nil and player.getHoverObject()) then
+    print("Creating button for faction " .. assignedFactionName)
+    removeButtons(player.getHoverObject())
+    factionButton(player.getHoverObject().getGUID(), assignedFactionName)
+    if state.customFactionBags == nil then
+      state.customFactionBags = {}
+    end
+    state.customFactionBags[assignedFactionName] = bagToAssign.getGUID()
+    bagToAssign = nil
+    assignedFactionName = nil
+  end
+
+end
+
+function initFactionHelper(color, faction, factionTable, factionBag)
   local objectDescriptors = factionBag.getObjects()
   local factionCard = getByName(objectDescriptors, "Faction Card")
   local eventDeck = getByName(objectDescriptors, "Event cards")
@@ -828,7 +971,11 @@ function initFaction(color, faction)
   moveTo(factionCard, colorTable.factionCardPos, factionBag, true)
   moveTo(eventDeck, colorTable.eventCardPos, factionBag, false, cardScale)
   moveTo(combatDeck, colorTable.combatDeckPos, factionBag, false, cardScale)
-  moveTo(objectiveTokens, objectiveTokenPos, factionBag, false)
+  moveTo(objectiveTokens, objectiveTokenPos, factionBag, true, nil, function(token)
+    Wait.frames(function()
+      token.setLock(false)
+    end, 20)
+  end)
   moveTo(factionTile, colorTable.startTilePos, factionBag, false)
   moveTo(cities, cityPos, factionBag, false)
   moveTo(factories, factoryPos, factionBag, false)
@@ -852,7 +999,9 @@ function initFaction(color, faction)
     factionTable.orderTokens.strategize,
     factionTable.orderTokens.deploy
   }
-  gridLayout(orderTokens, colorTable.orderTokenUpperLeft, colorTable.dir, 2, 2.5, 2.5, factionBag, false)
+  gridLayout(orderTokens, colorTable.orderTokenUpperLeft, colorTable.dir, 2, 2.5, 2.5, factionBag, false, nil, nil, function(obj)
+    obj.setName(faction .. " order token")
+  end)
   gridLayout(
     {level0upgrades, orderUpgrades},
     colorTable.upgradeCardUpperLeft,
@@ -1029,6 +1178,14 @@ function upgradeButton(deck)
   cardbutton(deck, "UP", "upgradeCards")
 end
 
+function playerCardRotation(playerColor)
+  local yRot = 180
+  if playerInitInfo[playerColor].dir < 0 then
+    yRot = 0
+  end
+  return {x = 0, y = yRot, z = 0}
+end
+
 function upgradeCards(deck, playerColor)
   if (not state.combatLock[playerColor]) then
     state.combatLock[playerColor] = true
@@ -1062,11 +1219,14 @@ function upgradeCards(deck, playerColor)
         local card1 = combatDeck.takeObject({guid = guids[1]})
 
         card1.setPositionSmooth(goto1)
+        local cardRotation = playerCardRotation(playerColor)
+        card1.setRotationSmooth(cardRotation)
         card1.setLock(true)
         cardbutton(card1, "DIS", "finishUpgrade")
         if (counter < 4) then
           local card2 = combatDeck.takeObject({guid = guids[2]})
           card2.setPositionSmooth(goto2)
+          card2.setRotationSmooth(cardRotation)
           card2.setLock(true)
         else
           local id = "moveCard" .. guids[2]
@@ -1097,12 +1257,15 @@ function finishUpgrade(clickedCard, playerColor)
   local height = 1.5
   local combatCardGuid
   local discardCardGuid
+  local cardRotation = playerCardRotation(playerColor)
+  local cardFaceDown = {x = cardRotation.x, y = cardRotation.y, z = cardRotation.z + 180}
   for cardName, guids in pairs(cardNamesToGuids) do
     for k, guid in pairs(guids) do
       local card = getObjectFromGUID(guid)
       if (cardName == clickedCard.getName()) then
         sideTablePos.y = height
         card.setPositionSmooth(sideTablePos)
+        card.setRotationSmooth(cardRotation)
         card.setLock(false)
         card.use_snap_points = false
         card.use_grid = false
@@ -1111,6 +1274,7 @@ function finishUpgrade(clickedCard, playerColor)
       else
         combatDeckPosition.y = height
         card.setPositionSmooth(combatDeckPosition)
+        card.setRotationSmooth(cardFaceDown)
         card.setLock(false)
         card.use_snap_points = false
         card.use_grid = false
@@ -1130,8 +1294,8 @@ function finishUpgrade(clickedCard, playerColor)
   card1.clearButtons()
   height = height + 0.1
   combatDeckPosition.y = height
-  timer(betterGuids[1], "moveObj", {guid = betterGuids[1], pos = combatDeckPosition, lock = false}, 0.1)
-  timer(betterGuids[2], "moveObj", {guid = betterGuids[2], pos = combatDeckPosition, lock = false}, 0.2)
+  timer(betterGuids[1], "moveObj", {guid = betterGuids[1], rot = cardFaceDown, pos = combatDeckPosition, lock = false}, 0.1)
+  timer(betterGuids[2], "moveObj", {guid = betterGuids[2],  rot = cardFaceDown, pos = combatDeckPosition, lock = false}, 0.2)
   timer(playerColor, "refindCombatDeck", {discard = discardCardGuid, combat = combatCardGuid, player = playerColor}, 2)
   timer(playerColor, "unlockCombat", {playerColor = playerColor}, 2)
 end
